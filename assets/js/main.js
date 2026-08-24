@@ -471,6 +471,105 @@
     const status = contactForm.querySelector('[data-contact-status]');
     const fields = [...contactForm.querySelectorAll('input:not([type="hidden"]), select, textarea')];
 
+    if (enquiryType) {
+      const field = enquiryType.closest('.contact-field--select');
+      const label = field?.querySelector('label');
+      const custom = document.createElement('div');
+      const trigger = document.createElement('button');
+      const menu = document.createElement('div');
+      const options = [...enquiryType.options];
+      const menuId = `${enquiryType.id}-menu`;
+
+      custom.className = 'contact-select';
+      trigger.className = 'contact-select__trigger';
+      trigger.id = `${enquiryType.id}-button`;
+      trigger.type = 'button';
+      trigger.setAttribute('aria-haspopup', 'listbox');
+      trigger.setAttribute('aria-expanded', 'false');
+      trigger.setAttribute('aria-controls', menuId);
+      trigger.innerHTML = `<span>${enquiryType.selectedOptions[0]?.textContent || options[0].textContent}</span><svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5"/></svg>`;
+
+      menu.className = 'contact-select__menu';
+      menu.id = menuId;
+      menu.setAttribute('role', 'listbox');
+      menu.setAttribute('aria-label', 'Enquiry Type');
+      menu.hidden = true;
+
+      const optionButtons = options.map((option, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.role = 'option';
+        button.dataset.value = option.value;
+        button.textContent = option.textContent;
+        button.setAttribute('aria-selected', String(option.selected));
+        button.tabIndex = index === enquiryType.selectedIndex ? 0 : -1;
+        menu.append(button);
+        return button;
+      });
+
+      const closeMenu = (restoreFocus = false) => {
+        custom.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+        menu.hidden = true;
+        if (restoreFocus) trigger.focus();
+      };
+      const openMenu = () => {
+        custom.classList.add('is-open');
+        trigger.setAttribute('aria-expanded', 'true');
+        menu.hidden = false;
+        (optionButtons[enquiryType.selectedIndex] || optionButtons[0])?.focus();
+      };
+      const chooseOption = (button) => {
+        enquiryType.value = button.dataset.value;
+        trigger.querySelector('span').textContent = button.textContent;
+        optionButtons.forEach((item) => {
+          const selected = item === button;
+          item.setAttribute('aria-selected', String(selected));
+          item.tabIndex = selected ? 0 : -1;
+        });
+        enquiryType.dispatchEvent(new Event('change', { bubbles:true }));
+        closeMenu(true);
+      };
+
+      trigger.addEventListener('click', () => menu.hidden ? openMenu() : closeMenu());
+      trigger.addEventListener('keydown', (event) => {
+        if (['ArrowDown','ArrowUp','Enter',' '].includes(event.key)) {
+          event.preventDefault();
+          openMenu();
+        }
+      });
+      optionButtons.forEach((button) => {
+        button.addEventListener('click', () => chooseOption(button));
+        button.addEventListener('keydown', (event) => {
+          const current = optionButtons.indexOf(button);
+          if (event.key === 'Escape' || event.key === 'Tab') {
+            if (event.key === 'Escape') event.preventDefault();
+            closeMenu(event.key === 'Escape');
+            return;
+          }
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            chooseOption(button);
+            return;
+          }
+          if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+            event.preventDefault();
+            const offset = event.key === 'ArrowDown' ? 1 : -1;
+            optionButtons[(current + offset + optionButtons.length) % optionButtons.length].focus();
+          }
+        });
+      });
+      document.addEventListener('pointerdown', (event) => {
+        if (!custom.contains(event.target)) closeMenu();
+      });
+
+      enquiryType.classList.add('contact-select__native');
+      field?.classList.add('has-custom-select');
+      label?.setAttribute('for', trigger.id);
+      custom.append(trigger, menu);
+      enquiryType.insertAdjacentElement('afterend', custom);
+    }
+
     const errorMessage = (field) => {
       if (field.validity.valueMissing) return field.tagName === 'SELECT' ? 'Please choose an enquiry type.' : `Please enter your ${field.name === 'name' ? 'name' : field.name}.`;
       if (field.validity.typeMismatch) return 'Enter a valid email address.';
