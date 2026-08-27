@@ -84,14 +84,18 @@
   const productAnnouncement = document.querySelector('[data-product-announcement]');
   const wishlistButtons = [...document.querySelectorAll('[data-wishlist]')];
   const wishlistProductName = (button) => (button.dataset.product || button.getAttribute('aria-label') || '').replace(/^(Add|Remove) /, '').replace(/ (to|from) wishlist$/, '');
+  const updateHeaderBadge = (badge, count) => {
+    badge.textContent = String(count);
+    badge.hidden = false;
+  };
+  document.querySelectorAll('.cart-count').forEach((badge) => updateHeaderBadge(badge, Number(badge.textContent) || 0));
   let savedWishlist = new Set();
   try { savedWishlist = new Set(JSON.parse(localStorage.getItem('veloraWishlist') || '[]')); } catch (_) { savedWishlist = new Set(); }
   const updateWishlistHeader = () => {
     const count = savedWishlist.size;
-    document.querySelectorAll('.wishlist-count').forEach((badge) => { badge.textContent = String(count); });
+    document.querySelectorAll('.wishlist-count').forEach((badge) => updateHeaderBadge(badge, count));
     document.querySelectorAll('.mobile-wishlist-button b').forEach((badge) => { badge.textContent = String(count); });
     document.querySelectorAll('.wishlist-header-button,.mobile-wishlist-button').forEach((control) => {
-      control.classList.toggle('is-active', count > 0);
       control.setAttribute('aria-label', `Wishlist, ${count} ${count === 1 ? 'item' : 'items'}`);
     });
   };
@@ -128,7 +132,11 @@
         button.classList.remove('is-added');
         button.setAttribute('aria-label', `Add ${product} to cart`);
         if (label) label.textContent = originalLabel;
-        cartCounts.forEach((count) => { count.textContent = String(Math.max(0, Number(count.textContent) - 1)); });
+        cartCounts.forEach((count) => {
+          const nextCount = Math.max(0, Number(count.textContent) - 1);
+          if (count.classList.contains('cart-count')) updateHeaderBadge(count, nextCount);
+          else count.textContent = String(nextCount);
+        });
         const remainingItems = Number(cartCounts[0]?.textContent || 0);
         document.querySelectorAll('.bag-button, .mobile-bag-button').forEach((bag) => bag.setAttribute('aria-label', `Shopping cart, ${remainingItems} ${remainingItems === 1 ? 'item' : 'items'}`));
         if (productAnnouncement) productAnnouncement.textContent = `${product} removed from cart.`;
@@ -138,7 +146,11 @@
       button.classList.add('is-added');
       button.setAttribute('aria-label', `${product} added to cart`);
       if (label) label.textContent = 'Added';
-      cartCounts.forEach((count) => { count.textContent = String(Number(count.textContent) + 1); });
+      cartCounts.forEach((count) => {
+        const nextCount = Number(count.textContent) + 1;
+        if (count.classList.contains('cart-count')) updateHeaderBadge(count, nextCount);
+        else count.textContent = String(nextCount);
+      });
       document.querySelectorAll('.bag-button, .mobile-bag-button').forEach((bag) => bag.setAttribute('aria-label', 'Shopping cart with added items'));
       if (productAnnouncement) productAnnouncement.textContent = `${product} added to cart.`;
     });
