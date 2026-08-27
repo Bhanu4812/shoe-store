@@ -712,6 +712,37 @@
 
 })();
 
+/* Native lazy images with cached-load, fade-in and error-state handling */
+(() => {
+  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+  lazyImages.forEach((img) => {
+    const shell = img.parentElement;
+    if (!shell) return;
+
+    shell.classList.add('image-loading');
+
+    const finish = () => {
+      shell.classList.remove('image-error');
+      shell.classList.add('image-loaded');
+    };
+    const fail = () => {
+      shell.classList.remove('image-loaded');
+      shell.classList.add('image-error');
+      img.setAttribute('aria-hidden', 'true');
+    };
+
+    if (img.complete) {
+      if (img.naturalWidth > 0) finish();
+      else fail();
+      return;
+    }
+
+    img.addEventListener('load', finish, { once:true });
+    img.addEventListener('error', fail, { once:true });
+  });
+})();
+
 /* Coming Soon launch countdown and access form */
 (() => {
   const countdown = document.querySelector('[data-countdown]');
