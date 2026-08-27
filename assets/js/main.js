@@ -714,7 +714,7 @@
 
 /* Native lazy images with cached-load, fade-in and error-state handling */
 (() => {
-  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+  const lazyImages = document.querySelectorAll('img[loading="lazy"]:not([aria-hidden="true"]):not([alt=""])');
 
   lazyImages.forEach((img) => {
     const shell = img.parentElement;
@@ -725,6 +725,9 @@
     const finish = () => {
       shell.classList.remove('image-error');
       shell.classList.add('image-loaded');
+      window.setTimeout(() => {
+        shell.classList.remove('image-loading', 'image-loaded');
+      }, 280);
     };
     const fail = () => {
       shell.classList.remove('image-loaded');
