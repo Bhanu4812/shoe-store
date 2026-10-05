@@ -19,12 +19,12 @@
     <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 64x64" />
     <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png" />
     <link rel="stylesheet" href="../assets/css/layout-polish.css" />
-  <link rel="stylesheet" href="../assets/css/section-designs.css">
-</head>
+    <link rel="stylesheet" href="../assets/css/section-designs.css" />
+  </head>
   <body class="new-arrivals-page page-arrivals">
     <!-- Premium site header -->
     <header class="site-header" data-site-header>
-      <div class="header-shell">
+      <div class="header-shell site-container">
         <a class="brand" href="Home page1.html" aria-label="VELORA home">
           <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
             <path
@@ -63,11 +63,7 @@
           </span>
         </a>
 
-        <nav
-          class="primary-nav"
-          aria-label="Primary navigation"
-          id="primary-navigation"
-        >
+        <nav class="primary-nav" aria-label="Primary navigation" id="primary-navigation">
           <ul class="nav-list">
             <li class="nav-item nav-item--has-menu">
               <button
@@ -88,14 +84,10 @@
               </button>
               <ul class="home-menu" id="home-menu" aria-label="Home pages">
                 <li>
-                  <a class="home-menu__link" href="Home page1.html"
-                    >Homepage 1</a
-                  >
+                  <a class="home-menu__link" href="Home page1.html">Homepage 1</a>
                 </li>
                 <li>
-                  <a class="home-menu__link" href="Home page 2.html"
-                    >Homepage 2</a
-                  >
+                  <a class="home-menu__link" href="Home page 2.html">Homepage 2</a>
                 </li>
               </ul>
             </li>
@@ -123,11 +115,7 @@
                 data-theme-toggle
                 aria-label="Switch to dark mode"
               >
-                <svg
-                  class="icon icon--moon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
+                <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z"
                     fill="none"
@@ -137,11 +125,7 @@
                     stroke-width="1.7"
                   />
                 </svg>
-                <svg
-                  class="icon icon--sun"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
+                <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true">
                   <circle
                     cx="12"
                     cy="12"
@@ -208,13 +192,6 @@
                 </span>
               </a>
             </div>
-            <a
-              class="login-button shop-header-cta"
-              href="Collections.html#products"
-            >
-              Shop Shoes
-              <span aria-hidden="true">→</span>
-            </a>
           </div>
         </nav>
 
@@ -279,11 +256,7 @@
             </svg>
             <span class="wishlist-count" aria-hidden="true">0</span>
           </a>
-          <a
-            class="header-icon-button bag-button"
-            href="#cart"
-            aria-label="Shopping cart, 0 items"
-          >
+          <a class="header-icon-button bag-button" href="#cart" aria-label="Shopping cart, 0 items">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M5 8.5h14l-1 12H6l-1-12ZM9 9V6.7a3 3 0 0 1 6 0V9"
@@ -296,10 +269,7 @@
             </svg>
             <span class="cart-count" aria-hidden="true">0</span>
           </a>
-          <a
-            class="login-button shop-header-cta"
-            href="Collections.html#products"
-          >
+          <a class="login-button shop-header-cta" href="Collections.html#products">
             Shop Shoes
             <span aria-hidden="true">→</span>
           </a>
@@ -318,14 +288,13 @@
       </div>
     </header>
 
-    <main class="shop-main">
+    <main class="site-main shop-main">
       <section class="shop-page-hero shop-catalogue-hero">
         <div>
           <p class="shop-eyebrow">VELORA / The latest edit</p>
           <h1>A fresh step forward.</h1>
           <p>
-            Considered silhouettes. Distinctive details. Explore footwear for
-            your kind of movement.
+            Considered silhouettes. Distinctive details. Explore footwear for your kind of movement.
           </p>
 
           <a class="shop-primary" href="#products">Shop New Arrivals &#8594;</a>
@@ -342,20 +311,14 @@
       <section class="shop-intro shop-intro--compact">
         <h2>Shop by category</h2>
         <nav class="shop-categories" aria-label="Shop categories">
-          <a href="Collections.html#products">All Shoes</a>
-          <a href="Collections.html?category=sneakers#products">Sneakers</a>
-          <a href="Collections.html?category=performance#products"
-            >Performance</a
-          >
-          <a href="Collections.html?category=everyday#products">Everyday</a>
-          <a href="Collections.html?category=trail#products">Trail</a>
+          <a href="New Arrivals.html#products">All Shoes</a>
+          <a href="New Arrivals.html?category=sneakers#products">Sneakers</a>
+          <a href="New Arrivals.html?category=performance#products">Performance</a>
+          <a href="New Arrivals.html?category=everyday#products">Everyday</a>
+          <a href="New Arrivals.html?category=trail#products">Trail</a>
         </nav>
       </section>
-      <section
-        class="shop-catalogue"
-        id="products"
-        aria-labelledby="shop-title"
-      >
+      <section class="shop-catalogue" id="products" aria-labelledby="shop-title">
         <div class="shop-toolbar">
           <div>
             <h2 id="shop-title">New Arrivals</h2>
@@ -363,11 +326,7 @@
           </div>
           <label>
             Search shoes
-            <input
-              type="search"
-              data-shop-search
-              placeholder="Search product names"
-            />
+            <input type="search" data-shop-search placeholder="Search product names" />
           </label>
           <label>
             Sort by
@@ -378,12 +337,7 @@
           </label>
         </div>
         <div class="shop-grid">
-          <article
-            class="shop-card"
-            data-shop-card
-            data-category="performance"
-            data-name="aeron x"
-          >
+          <article class="shop-card" data-shop-card data-category="performance" data-name="aeron x">
             <a
               class="shop-card__image"
               href="Collections.html?product=aeron-x"
@@ -405,9 +359,7 @@
               <strong>₹12,999</strong>
               <div class="shop-card__actions">
                 <a href="Collections.html?product=aeron-x">View Product</a>
-                <button type="button" data-shop-add="aeron-x">
-                  Add to Cart
-                </button>
+                <button type="button" data-shop-add="aeron-x">Add to Cart</button>
                 <button
                   type="button"
                   data-wishlist
@@ -449,9 +401,7 @@
               <strong>₹10,999</strong>
               <div class="shop-card__actions">
                 <a href="Collections.html?product=vector-02">View Product</a>
-                <button type="button" data-shop-add="vector-02">
-                  Add to Cart
-                </button>
+                <button type="button" data-shop-add="vector-02">Add to Cart</button>
                 <button
                   type="button"
                   data-wishlist
@@ -464,12 +414,7 @@
               </div>
             </div>
           </article>
-          <article
-            class="shop-card"
-            data-shop-card
-            data-category="sneakers"
-            data-name="forma low"
-          >
+          <article class="shop-card" data-shop-card data-category="sneakers" data-name="forma low">
             <a
               class="shop-card__image"
               href="Collections.html?product=forma-low"
@@ -493,9 +438,7 @@
               <strong>₹11,999</strong>
               <div class="shop-card__actions">
                 <a href="Collections.html?product=forma-low">View Product</a>
-                <button type="button" data-shop-add="forma-low">
-                  Add to Cart
-                </button>
+                <button type="button" data-shop-add="forma-low">Add to Cart</button>
                 <button
                   type="button"
                   data-wishlist
@@ -537,9 +480,7 @@
               <strong>₹11,499</strong>
               <div class="shop-card__actions">
                 <a href="Collections.html?product=flux-runner">View Product</a>
-                <button type="button" data-shop-add="flux-runner">
-                  Add to Cart
-                </button>
+                <button type="button" data-shop-add="flux-runner">Add to Cart</button>
                 <button
                   type="button"
                   data-wishlist
@@ -581,9 +522,7 @@
               <strong>₹9,999</strong>
               <div class="shop-card__actions">
                 <a href="Collections.html?product=studio-court">View Product</a>
-                <button type="button" data-shop-add="studio-court">
-                  Add to Cart
-                </button>
+                <button type="button" data-shop-add="studio-court">Add to Cart</button>
                 <button
                   type="button"
                   data-wishlist
@@ -596,12 +535,7 @@
               </div>
             </div>
           </article>
-          <article
-            class="shop-card"
-            data-shop-card
-            data-category="trail"
-            data-name="terrain shift"
-          >
+          <article class="shop-card" data-shop-card data-category="trail" data-name="terrain shift">
             <a
               class="shop-card__image"
               href="Collections.html?product=terrain-shift"
@@ -620,18 +554,12 @@
             <div class="shop-card__info">
               <p>Trail</p>
               <h3>
-                <a href="Collections.html?product=terrain-shift"
-                  >Terrain Shift</a
-                >
+                <a href="Collections.html?product=terrain-shift">Terrain Shift</a>
               </h3>
               <strong>₹13,999</strong>
               <div class="shop-card__actions">
-                <a href="Collections.html?product=terrain-shift"
-                  >View Product</a
-                >
-                <button type="button" data-shop-add="terrain-shift">
-                  Add to Cart
-                </button>
+                <a href="Collections.html?product=terrain-shift">View Product</a>
+                <button type="button" data-shop-add="terrain-shift">Add to Cart</button>
                 <button
                   type="button"
                   data-wishlist
@@ -644,12 +572,7 @@
               </div>
             </div>
           </article>
-          <article
-            class="shop-card"
-            data-shop-card
-            data-category="everyday"
-            data-name="core knit"
-          >
+          <article class="shop-card" data-shop-card data-category="everyday" data-name="core knit">
             <a
               class="shop-card__image"
               href="Collections.html?product=core-knit"
@@ -673,9 +596,7 @@
               <strong>₹8,999</strong>
               <div class="shop-card__actions">
                 <a href="Collections.html?product=core-knit">View Product</a>
-                <button type="button" data-shop-add="core-knit">
-                  Add to Cart
-                </button>
+                <button type="button" data-shop-add="core-knit">Add to Cart</button>
                 <button
                   type="button"
                   data-wishlist
@@ -688,12 +609,7 @@
               </div>
             </div>
           </article>
-          <article
-            class="shop-card"
-            data-shop-card
-            data-category="sneakers"
-            data-name="axis one"
-          >
+          <article class="shop-card" data-shop-card data-category="sneakers" data-name="axis one">
             <a
               class="shop-card__image"
               href="Collections.html?product=axis-one"
@@ -715,9 +631,7 @@
               <strong>₹10,999</strong>
               <div class="shop-card__actions">
                 <a href="Collections.html?product=axis-one">View Product</a>
-                <button type="button" data-shop-add="axis-one">
-                  Add to Cart
-                </button>
+                <button type="button" data-shop-add="axis-one">Add to Cart</button>
                 <button
                   type="button"
                   data-wishlist
@@ -755,30 +669,51 @@
         <img
           src="../assets/images/new-arrivals-forma-study-evening-2026.webp"
           alt="Black Forma Low sneakers styled for an evening in the city"
-          width="1536"
-          height="1024"
+          width="1024"
+          height="1536"
           loading="lazy"
           decoding="async"
         />
         <div>
           <p class="shop-eyebrow">VELORA / The edit</p>
           <h2 id="arrivals-style">A fresh perspective on everyday style.</h2>
-          <p>
-            Take a closer look at Forma Low, then explore the rest of the latest
-            edit.
-          </p>
-          <a class="shop-primary" href="Collections.html?product=forma-low"
-            >View Product &#8594;</a
-          >
+          <p>Take a closer look at Forma Low, then explore the rest of the latest edit.</p>
+          <a class="shop-primary" href="Collections.html?product=forma-low">View Product &#8594;</a>
         </div>
       </section>
-      <section class="shop-added section-release-questions" aria-labelledby="arrivals-fit"><header><p class="shop-eyebrow">VELORA / Before adding your next pair.</p><h2 id="arrivals-fit">Before adding your next pair.</h2><p>The latest edit, with the details that matter to you.</p></header><div><details open><summary>How do I learn more about a style?</summary><p>Choose View Product to see its image, listed price and category.</p><a href="#products">Explore the Latest Styles &#8594;</a></details><details><summary>Can I check sizing and availability?</summary><p>Contact VELORA with the product name and your usual size before ordering.</p><a href="contact.html#contact-form">Ask the Team &#8594;</a></details><details><summary>How does the shopping bag work?</summary><p>Add your favourites and adjust quantities in the bag. Ordering enquiries go through the contact page.</p><a href="#cart">Open Your Bag &#8594;</a></details></div></section>
+      <section class="shop-added section-release-questions" aria-labelledby="arrivals-fit">
+        <header>
+          <p class="shop-eyebrow">VELORA / Before adding your next pair.</p>
+          <h2 id="arrivals-fit">Before adding your next pair.</h2>
+          <p>The latest edit, with the details that matter to you.</p>
+        </header>
+        <div>
+          <details open>
+            <summary>How do I learn more about a style?</summary>
+            <p>Choose View Product to see its image, listed price and category.</p>
+            <a href="#products">Explore the Latest Styles &#8594;</a>
+          </details>
+          <details>
+            <summary>Can I check sizing and availability?</summary>
+            <p>Contact VELORA with the product name and your usual size before ordering.</p>
+            <a href="contact.html#contact-form">Ask the Team &#8594;</a>
+          </details>
+          <details>
+            <summary>How does the shopping bag work?</summary>
+            <p>
+              Add your favourites and adjust quantities in the bag. Ordering enquiries go through
+              the contact page.
+            </p>
+            <a href="#cart">Open Your Bag &#8594;</a>
+          </details>
+        </div>
+      </section>
     </main>
 
     <!-- Premium site footer -->
     <footer class="site-footer">
       <section class="footer-benefits" aria-label="VELORA customer benefits">
-        <div class="footer-container benefits-grid">
+        <div class="site-container footer-container benefits-grid">
           <article class="benefit">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path
@@ -853,13 +788,9 @@
         </div>
       </section>
       <div class="footer-main">
-        <div class="footer-container footer-grid">
+        <div class="site-container footer-container footer-grid">
           <section class="footer-brand" aria-label="VELORA">
-            <a
-              class="brand footer-brand__logo"
-              href="Home page1.html"
-              aria-label="VELORA home"
-            >
+            <a class="brand footer-brand__logo" href="Home page1.html" aria-label="VELORA home">
               <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
                 <path
                   d="M7 29.5c6.1-.1 10.4-2.3 13.5-6.8l3.3-4.9 5.1 4.7c3.1 2.8 6.9 4.5 11.5 4.9v5.8H7v-3.7Z"
@@ -897,8 +828,7 @@
               </span>
             </a>
             <p>
-              Elevated footwear crafted for everyday movement, modern style, and
-              lasting comfort.
+              Elevated footwear crafted for everyday movement, modern style, and lasting comfort.
             </p>
           </section>
           <nav class="footer-nav" aria-label="Shop">
@@ -907,19 +837,13 @@
               <li><a href="Collections.html#products">All Shoes</a></li>
               <li><a href="New Arrivals.html#products">New Arrivals</a></li>
               <li>
-                <a href="Collections.html?category=sneakers#products"
-                  >Sneakers</a
-                >
+                <a href="Collections.html?category=sneakers#products">Sneakers</a>
               </li>
               <li>
-                <a href="Collections.html?category=performance#products"
-                  >Performance</a
-                >
+                <a href="Collections.html?category=performance#products">Performance</a>
               </li>
               <li>
-                <a href="Collections.html?category=everyday#products"
-                  >Everyday</a
-                >
+                <a href="Collections.html?category=everyday#products">Everyday</a>
               </li>
               <li>
                 <a href="Collections.html?category=trail#products">Trail</a>
@@ -949,14 +873,9 @@
           <section class="footer-newsletter" aria-labelledby="newsletter-title">
             <p class="footer-eyebrow">VELORA INSIDER</p>
             <h2 id="newsletter-title">Step Into What’s Next</h2>
-            <p>
-              Get early access to new collections, limited releases, and
-              members-only offers.
-            </p>
+            <p>Get early access to new collections, limited releases, and members-only offers.</p>
             <form class="newsletter-form" data-newsletter-form novalidate>
-              <label class="sr-only" for="newsletter-email"
-                >Email address</label
-              >
+              <label class="sr-only" for="newsletter-email">Email address</label>
               <div class="newsletter-field">
                 <input
                   id="newsletter-email"
@@ -971,17 +890,13 @@
                   <span aria-hidden="true">→</span>
                 </button>
               </div>
-              <p
-                class="newsletter-message"
-                data-newsletter-message
-                aria-live="polite"
-              ></p>
+              <p class="newsletter-message" data-newsletter-message aria-live="polite"></p>
             </form>
           </section>
         </div>
       </div>
       <div class="footer-legal">
-        <div class="footer-container legal-content">
+        <div class="site-container footer-container legal-content">
           <p>© 2026 VELORA. All rights reserved.</p>
         </div>
       </div>

@@ -1,4 +1,4 @@
-/* Shared spacing, full-image framing and aligned rows. */
+/* Shared containers, spacing and aligned rows. */
 .error-shell > .shop-added,
 .coming-shell > .shop-added {
   width: 100%;
@@ -6,12 +6,26 @@
   border-top: 1px solid var(--header-border);
 }
 .shop-added {
-  max-width: 1440px;
+  max-width: var(--site-max);
   margin-inline: auto;
 }
 .shop-added header {
   max-width: 720px;
   margin-bottom: 24px;
+  min-width: 0;
+  text-align: start;
+}
+main section.shop-added > header > .shop-eyebrow,
+main section.shop-intro > .shop-eyebrow,
+main .shop-toolbar > div > .shop-eyebrow {
+  margin: 0 0 10px;
+}
+main section.shop-added > header > h2,
+main section.shop-intro > h2,
+main .shop-toolbar > div > h2 {
+  margin: 0;
+  text-align: start;
+  overflow-wrap: break-word;
 }
 .shop-added header > p:last-child {
   margin: 14px 0 0;
@@ -56,7 +70,7 @@ main .shop-added__grid h3 {
   display: block;
   width: 100%;
   height: 320px;
-  object-fit: contain;
+  object-fit: cover;
   background: var(--hero-surface);
 }
 .shop-added--visual > div p:not(.shop-eyebrow) {
@@ -76,27 +90,90 @@ main .shop-added__grid h3 {
     padding: 20px;
   }
 }
+/* One horizontal guide for navigation, page content and footer. */
 :root {
-  --section-space: 48px;
-  --section-gutter: clamp(20px, 3vw, 40px);
+  --site-max: 1360px;
+  --site-gutter: clamp(20px, 3vw, 40px);
+  --section-gutter: var(--site-gutter);
+  --section-space: clamp(32px, 3.5vw, 48px);
+  --section-space-md: clamp(24px, 2.5vw, 32px);
+  --content-gap: clamp(24px, 3vw, 40px);
+  --grid-gap: clamp(16px, 2vw, 24px);
 }
-body:not(.auth-page) main > section {
-  padding-block: 48px !important;
+.site-container {
+  inline-size: 100%;
+  max-inline-size: var(--site-max);
+  margin-inline: auto;
+  padding-inline: var(--site-gutter);
 }
-body:not(.auth-page) main > :is(.shop-home-hero, .shop-page-hero, .about-hero) {
-  padding: 0 !important;
+.site-main {
+  inline-size: 100%;
+  max-inline-size: var(--site-max);
+  margin-inline: auto;
 }
-body:not(.auth-page) main > .shop-brand-strip {
-  padding: 28px var(--section-gutter) !important;
+.site-main > section {
+  padding-block: var(--section-space);
+  padding-inline: var(--site-gutter);
 }
-body:not(.auth-page) main > .shop-intro {
-  padding: 28px var(--section-gutter) !important;
+.site-main > section > :is([class$="__container"], [class$="__inner"]) {
+  max-inline-size: none;
+  padding-inline: 0;
 }
-body:not(.auth-page) main > .shop-catalogue {
-  padding: 32px var(--section-gutter) 40px !important;
+.site-main > :is(.shop-home-hero, .shop-page-hero, .about-hero) {
+  padding: 0;
+  margin: 24px var(--site-gutter);
 }
-body:not(.auth-page) main > .shop-help {
-  padding: 32px !important;
+.site-main > :is(.shop-brand-strip, .shop-intro) {
+  padding-block: var(--section-space-md);
+}
+.site-main > .shop-catalogue {
+  padding-block: var(--section-space-md) var(--section-space);
+}
+.site-main > .shop-help {
+  margin: 0;
+  padding: var(--section-space-md) var(--site-gutter);
+}
+.site-main > .shop-added {
+  max-inline-size: none;
+}
+.shop-added header > p:last-child,
+.shop-intro > p:not(.shop-eyebrow),
+.shop-help p {
+  max-inline-size: 58ch;
+}
+
+/* Shared header and footer keep the same gutters at every breakpoint. */
+.header-shell {
+  min-block-size: var(--header-height);
+  gap: 20px;
+}
+.home-menu {
+  inset-inline-start: 0;
+  inline-size: min(212px, calc(100vw - 2 * var(--site-gutter)));
+}
+.footer-grid {
+  grid-template-columns: minmax(190px, 1.25fr) repeat(3, minmax(90px, 0.65fr)) minmax(220px, 1.2fr);
+  gap: var(--grid-gap);
+  align-items: start;
+}
+.footer-grid > * {
+  min-inline-size: 0;
+}
+.footer-main {
+  padding-block: var(--section-space);
+}
+.legal-content {
+  flex-wrap: wrap;
+  gap: 16px 32px;
+}
+.newsletter-field :is(input, button) {
+  min-block-size: 44px;
+}
+.benefits-grid {
+  align-items: stretch;
+}
+.benefit {
+  min-inline-size: 0;
 }
 main section:not(:first-child) h2 {
   font-size: clamp(28px, 3vw, 42px);
@@ -106,32 +183,22 @@ main section:not(:first-child) h2 {
 main section:not(:first-child) h3 {
   line-height: 1.35;
 }
-main
-  :is(
-    .about-values__header,
-    .team-editorial__heading,
-    .service-offers__heading
-  ) {
+main :is(.about-values__header, .team-editorial__heading, .service-offers__heading) {
   text-align: start;
   margin-inline: 0;
   max-width: none;
 }
-main
-  :is(
-    .design-process__heading,
-    .craft-process__heading,
-    .team-editorial__heading
-  ) {
+main :is(.design-process__heading, .craft-process__heading, .team-editorial__heading) {
   padding-bottom: 28px;
   gap: 20px;
 }
 main :is(.about-values__grid, .team-editorial__grid, .service-offers__grid) {
   margin-top: 28px;
 }
-/* Product and hero subjects remain completely visible. */
+/* Hero frames and product-card layout. */
 .shop-home-hero,
 .shop-page-hero {
-  block-size: min(560px, calc(var(--hero-space) - 48px));
+  block-size: min(420px, calc(var(--hero-space) - 48px));
   grid-template-rows: minmax(0, 1fr);
 }
 .shop-home-hero > img,
@@ -139,13 +206,14 @@ main :is(.about-values__grid, .team-editorial__grid, .service-offers__grid) {
   width: 100%;
   height: 100%;
   min-height: 0;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   background: var(--hero-surface);
 }
 .shop-home-hero > div,
 .shop-page-hero > div {
-  padding: 32px;
+  padding-block: 32px;
+  padding-inline: 0 32px;
 }
 .shop-home-hero h1,
 .shop-page-hero h1 {
@@ -155,7 +223,7 @@ main :is(.about-values__grid, .team-editorial__grid, .service-offers__grid) {
   block-size: min(560px, var(--hero-space));
 }
 .about-hero__visual img {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   background: var(--hero-surface);
   filter: none;
@@ -170,11 +238,10 @@ main :is(.about-values__grid, .team-editorial__grid, .service-offers__grid) {
 }
 .shop-card__image {
   flex: none;
-  aspect-ratio: 1/1;
+  aspect-ratio: 3 / 2;
 }
 .shop-card__image img {
-  object-fit: contain;
-  transform: none !important;
+  object-fit: cover;
 }
 .shop-card__info {
   display: flex;
@@ -188,11 +255,29 @@ main :is(.about-values__grid, .team-editorial__grid, .service-offers__grid) {
 }
 main section.shop-featured .shop-card h3 {
   font-family: inherit;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: 0;
   min-height: 2.8em;
+  margin: 0;
+}
+main section.shop-featured .shop-card__info {
+  padding: 16px 0 0;
+  align-items: stretch;
+  text-align: start;
+}
+main section.shop-featured .shop-card__info > p {
+  min-height: 1.4em;
+  line-height: 1.4;
+  margin: 0 0 6px;
+}
+main section.shop-featured .shop-card__info > strong {
+  margin: 8px 0 0;
+}
+main section.shop-featured .shop-card__image {
+  margin: 0;
+  width: 100%;
 }
 @media (max-width: 760px) {
   main section.shop-featured .shop-card h3 {
@@ -222,6 +307,8 @@ main section.shop-featured .shop-card h3 {
   font-size: clamp(30px, 3.3vw, 44px);
 }
 .about-story__collage {
+  inline-size: 100%;
+  aspect-ratio: auto;
   min-height: 0;
   height: 420px;
   grid-template-columns: 1fr 1fr;
@@ -229,7 +316,7 @@ main section.shop-featured .shop-card h3 {
   gap: 12px;
 }
 .about-story__image img {
-  object-fit: contain;
+  object-fit: cover;
   transform: none !important;
   filter: none;
   background: var(--hero-surface);
@@ -258,7 +345,7 @@ main section.shop-featured .shop-card h3 {
   aspect-ratio: 3/4;
 }
 .field-story__image img {
-  object-fit: contain;
+  object-fit: cover;
   transform: none !important;
   filter: none;
 }
@@ -308,7 +395,7 @@ main section.shop-featured .shop-card h3 {
   aspect-ratio: 2/3;
 }
 .team-profile img {
-  object-fit: contain;
+  object-fit: cover;
   transform: none !important;
   filter: none;
 }
@@ -345,7 +432,7 @@ main section.shop-featured .shop-card h3 {
   aspect-ratio: 4/3;
 }
 .service-offer__media img {
-  object-fit: contain;
+  object-fit: cover;
   transform: none !important;
 }
 .service-offer__body {
@@ -368,9 +455,10 @@ main section.shop-featured .shop-card h3 {
   padding-top: 12px;
 }
 .personal-fitting__composition {
-  grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: auto auto;
-  gap: 24px;
+  gap: var(--grid-gap);
 }
 .personal-fitting__image--main,
 .personal-fitting__image--detail {
@@ -383,7 +471,7 @@ main section.shop-featured .shop-card h3 {
   border: 0 !important;
 }
 .personal-fitting__image img {
-  object-fit: contain;
+  object-fit: cover;
   transform: none !important;
 }
 .personal-fitting__process {
@@ -395,14 +483,16 @@ main section.shop-featured .shop-card h3 {
   grid-template-columns: 1fr 1fr;
 }
 .bulk-concierge__quantity {
-  padding: 36px 28px 36px 0;
+  padding-block: 36px;
+  padding-inline: 0 28px;
 }
 .bulk-concierge__quantity strong {
   font-size: clamp(70px, 10vw, 130px);
   line-height: 1;
 }
 .bulk-concierge__content {
-  padding: 36px 0 36px 28px;
+  padding-block: 36px;
+  padding-inline: 28px 0;
 }
 .bulk-concierge__description {
   margin-block: 20px;
@@ -413,12 +503,6 @@ main section.shop-featured .shop-card h3 {
 .bulk-concierge__backdrop,
 .bulk-concierge__quantity::after {
   display: none;
-}
-.footer-main {
-  padding-block: 40px;
-}
-.footer-grid {
-  gap: 28px;
 }
 .size-consultation__header {
   padding-bottom: 28px;
@@ -447,7 +531,7 @@ main section.shop-featured .shop-card h3 {
   border: 0;
 }
 .size-consultation__image img {
-  object-fit: contain;
+  object-fit: cover;
   filter: none;
   transform: none !important;
   background: var(--hero-surface);
@@ -509,24 +593,17 @@ main section.shop-featured .shop-card h3 {
   .field-story__visuals {
     max-height: 420px;
   }
+  .field-story__copy {
+    display: block;
+  }
 }
 @media (max-width: 760px) {
-  body:not(.auth-page) main > section {
-    padding-block: 28px !important;
-  }
-  body:not(.auth-page)
-    main
-    > :is(.shop-home-hero, .shop-page-hero, .about-hero) {
-    padding: 0 !important;
-  }
   .shop-home-hero,
   .shop-page-hero {
-    block-size: min(640px, calc(var(--hero-space) - 32px));
-    grid-template-rows: auto minmax(0, 1fr);
   }
   .shop-home-hero > div,
   .shop-page-hero > div {
-    padding: 24px;
+    padding: 24px 0;
   }
   .shop-home-hero h1,
   .shop-page-hero h1 {
@@ -598,5 +675,410 @@ main section.shop-featured .shop-card h3 {
   }
   .service-offer__body h3 {
     min-height: 0;
+  }
+}
+
+/* Complete rows: actions settle at the bottom without fixed card heights. */
+.shop-grid {
+  gap: 32px var(--grid-gap);
+  align-items: stretch;
+}
+.shop-card__actions {
+  grid-template-columns: minmax(0, 1fr) 44px;
+}
+.shop-card__image:hover img {
+  transform: scale(1.035);
+}
+.shop-badge {
+  left: auto;
+  inset-inline-start: 12px;
+}
+.shop-toolbar > div {
+  min-inline-size: 0;
+  flex: 1 1 240px;
+}
+.shop-toolbar label {
+  min-inline-size: 0;
+  flex: 0 1 200px;
+}
+.shop-toolbar :is(input, select) {
+  min-inline-size: 0;
+}
+.shop-help__actions {
+  min-inline-size: 0;
+}
+.section-fit-path li,
+.section-buying-guide article {
+  display: flex;
+  flex-direction: column;
+}
+.section-fit-path li > a {
+  margin-block-start: auto;
+}
+.design-process__sequence li {
+  display: flex;
+  flex-direction: column;
+}
+.design-process__sequence li > small {
+  margin-block-start: auto;
+  padding-block-start: 16px;
+}
+.about-value {
+  display: flex;
+  flex-direction: column;
+}
+.about-value h3 {
+  font-size: 14px;
+  line-height: 1.5;
+  min-block-size: 3em;
+}
+.about-value p {
+  margin-block-end: 0;
+}
+.team-profile figcaption {
+  display: flex;
+  flex-direction: column;
+}
+.team-profile p {
+  margin-block-start: auto;
+  padding-block-start: 8px;
+}
+.team-profile > div,
+.service-offer__media {
+  overflow: hidden;
+}
+
+/* Editorial columns scale with available space rather than minimum pixel widths. */
+.contact-enquiry__inner {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: var(--content-gap);
+}
+.contact-enquiry__intro {
+  padding-block-start: 0;
+}
+.contact-enquiry__intro > p {
+  margin-block-end: 20px;
+}
+.contact-enquiry__intro > span {
+  margin-block-start: 20px;
+}
+.contact-enquiry__details {
+  margin-block-start: 28px;
+}
+.contact-enquiry__note {
+  margin-block-start: 28px;
+}
+.contact-enquiry__form {
+  padding: clamp(20px, 2.5vw, 36px);
+  gap: 20px;
+}
+.contact-field :is(input, select, textarea),
+.contact-select__trigger {
+  inline-size: 100%;
+  min-inline-size: 0;
+}
+.contact-field textarea {
+  resize: vertical;
+}
+.contact-select__menu {
+  max-block-size: 260px;
+  overflow-y: auto;
+}
+.contact-location__header {
+  margin-block-end: 28px;
+  grid-template-columns: minmax(140px, 0.28fr) minmax(0, 1fr);
+  gap: var(--content-gap);
+}
+.contact-location__header > div {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.contact-faq__inner {
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  gap: var(--content-gap);
+}
+.contact-faq__shoe {
+  block-size: clamp(220px, 25vw, 340px);
+  margin-block-start: 24px;
+}
+.contact-faq__item button {
+  min-block-size: 88px;
+}
+
+/* Utility pages use the same guides while retaining their standalone treatment. */
+.error-shell,
+.coming-shell {
+  max-inline-size: var(--site-max);
+  padding-inline: var(--site-gutter);
+}
+.error-brand,
+.coming-brand {
+  inset-inline-start: var(--site-gutter);
+}
+:is(.error-shell, .coming-shell) > .shop-added {
+  padding-block: var(--section-space-md);
+}
+:is(.error-page, .coming-page) .shop-added {
+  color: var(--body-text);
+  --hero-surface: var(--page-background);
+}
+:is(.error-page, .coming-page) .shop-added :is(h2, h3) {
+  color: var(--heading-text);
+}
+:is(.error-page, .coming-page) .shop-added p {
+  color: var(--body-text);
+}
+:is(.error-page, .coming-page) .shop-added a {
+  color: var(--link-color);
+}
+.error-page {
+  --page-background: var(--error-bg);
+  --heading-text: var(--error-text);
+  --body-text: var(--error-muted);
+  --link-color: var(--error-text);
+}
+.coming-page {
+  --page-background: var(--coming-bg);
+  --heading-text: var(--coming-text);
+  --body-text: var(--coming-muted);
+  --link-color: var(--coming-text);
+}
+
+/* RTL uses the same tracks and logical padding as the LTR composition. */
+html[dir="rtl"] .bulk-concierge__quantity {
+  padding-block: 36px;
+  padding-inline: 0 28px;
+  border-inline-start: 0;
+  border-inline-end: 1px solid var(--header-border);
+}
+html[dir="rtl"] .bulk-concierge__content {
+  padding-block: 36px;
+  padding-inline: 28px 0;
+}
+
+@media (max-width: 1100px) {
+  .header-shell {
+    padding-inline: var(--site-gutter);
+  }
+  .primary-nav {
+    inset-inline: 0;
+    inset-block-start: 100%;
+    padding-inline: var(--site-gutter);
+    inline-size: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  .primary-nav .home-menu {
+    inline-size: auto;
+  }
+  .footer-grid {
+    grid-template-columns: 1.3fr repeat(3, minmax(0, 1fr));
+  }
+  .footer-newsletter {
+    grid-column: 1 / -1;
+    max-inline-size: 480px;
+  }
+  .shop-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .about-values__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--grid-gap);
+  }
+  .about-value h3 {
+    min-block-size: 0;
+  }
+  .contact-enquiry__form {
+    grid-template-columns: 1fr;
+  }
+  .contact-enquiry__form > * {
+    grid-column: 1;
+  }
+}
+@media (max-width: 900px) {
+  .contact-enquiry__inner,
+  .contact-faq__inner {
+    grid-template-columns: 1fr;
+  }
+  .contact-enquiry__intro {
+    max-inline-size: none;
+  }
+  .contact-enquiry__form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .contact-enquiry__form > * {
+    grid-column: auto;
+  }
+  .contact-enquiry__form
+    > :is(
+      .contact-enquiry__form-heading,
+      .contact-field--message,
+      .contact-enquiry__submit,
+      .contact-enquiry__privacy,
+      .contact-enquiry__status
+    ) {
+    grid-column: 1 / -1;
+  }
+  .contact-faq__header {
+    display: grid;
+    grid-template-columns: 1fr minmax(160px, 0.6fr);
+    gap: 16px 24px;
+  }
+  .contact-faq__header > :is(p, h2) {
+    grid-column: 1;
+  }
+  .contact-faq__shoe {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    inline-size: 100%;
+    block-size: 180px;
+    margin: 0;
+  }
+}
+@media (max-width: 760px) {
+  .site-main > :is(.shop-home-hero, .shop-page-hero, .about-hero) {
+    margin-block: 20px;
+  }
+  .site-main > :is(.shop-home-hero, .shop-page-hero) {
+    block-size: auto;
+    grid-template-rows: auto auto;
+  }
+  .shop-home-hero > img,
+  .shop-page-hero > img {
+    block-size: auto;
+    aspect-ratio: 3 / 2;
+  }
+  .shop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .shop-toolbar label {
+    flex: 1 1 140px;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+  .footer-brand,
+  .footer-newsletter {
+    grid-column: 1 / -1;
+  }
+  .footer-container {
+    padding-inline: var(--site-gutter);
+  }
+  .personal-fitting__process {
+    grid-template-columns: 1fr;
+  }
+  html[dir="rtl"] .bulk-concierge__quantity {
+    padding: 24px 0;
+    border-inline-end: 0;
+  }
+  html[dir="rtl"] .bulk-concierge__content {
+    padding: 24px 0;
+  }
+  .contact-location__header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .site-main > .about-hero {
+    block-size: auto;
+    grid-template-rows: auto auto;
+  }
+  .about-hero__visual {
+    block-size: auto;
+    aspect-ratio: 3 / 2;
+  }
+  .about-hero__content-inner {
+    min-inline-size: 0;
+  }
+  .about-hero__content {
+    padding-inline: 0;
+  }
+}
+@media (max-width: 600px) {
+  .about-values__grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-enquiry__form {
+    grid-template-columns: 1fr;
+  }
+  .contact-enquiry__form > * {
+    grid-column: 1;
+  }
+  .contact-faq__header {
+    grid-template-columns: 1fr;
+  }
+  .contact-faq__shoe {
+    grid-column: 1;
+    grid-row: auto;
+    inline-size: min(100%, 260px);
+  }
+  .size-consultation__composition,
+  .personal-fitting__composition {
+    grid-template-columns: 1fr;
+  }
+  .size-consultation__image--measure,
+  .personal-fitting__image--detail {
+    grid-row: 2;
+  }
+  .size-consultation__converter,
+  .personal-fitting__process {
+    grid-row: 3;
+  }
+}
+@media (max-width: 480px) {
+  .header-shell {
+    padding-inline: var(--site-gutter);
+  }
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+  .shop-card__image {
+    aspect-ratio: 3 / 2;
+  }
+  .shop-card h3 {
+    min-height: 0;
+    font-size: 18px;
+  }
+  main section.shop-featured .shop-card h3 {
+    min-height: 0;
+    font-size: 14px;
+  }
+  .shop-card strong {
+    margin-block-start: 8px;
+  }
+  .shop-card__actions button[data-wishlist] {
+    min-block-size: 44px;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .size-consultation__converter {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 360px) {
+  .brand {
+    gap: 7px;
+  }
+  .brand-mark {
+    inline-size: 22px;
+    block-size: 22px;
+  }
+  .brand-name {
+    font-size: 16px;
+  }
+  .header-actions {
+    gap: 2px;
+  }
+  .header-icon-button,
+  .menu-toggle {
+    inline-size: 34px;
+    block-size: 34px;
+  }
+  .site-header .shop-header-cta {
+    padding-inline: 8px;
   }
 }

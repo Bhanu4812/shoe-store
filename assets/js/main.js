@@ -105,9 +105,11 @@
       button.setAttribute('aria-pressed', 'true');
       button.setAttribute('aria-label', `Remove ${product} from wishlist`);
     }
+    button.textContent = savedWishlist.has(product) ? '♥' : '♡';
     button.addEventListener('click', () => {
       const selected = button.getAttribute('aria-pressed') !== 'true';
       button.setAttribute('aria-pressed', String(selected));
+      button.textContent = selected ? '♥' : '♡';
       button.setAttribute('aria-label', `${selected ? 'Remove' : 'Add'} ${product} ${selected ? 'from' : 'to'} wishlist`);
       if (selected) savedWishlist.add(product); else savedWishlist.delete(product);
       try { localStorage.setItem('veloraWishlist', JSON.stringify([...savedWishlist])); } catch (_) { /* Storage may be unavailable in privacy mode. */ }

@@ -2,7 +2,8 @@
   "name": "velora-shoe-store",
   "private": true,
   "scripts": {
-    "test": "node tests/store.spec.cjs && node tests/hero.spec.cjs && node tests/layout.spec.cjs"
+    "test": "node tests/store.spec.cjs && node tests/hero.spec.cjs && node tests/layout.spec.cjs",
+    "test:alignment": "node tests/alignment.spec.cjs"
   },
   "devDependencies": {
     "playwright": "1.63.0"

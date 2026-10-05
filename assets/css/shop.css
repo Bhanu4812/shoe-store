@@ -144,7 +144,6 @@ select {
 .header-shell {
   grid-template-columns: auto 1fr auto;
   gap: 24px;
-  max-width: 1440px;
 }
 .brand-tagline {
   font-size: 10px;
@@ -377,9 +376,9 @@ select {
   font-size: 23px;
   cursor: pointer;
 }
-.shop-card__actions button[aria-pressed="true"] {
+.shop-card__actions button[data-wishlist][aria-pressed="true"] {
   color: var(--header-active);
-  background: var(--selection-background);
+  background: var(--header-surface);
 }
 .shop-help {
   background: var(--hero-surface);
@@ -826,16 +825,8 @@ body:has(.shop-dialog[open]) {
 }
 /* These first-screen layouts own their spacing rather than the legacy section scale. */
 body:not(.auth-page) main > :is(.shop-home-hero, .shop-page-hero, .about-hero) {
-  padding: 0 !important;
-}
-body:not(.auth-page) main > .shop-intro {
-  padding: 32px !important;
+  padding: 0;
 }
 main section:is(.shop-home-hero, .shop-page-hero, .about-hero, .shop-intro) h1 {
   line-height: 1.04;
-}
-@media (max-width: 760px) {
-  body:not(.auth-page) main > .shop-intro {
-    padding: 24px 20px !important;
-  }
 }

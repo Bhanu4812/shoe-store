@@ -98,6 +98,16 @@ const server = http.createServer((req, res) => {
           await page.locator("[data-menu-toggle]").click();
         }
       }
+      await page.goto(base + "/pages/New%20Arrivals.html");
+      const spotlight = page.locator('.section-arrival-spotlight');
+      await spotlight.scrollIntoViewIfNeeded();
+      await spotlight.locator('img').evaluate(img => img.decode());
+      assert.equal(await spotlight.evaluate(el => {
+        const content = el.querySelector('div').getBoundingClientRect();
+        const button = el.querySelector('a').getBoundingClientRect();
+        return Math.abs(content.x + content.width / 2 - button.x - button.width / 2) < 2;
+      }), true, `Editorial button centered at ${width}`);
+      await spotlight.screenshot({path: path.join(root, '.qa', `arrival-spotlight-${width}.png`)});
       await page.goto(base + "/pages/Collections.html");
       for (const image of await page.locator(".shop-card img").all()) {
         await image.scrollIntoViewIfNeeded();
@@ -126,6 +136,20 @@ const server = http.createServer((req, res) => {
       await page.keyboard.press("Escape");
     }
     await page.setViewportSize({ width: 390, height: 844 });
+    for (const [label, category, count] of [
+      ["All Shoes", null, 8],
+      ["Sneakers", "sneakers", 3],
+      ["Performance", "performance", 3],
+      ["Everyday", "everyday", 1],
+      ["Trail", "trail", 1],
+    ]) {
+      await page.goto(base + "/pages/New%20Arrivals.html");
+      await page.locator('.shop-categories').getByRole('link', {name: label, exact: true}).click();
+      assert.equal(new URL(page.url()).searchParams.get('category'), category);
+      assert.equal(new URL(page.url()).hash, '#products');
+      assert.equal(await page.locator('[data-shop-card]:visible').count(), count);
+      assert.equal(await page.locator('.shop-categories [aria-current="page"]').textContent(), label);
+    }
     await page.goto(
       base + "/pages/Collections.html?category=sneakers#products",
     );
@@ -173,9 +197,14 @@ const server = http.createServer((req, res) => {
     await page.locator("[data-shop-search]").fill("unknown shoe");
     assert.equal(await page.locator("[data-shop-empty]").isVisible(), true);
     await page.locator("[data-shop-search]").fill("");
-    await page.locator("[data-wishlist]").first().click();
+    const heart = page.locator("[data-wishlist]").first();
+    const heartBackground = await heart.evaluate(el => getComputedStyle(el).backgroundColor);
+    await heart.click();
+    assert.equal(await heart.textContent(), "♥");
+    assert.equal(await heart.evaluate(el => getComputedStyle(el).backgroundColor), heartBackground);
     await page.goto(base + "/pages/Collections.html?wishlist=1#products");
     assert.equal(await page.locator("[data-shop-card]:visible").count(), 1);
+    assert.equal(await page.locator('[data-shop-card]:visible [data-wishlist]').textContent(), "♥");
     await page.locator("[data-menu-toggle]").click();
     await page.locator(".mobile-rtl-button").click();
     assert.equal(await page.locator("html").getAttribute("dir"), "rtl");
@@ -189,7 +218,31 @@ const server = http.createServer((req, res) => {
     await page.locator("[data-menu-toggle]").click();
     await page.goto(base + "/pages/Collections.html");
     await page.locator('[data-shop-add="aero-runner-x1"]').click();
+    assert.equal(await page.locator('[data-shop-add="aero-runner-x1"]').textContent(), "Added to Cart");
+    assert.equal(await page.locator('.shop-notice').isVisible(), true);
     await page.locator('[data-shop-add="aeron-x"]').click();
+    assert.equal(await page.locator('.cart-count').textContent(), "2");
+    await page.waitForTimeout(3200);
+    assert.equal(await page.locator('[data-shop-add="aeron-x"]').textContent(), "Added to Cart");
+    await page.reload();
+    const cartToggle = page.locator('[data-shop-add="aeron-x"]');
+    assert.equal(await cartToggle.textContent(), "Added to Cart");
+    assert.equal(await cartToggle.getAttribute('aria-pressed'), "true");
+    await cartToggle.click();
+    assert.equal(await cartToggle.textContent(), "Add to Cart");
+    assert.equal(await page.locator('.cart-count').textContent(), "1");
+    assert.equal(await page.locator('.mobile-bag-button b').textContent(), "1");
+    await page.reload();
+    assert.equal(await cartToggle.textContent(), "Add to Cart");
+    await cartToggle.click();
+    assert.equal(await page.locator('.cart-count').textContent(), "2");
+    await page.locator('[data-shop-add="aeron-x"]').locator('..').getByRole('link', {name: 'View Product', exact: true}).click();
+    assert.equal(await page.locator('[data-detail-add]').textContent(), "Added to Cart");
+    await page.locator('[data-detail-add]').click();
+    assert.equal(await cartToggle.textContent(), "Add to Cart");
+    assert.equal(await page.locator('.cart-count').textContent(), "1");
+    await page.locator('[data-detail-add]').click();
+    await page.keyboard.press('Escape');
     await page.locator(".header-actions .bag-button").click();
     assert.equal(await page.locator(".shop-cart-total").count(), 2);
     assert.equal(await page.locator(".shop-cart-item").count(), 2);

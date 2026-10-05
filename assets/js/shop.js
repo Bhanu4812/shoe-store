@@ -36,6 +36,17 @@
       notice.hidden = true;
     }, 3000);
   };
+  const cartButtonSelector = "[data-shop-add],[data-detail-add],[data-quick-add]";
+  const buttonProductId = (button) =>
+    button.dataset.shopAdd || button.dataset.detailAdd ||
+    products.find((product) => product.name === button.dataset.product)?.id;
+  const syncCartButtons = () => {
+    document.querySelectorAll(cartButtonSelector).forEach((button) => {
+      const selected = cart.some((item) => item.id === buttonProductId(button));
+      button.textContent = selected ? "Added to Cart" : "Add to Cart";
+      button.setAttribute("aria-pressed", String(selected));
+    });
+  };
   const save = () => {
     try {
       localStorage.setItem("velora-cart", JSON.stringify(cart));
@@ -48,19 +59,16 @@
     document
       .querySelectorAll(".bag-button,.mobile-bag-button")
       .forEach((link) => link.setAttribute("aria-label", `Shopping cart, ${count} items`));
+    syncCartButtons();
   };
-  const add = (id) => {
+  const toggleCart = (id) => {
     const product = byId(id);
     if (!product) return;
     const item = cart.find((item) => item.id === id);
-    if (item && item.quantity >= 99) {
-      announce("Maximum quantity is 99 per product.");
-      return;
-    }
-    if (item) item.quantity++;
+    if (item) cart = cart.filter((entry) => entry.id !== id);
     else cart.push({ id, quantity: 1 });
     save();
-    announce(`${product.name} added to cart.`);
+    announce(`${product.name} ${item ? "removed from" : "added to"} cart.`);
   };
   const createDialog = (id) => {
     const dialog = document.createElement("dialog");
@@ -106,6 +114,7 @@
     }
     details.querySelector("[data-dialog-content]").innerHTML =
       `<div class="shop-detail"><img src="${product.image}" alt="${product.name}"><div><p class="shop-eyebrow">VELORA / ${product.category}</p><h2 id="detail-title">${product.name}</h2><strong>${money(product)}</strong><p>Explore this ${product.category} style from the VELORA collection. Contact our team for sizing, materials and availability.</p><button type="button" data-detail-add="${product.id}">Add to Cart</button><a href="contact.html">Ask about this pair →</a><a href="Collections.html?category=${product.category}#products">Browse similar shoes →</a></div></div>`;
+    syncCartButtons();
     open(details);
   };
   const renderBag = () => {
@@ -139,13 +148,9 @@
     );
   };
   document.addEventListener("click", (event) => {
-    const addButton = event.target.closest("[data-shop-add],[data-detail-add],[data-quick-add]");
+    const addButton = event.target.closest(cartButtonSelector);
     if (addButton) {
-      const id =
-        addButton.dataset.shopAdd ||
-        addButton.dataset.detailAdd ||
-        products.find((p) => p.name === addButton.dataset.product)?.id;
-      add(id);
+      toggleCart(buttonProductId(addButton));
       return;
     }
     const cartLink = event.target.closest('a[href="#cart"]');

@@ -1,114 +1,468 @@
 /* Logical layout overrides for the RTL header state */
-html[dir="rtl"] .brand { direction:ltr; }
-html[dir="rtl"] .brand-copy { direction:rtl; }
-html[dir="rtl"] .header-shell { direction:rtl; }
-html[dir="rtl"] .primary-nav,html[dir="rtl"] .header-actions { direction:rtl; }
-html[dir="rtl"] .login-button > span { transform:scaleX(-1); }
-html[dir="rtl"] { --underline-origin:right; }
-html[dir="rtl"] .newsletter-field button span { transform:scaleX(-1); }
-html[dir="rtl"] .design-process__sequence { direction:rtl; }
-html[dir="rtl"] .field-story__vertical { writing-mode:vertical-lr; }
-html[dir="rtl"] .hero-primary-action span { transform:scaleX(-1); }
-html[dir="rtl"] .hero-primary-action:hover span { transform:scaleX(-1) translateX(3px); }
-html[dir="rtl"] .collections-heading > a:hover span,html[dir="rtl"] .collection-card__content a:hover b { transform:scaleX(-1) translateX(3px); }
-html[dir="rtl"] .category-card__content b { transform:scaleX(-1); }
-html[dir="rtl"] .category-card > a:hover .category-card__content b { transform:scaleX(-1) translateX(4px); }
-html[dir="rtl"] .new-arrivals__view-all span { transform:scaleX(-1); }
-html[dir="rtl"] .new-arrivals__view-all:hover span { transform:scaleX(-1) translateX(3px); }
-html[dir="rtl"] .product-story__cta span { transform:scaleX(-1); }
-html[dir="rtl"] .product-story__cta:hover span { transform:scaleX(-1) translateX(4px); }
-@media (min-width:1024px) { html[dir="rtl"] .product-story__visual { grid-column:2; grid-row:1; } html[dir="rtl"] .product-story__content { grid-column:1; grid-row:1; } }
-html[dir="rtl"] .material-study__cta span { transform:scaleX(-1); }
-html[dir="rtl"] .material-study__cta:hover span { transform:scaleX(-1) translateX(3px); }
-html[dir="rtl"] .seasonal-campaign__image { transform:scaleX(-1); }
-html[dir="rtl"] .seasonal-campaign:hover .seasonal-campaign__image { transform:scaleX(-1) scale(1.012); }
-html[dir="rtl"] .seasonal-campaign__overlay { background:linear-gradient(270deg,rgba(18,18,16,.78) 0%,rgba(18,18,16,.51) 35%,rgba(18,18,16,.08) 68%); }
-html[dir="rtl"] .seasonal-campaign__content { margin-inline-start:max(20px,calc((100% - 1484px)/2)); }
-html[dir="rtl"] .seasonal-campaign__actions a span { transform:scaleX(-1); }
-html[dir="rtl"] .seasonal-campaign__actions a:hover span { transform:scaleX(-1) translate(3px,-1px); }
-html[dir="rtl"] .best-sellers__link span { transform:scaleX(-1); }
-html[dir="rtl"] .best-sellers__link:hover span { transform:scaleX(-1) translateX(3px); }
-html[dir="rtl"] .premium-newsletter__field input { padding:0 0 0 16px; }
-html[dir="rtl"] .premium-newsletter__field button { padding-inline:0 18px; }
-html[dir="rtl"] .premium-newsletter__field button span { transform:scaleX(-1); }
-html[dir="rtl"] .premium-newsletter__field button:hover span { transform:scaleX(-1) translateX(3px); }
-@media (max-width:639px) { html[dir="rtl"] .premium-newsletter__field input,html[dir="rtl"] .premium-newsletter__field button { padding-inline:18px; } }
-html[dir="rtl"] .performance-hero__actions a span { transform:scaleX(-1); }
-html[dir="rtl"] .performance-hero__actions a:hover span { transform:scaleX(-1) translate(3px,-1px); }
-html[dir="rtl"] .performance-hero__product figcaption { direction:rtl; }
-html[dir="rtl"] .performance-hero__vertical { writing-mode:vertical-lr; }
-html[dir="rtl"] .collection-navigator__tabs button b,html[dir="rtl"] .collection-navigator__preview-meta a span { transform:scaleX(-1); }
-html[dir="rtl"] .collection-navigator__tabs button:is(:hover,:focus-visible,[aria-selected="true"]) b { transform:scaleX(-1) translateX(0); }
-html[dir="rtl"] .collection-navigator__preview-meta a:hover span { transform:scaleX(-1) translate(3px,-2px); }
-html[dir="rtl"] .performance-tech__axis { writing-mode:vertical-lr; }
-html[dir="rtl"] .performance-tech__product figcaption { direction:rtl; }
-html[dir="rtl"] .tech-callout--start::after { transform:rotate(7deg); }
-html[dir="rtl"] .tech-callout--end::after { transform:rotate(-7deg); }
-html[dir="rtl"] .limited-drop__inventory i { inset:0 0 0 auto; }
-html[dir="rtl"] .limited-drop__release > a span { transform:scaleX(-1); }
-html[dir="rtl"] .limited-drop__release > a:hover span { transform:scaleX(-1) translate(3px,-2px); }
-html[dir="rtl"] .movement-community__note { writing-mode:vertical-lr; }
-html[dir="rtl"] .movement-community__footer a span { transform:scaleX(-1); }
-html[dir="rtl"] .movement-community__footer a:hover span { transform:scaleX(-1) translate(3px,-2px); }
-html[dir="rtl"] .new-drop-rail__controls button span,html[dir="rtl"] .drop-product__details > a span { transform:scaleX(-1); }
-html[dir="rtl"] .drop-product__details > a:hover { transform:translate(-3px,-2px); }
-html[dir="rtl"] .craft-process__stages { direction:rtl; }
-html[dir="rtl"] .craft-process__study p { text-align:start; }
-html[dir="rtl"] .closing-cta__motion { transform:scaleX(-1) rotate(-8deg); }
-html[dir="rtl"] .closing-cta__actions a span { transform:scaleX(-1); }
-html[dir="rtl"] .closing-cta__actions a:hover span { transform:scaleX(-1) translate(3px,-2px); }
-html[dir="rtl"] .collections-hero__campaign img { transform:scaleX(-1); }
-html[dir="rtl"] .collections-hero__campaign:hover img { transform:scaleX(-1) scale(1.008); }
-html[dir="rtl"] .collection-index__row:is(:hover,:focus-visible) h3 { transform:translateX(-7px); }
-html[dir="rtl"] .collection-index__arrow { transform:scaleX(-1); }
-html[dir="rtl"] .collection-index__row:is(:hover,:focus-visible) .collection-index__arrow { transform:scaleX(-1) translate(4px,-4px); }
-@media (max-width:767px) { html[dir="rtl"] .collection-index__row:is(:hover,:focus-visible) h3 { transform:translateX(-4px); } }
-html[dir="rtl"] .everyday-feature__lifestyle { grid-column:4/13; }
-html[dir="rtl"] .everyday-feature__detail { grid-column:1/5; box-shadow:18px 20px 45px rgba(41,35,27,.12); }
-html[dir="rtl"] .everyday-feature__copy { grid-column:7/12; }
-html[dir="rtl"] .everyday-feature__copy a span { transform:scaleX(-1); }
-html[dir="rtl"] .everyday-feature__copy a:is(:hover,:focus-visible) span { transform:scaleX(-1) translate(4px,-4px); }
-@media (max-width:1023px) { html[dir="rtl"] .everyday-feature__lifestyle { grid-column:3/13; } html[dir="rtl"] .everyday-feature__detail { grid-column:1/5; } html[dir="rtl"] .everyday-feature__copy { grid-column:6/13; } }
-@media (max-width:767px) { html[dir="rtl"] .everyday-feature__lifestyle { grid-column:1/-1; } html[dir="rtl"] .everyday-feature__detail { grid-column:1/4; box-shadow:12px 14px 30px rgba(41,35,27,.15); } html[dir="rtl"] .everyday-feature__copy { grid-column:3/7; } }
-@media (max-width:399px) { html[dir="rtl"] .everyday-feature__detail { grid-column:1/5; } html[dir="rtl"] .everyday-feature__copy { grid-column:2/7; } }
-html[dir="rtl"] .kids-feature__copy { grid-column:8/13; }
-html[dir="rtl"] .kids-feature__lifestyle { grid-column:1/9; }
-html[dir="rtl"] .kids-feature__detail { grid-column:8/11; box-shadow:-18px 20px 46px rgba(30,48,57,.16); }
-html[dir="rtl"] .kids-feature__count { grid-column:11/13; }
-html[dir="rtl"] .kids-feature__copy a span { transform:scaleX(-1); }
-html[dir="rtl"] .kids-feature__copy a:is(:hover,:focus-visible) span { transform:scaleX(-1) translate(4px,-4px); }
-@media (max-width:1023px) { html[dir="rtl"] .kids-feature__copy { grid-column:7/13; } html[dir="rtl"] .kids-feature__lifestyle { grid-column:1/9; } html[dir="rtl"] .kids-feature__detail { grid-column:7/11; } html[dir="rtl"] .kids-feature__count { grid-column:11/13; } }
-@media (max-width:767px) { html[dir="rtl"] .kids-feature__copy { grid-column:1/-1; } html[dir="rtl"] .kids-feature__lifestyle { grid-column:1/-1; } html[dir="rtl"] .kids-feature__detail { grid-column:4/7; box-shadow:-12px 15px 32px rgba(30,48,57,.18); } html[dir="rtl"] .kids-feature__count { grid-column:1/4; justify-self:start; } }
-@media (max-width:399px) { html[dir="rtl"] .kids-feature__detail { grid-column:3/7; } html[dir="rtl"] .kids-feature__count { grid-column:1/4; } }
-html[dir="rtl"] .curated-product--featured { grid-column:7/13; }
-html[dir="rtl"] .curated-product--formal { grid-column:4/7; }
-html[dir="rtl"] .curated-product--terrain { grid-column:1/4; }
-html[dir="rtl"] .curated-product__view b { transform:scaleX(-1); }
-html[dir="rtl"] .curated-product__view:is(:hover,:focus-visible) b { transform:scaleX(-1) translate(4px,-4px); }
-@media (max-width:1023px) { html[dir="rtl"] .curated-product--featured { grid-column:7/13; } html[dir="rtl"] .curated-product--formal { grid-column:4/7; } html[dir="rtl"] .curated-product--terrain { grid-column:1/4; } }
-@media (max-width:767px) { html[dir="rtl"] .curated-product--featured { inline-size:100%; } html[dir="rtl"] .curated-product--formal { inline-size:78%; align-self:flex-start; } html[dir="rtl"] .curated-product--terrain { inline-size:72%; align-self:flex-end; } }
-@media (max-width:399px) { html[dir="rtl"] .curated-product--formal,html[dir="rtl"] .curated-product--terrain { inline-size:88%; } }
-html[dir="rtl"] .collection-finder__backdrop { transform:scaleX(-1) rotate(-4deg); }
-html[dir="rtl"] .collection-finder__actions a span { transform:scaleX(-1); }
-html[dir="rtl"] .collection-finder__actions a:is(:hover,:focus-visible) span { transform:scaleX(-1) translate(3px,-3px); }
-html[dir="rtl"] .services-hero h1 > span:last-child { margin-inline-start:clamp(55px,9vw,142px); }
-html[dir="rtl"] .services-hero__routes { transform:scaleX(-1); }
-html[dir="rtl"] .services-hero__actions a span { transform:scaleX(-1); }
-html[dir="rtl"] .services-hero__actions a:is(:hover,:focus-visible) span { transform:scaleX(-1) translate(3px,-3px); }
-@media (max-width:767px) { html[dir="rtl"] .services-hero h1 > span:last-child { margin-inline-start:clamp(20px,8vw,48px); } }
-html[dir="rtl"] .fitting-experience__study { transform:scaleX(-1); }
-html[dir="rtl"] .fitting-path__track span { transform-origin:right center; }
-html[dir="rtl"] .fitting-path__marker { transform:translate(50%,-5px); }
-html[dir="rtl"] .fitting-experience__footer a span { transform:scaleX(-1); }
-html[dir="rtl"] .fitting-experience__footer a:is(:hover,:focus-visible) span { transform:scaleX(-1) translate(4px,-4px); }
-@media (max-width:639px) { html[dir="rtl"] .fitting-path__track { inset-inline-start:5px; inset-inline-end:auto; } html[dir="rtl"] .fitting-path__track span { transform-origin:center top; } html[dir="rtl"] .fitting-path li { padding-inline-start:42px; padding-inline-end:0; } html[dir="rtl"] .fitting-path__marker { inset-inline-start:5px; inset-inline-end:auto; transform:translate(50%,0); } }
-html[dir="rtl"] .bulk-concierge__backdrop { transform:scaleX(-1) rotate(-5deg); }
-html[dir="rtl"] .bulk-concierge__quantity { padding-inline:0 clamp(30px,6vw,90px); border-inline-end:0; border-inline-start:1px solid var(--bulk-rule); }
-html[dir="rtl"] .bulk-concierge__quantity::after { transform-origin:right center; }
-html[dir="rtl"] .bulk-concierge__content { padding-inline:clamp(48px,8vw,125px) 0; }
-html[dir="rtl"] .bulk-concierge__cta span { transform:scaleX(-1); }
-html[dir="rtl"] .bulk-concierge__cta:is(:hover,:focus-visible) span { transform:scaleX(-1) translate(4px,-4px); }
-@media (max-width:900px) { html[dir="rtl"] .bulk-concierge__quantity { padding-inline:35px; } html[dir="rtl"] .bulk-concierge__content { padding-inline:45px 0; } }
-@media (max-width:767px) { html[dir="rtl"] .bulk-concierge__quantity { padding:75px 0 88px; border-inline-start:0; } html[dir="rtl"] .bulk-concierge__content { padding:78px 0 86px; } }
-html[dir="rtl"] .services-marquee__viewport--solid .services-marquee__track { animation-name:services-marquee-reverse; }
-html[dir="rtl"] .services-marquee__viewport--outline .services-marquee__track { animation-name:services-marquee-forward; }
+html[dir="rtl"] .brand {
+  direction: ltr;
+}
+html[dir="rtl"] .brand-copy {
+  direction: rtl;
+}
+html[dir="rtl"] .header-shell {
+  direction: rtl;
+}
+html[dir="rtl"] .primary-nav,
+html[dir="rtl"] .header-actions {
+  direction: rtl;
+}
+html[dir="rtl"] .login-button > span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] {
+  --underline-origin: right;
+}
+html[dir="rtl"] .newsletter-field button span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .design-process__sequence {
+  direction: rtl;
+}
+html[dir="rtl"] .field-story__vertical {
+  writing-mode: vertical-lr;
+}
+html[dir="rtl"] .hero-primary-action span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .hero-primary-action:hover span {
+  transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .collections-heading > a:hover span,
+html[dir="rtl"] .collection-card__content a:hover b {
+  transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .category-card__content b {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .category-card > a:hover .category-card__content b {
+  transform: scaleX(-1) translateX(4px);
+}
+html[dir="rtl"] .new-arrivals__view-all span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .new-arrivals__view-all:hover span {
+  transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .product-story__cta span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .product-story__cta:hover span {
+  transform: scaleX(-1) translateX(4px);
+}
+@media (min-width: 1024px) {
+  html[dir="rtl"] .product-story__visual {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  html[dir="rtl"] .product-story__content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+html[dir="rtl"] .material-study__cta span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .material-study__cta:hover span {
+  transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .seasonal-campaign__image {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .seasonal-campaign:hover .seasonal-campaign__image {
+  transform: scaleX(-1) scale(1.012);
+}
+html[dir="rtl"] .seasonal-campaign__overlay {
+  background: linear-gradient(
+    270deg,
+    rgba(18, 18, 16, 0.78) 0%,
+    rgba(18, 18, 16, 0.51) 35%,
+    rgba(18, 18, 16, 0.08) 68%
+  );
+}
+html[dir="rtl"] .seasonal-campaign__content {
+  margin-inline-start: max(20px, calc((100% - 1484px) / 2));
+}
+html[dir="rtl"] .seasonal-campaign__actions a span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .seasonal-campaign__actions a:hover span {
+  transform: scaleX(-1) translate(3px, -1px);
+}
+html[dir="rtl"] .best-sellers__link span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .best-sellers__link:hover span {
+  transform: scaleX(-1) translateX(3px);
+}
+html[dir="rtl"] .premium-newsletter__field input {
+  padding: 0 0 0 16px;
+}
+html[dir="rtl"] .premium-newsletter__field button {
+  padding-inline: 0 18px;
+}
+html[dir="rtl"] .premium-newsletter__field button span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .premium-newsletter__field button:hover span {
+  transform: scaleX(-1) translateX(3px);
+}
+@media (max-width: 639px) {
+  html[dir="rtl"] .premium-newsletter__field input,
+  html[dir="rtl"] .premium-newsletter__field button {
+    padding-inline: 18px;
+  }
+}
+html[dir="rtl"] .performance-hero__actions a span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .performance-hero__actions a:hover span {
+  transform: scaleX(-1) translate(3px, -1px);
+}
+html[dir="rtl"] .performance-hero__product figcaption {
+  direction: rtl;
+}
+html[dir="rtl"] .performance-hero__vertical {
+  writing-mode: vertical-lr;
+}
+html[dir="rtl"] .collection-navigator__tabs button b,
+html[dir="rtl"] .collection-navigator__preview-meta a span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"]
+  .collection-navigator__tabs
+  button:is(:hover, :focus-visible, [aria-selected="true"])
+  b {
+  transform: scaleX(-1) translateX(0);
+}
+html[dir="rtl"] .collection-navigator__preview-meta a:hover span {
+  transform: scaleX(-1) translate(3px, -2px);
+}
+html[dir="rtl"] .performance-tech__axis {
+  writing-mode: vertical-lr;
+}
+html[dir="rtl"] .performance-tech__product figcaption {
+  direction: rtl;
+}
+html[dir="rtl"] .tech-callout--start::after {
+  transform: rotate(7deg);
+}
+html[dir="rtl"] .tech-callout--end::after {
+  transform: rotate(-7deg);
+}
+html[dir="rtl"] .limited-drop__inventory i {
+  inset: 0 0 0 auto;
+}
+html[dir="rtl"] .limited-drop__release > a span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .limited-drop__release > a:hover span {
+  transform: scaleX(-1) translate(3px, -2px);
+}
+html[dir="rtl"] .movement-community__note {
+  writing-mode: vertical-lr;
+}
+html[dir="rtl"] .movement-community__footer a span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .movement-community__footer a:hover span {
+  transform: scaleX(-1) translate(3px, -2px);
+}
+html[dir="rtl"] .new-drop-rail__controls button span,
+html[dir="rtl"] .drop-product__details > a span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .drop-product__details > a:hover {
+  transform: translate(-3px, -2px);
+}
+html[dir="rtl"] .craft-process__stages {
+  direction: rtl;
+}
+html[dir="rtl"] .craft-process__study p {
+  text-align: start;
+}
+html[dir="rtl"] .closing-cta__motion {
+  transform: scaleX(-1) rotate(-8deg);
+}
+html[dir="rtl"] .closing-cta__actions a span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .closing-cta__actions a:hover span {
+  transform: scaleX(-1) translate(3px, -2px);
+}
+html[dir="rtl"] .collections-hero__campaign img {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .collections-hero__campaign:hover img {
+  transform: scaleX(-1) scale(1.008);
+}
+html[dir="rtl"] .collection-index__row:is(:hover, :focus-visible) h3 {
+  transform: translateX(-7px);
+}
+html[dir="rtl"] .collection-index__arrow {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .collection-index__row:is(:hover, :focus-visible) .collection-index__arrow {
+  transform: scaleX(-1) translate(4px, -4px);
+}
+@media (max-width: 767px) {
+  html[dir="rtl"] .collection-index__row:is(:hover, :focus-visible) h3 {
+    transform: translateX(-4px);
+  }
+}
+html[dir="rtl"] .everyday-feature__lifestyle {
+  grid-column: 4/13;
+}
+html[dir="rtl"] .everyday-feature__detail {
+  grid-column: 1/5;
+  box-shadow: 18px 20px 45px rgba(41, 35, 27, 0.12);
+}
+html[dir="rtl"] .everyday-feature__copy {
+  grid-column: 7/12;
+}
+html[dir="rtl"] .everyday-feature__copy a span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .everyday-feature__copy a:is(:hover, :focus-visible) span {
+  transform: scaleX(-1) translate(4px, -4px);
+}
+@media (max-width: 1023px) {
+  html[dir="rtl"] .everyday-feature__lifestyle {
+    grid-column: 3/13;
+  }
+  html[dir="rtl"] .everyday-feature__detail {
+    grid-column: 1/5;
+  }
+  html[dir="rtl"] .everyday-feature__copy {
+    grid-column: 6/13;
+  }
+}
+@media (max-width: 767px) {
+  html[dir="rtl"] .everyday-feature__lifestyle {
+    grid-column: 1/-1;
+  }
+  html[dir="rtl"] .everyday-feature__detail {
+    grid-column: 1/4;
+    box-shadow: 12px 14px 30px rgba(41, 35, 27, 0.15);
+  }
+  html[dir="rtl"] .everyday-feature__copy {
+    grid-column: 3/7;
+  }
+}
+@media (max-width: 399px) {
+  html[dir="rtl"] .everyday-feature__detail {
+    grid-column: 1/5;
+  }
+  html[dir="rtl"] .everyday-feature__copy {
+    grid-column: 2/7;
+  }
+}
+html[dir="rtl"] .kids-feature__copy {
+  grid-column: 8/13;
+}
+html[dir="rtl"] .kids-feature__lifestyle {
+  grid-column: 1/9;
+}
+html[dir="rtl"] .kids-feature__detail {
+  grid-column: 8/11;
+  box-shadow: -18px 20px 46px rgba(30, 48, 57, 0.16);
+}
+html[dir="rtl"] .kids-feature__count {
+  grid-column: 11/13;
+}
+html[dir="rtl"] .kids-feature__copy a span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .kids-feature__copy a:is(:hover, :focus-visible) span {
+  transform: scaleX(-1) translate(4px, -4px);
+}
+@media (max-width: 1023px) {
+  html[dir="rtl"] .kids-feature__copy {
+    grid-column: 7/13;
+  }
+  html[dir="rtl"] .kids-feature__lifestyle {
+    grid-column: 1/9;
+  }
+  html[dir="rtl"] .kids-feature__detail {
+    grid-column: 7/11;
+  }
+  html[dir="rtl"] .kids-feature__count {
+    grid-column: 11/13;
+  }
+}
+@media (max-width: 767px) {
+  html[dir="rtl"] .kids-feature__copy {
+    grid-column: 1/-1;
+  }
+  html[dir="rtl"] .kids-feature__lifestyle {
+    grid-column: 1/-1;
+  }
+  html[dir="rtl"] .kids-feature__detail {
+    grid-column: 4/7;
+    box-shadow: -12px 15px 32px rgba(30, 48, 57, 0.18);
+  }
+  html[dir="rtl"] .kids-feature__count {
+    grid-column: 1/4;
+    justify-self: start;
+  }
+}
+@media (max-width: 399px) {
+  html[dir="rtl"] .kids-feature__detail {
+    grid-column: 3/7;
+  }
+  html[dir="rtl"] .kids-feature__count {
+    grid-column: 1/4;
+  }
+}
+html[dir="rtl"] .curated-product--featured {
+  grid-column: 7/13;
+}
+html[dir="rtl"] .curated-product--formal {
+  grid-column: 4/7;
+}
+html[dir="rtl"] .curated-product--terrain {
+  grid-column: 1/4;
+}
+html[dir="rtl"] .curated-product__view b {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .curated-product__view:is(:hover, :focus-visible) b {
+  transform: scaleX(-1) translate(4px, -4px);
+}
+@media (max-width: 1023px) {
+  html[dir="rtl"] .curated-product--featured {
+    grid-column: 7/13;
+  }
+  html[dir="rtl"] .curated-product--formal {
+    grid-column: 4/7;
+  }
+  html[dir="rtl"] .curated-product--terrain {
+    grid-column: 1/4;
+  }
+}
+@media (max-width: 767px) {
+  html[dir="rtl"] .curated-product--featured {
+    inline-size: 100%;
+  }
+  html[dir="rtl"] .curated-product--formal {
+    inline-size: 78%;
+    align-self: flex-start;
+  }
+  html[dir="rtl"] .curated-product--terrain {
+    inline-size: 72%;
+    align-self: flex-end;
+  }
+}
+@media (max-width: 399px) {
+  html[dir="rtl"] .curated-product--formal,
+  html[dir="rtl"] .curated-product--terrain {
+    inline-size: 88%;
+  }
+}
+html[dir="rtl"] .collection-finder__backdrop {
+  transform: scaleX(-1) rotate(-4deg);
+}
+html[dir="rtl"] .collection-finder__actions a span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .collection-finder__actions a:is(:hover, :focus-visible) span {
+  transform: scaleX(-1) translate(3px, -3px);
+}
+html[dir="rtl"] .services-hero h1 > span:last-child {
+  margin-inline-start: clamp(55px, 9vw, 142px);
+}
+html[dir="rtl"] .services-hero__routes {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .services-hero__actions a span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .services-hero__actions a:is(:hover, :focus-visible) span {
+  transform: scaleX(-1) translate(3px, -3px);
+}
+@media (max-width: 767px) {
+  html[dir="rtl"] .services-hero h1 > span:last-child {
+    margin-inline-start: clamp(20px, 8vw, 48px);
+  }
+}
+html[dir="rtl"] .fitting-experience__study {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .fitting-path__track span {
+  transform-origin: right center;
+}
+html[dir="rtl"] .fitting-path__marker {
+  transform: translate(50%, -5px);
+}
+html[dir="rtl"] .fitting-experience__footer a span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .fitting-experience__footer a:is(:hover, :focus-visible) span {
+  transform: scaleX(-1) translate(4px, -4px);
+}
+@media (max-width: 639px) {
+  html[dir="rtl"] .fitting-path__track {
+    inset-inline-start: 5px;
+    inset-inline-end: auto;
+  }
+  html[dir="rtl"] .fitting-path__track span {
+    transform-origin: center top;
+  }
+  html[dir="rtl"] .fitting-path li {
+    padding-inline-start: 42px;
+    padding-inline-end: 0;
+  }
+  html[dir="rtl"] .fitting-path__marker {
+    inset-inline-start: 5px;
+    inset-inline-end: auto;
+    transform: translate(50%, 0);
+  }
+}
+html[dir="rtl"] .bulk-concierge__backdrop {
+  transform: scaleX(-1) rotate(-5deg);
+}
+html[dir="rtl"] .bulk-concierge__quantity {
+  padding-inline: 0 clamp(30px, 6vw, 90px);
+  border-inline-end: 0;
+  border-inline-start: 1px solid var(--bulk-rule);
+}
+html[dir="rtl"] .bulk-concierge__quantity::after {
+  transform-origin: right center;
+}
+html[dir="rtl"] .bulk-concierge__content {
+  padding-inline: clamp(48px, 8vw, 125px) 0;
+}
+html[dir="rtl"] .bulk-concierge__cta span {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .bulk-concierge__cta:is(:hover, :focus-visible) span {
+  transform: scaleX(-1) translate(4px, -4px);
+}
+@media (max-width: 900px) {
+  html[dir="rtl"] .bulk-concierge__quantity {
+    padding-inline: 35px;
+  }
+  html[dir="rtl"] .bulk-concierge__content {
+    padding-inline: 45px 0;
+  }
+}
+@media (max-width: 767px) {
+  html[dir="rtl"] .bulk-concierge__quantity {
+    padding: 75px 0 88px;
+    border-inline-start: 0;
+  }
+  html[dir="rtl"] .bulk-concierge__content {
+    padding: 78px 0 86px;
+  }
+}
+html[dir="rtl"] .services-marquee__viewport--solid .services-marquee__track {
+  animation-name: services-marquee-reverse;
+}
+html[dir="rtl"] .services-marquee__viewport--outline .services-marquee__track {
+  animation-name: services-marquee-forward;
+}

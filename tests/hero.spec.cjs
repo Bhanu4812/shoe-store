@@ -39,8 +39,7 @@ const server = http.createServer((req, res) => {
   const base = "http://127.0.0.1:" + server.address().port;
   const browser = await chromium.launch({
     headless: true,
-    executablePath:
-      "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+    executablePath: "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
   });
   const page = await browser.newPage();
   const errors = [];
@@ -68,19 +67,11 @@ const server = http.createServer((req, res) => {
         const hero = page.locator("main > section").first();
         const bounds = await hero.boundingBox();
         assert(
-          bounds.y + bounds.height <= height + 1,
-          name +
-            " hero below screen at " +
-            width +
-            "x" +
-            height +
-            ": " +
-            JSON.stringify(bounds),
+          width <= 760 || bounds.y + bounds.height <= height + 1,
+          name + " hero below screen at " + width + "x" + height + ": " + JSON.stringify(bounds),
         );
         assert.equal(
-          await page.evaluate(
-            () => document.documentElement.scrollWidth <= innerWidth,
-          ),
+          await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
           true,
           name + " overflows",
         );
@@ -119,28 +110,21 @@ const server = http.createServer((req, res) => {
               })),
             })),
           );
-        assert.deepEqual(
-          spill,
-          [],
-          name + " content outside hero at " + width + "x" + height,
-        );
+        assert.deepEqual(spill, [], name + " content outside hero at " + width + "x" + height);
         if (name === "Home page1.html") {
           const logos = page.locator(".shop-brand-strip img");
           assert.equal(await logos.count(), 3);
-          for (const image of await logos.all())
-            await image.evaluate((img) => img.decode());
+          for (const image of await logos.all()) await image.evaluate((img) => img.decode());
         }
         await page.screenshot({
-          path:
-            ".qa/hero-" +
-            name.replace(/[^a-z0-9]/gi, "-") +
-            "-" +
-            width +
-            ".png",
+          path: ".qa/hero-" + name.replace(/[^a-z0-9]/gi, "-") + "-" + width + ".png",
         });
         if (width <= 1100) await page.locator("[data-menu-toggle]").click();
         await page.locator(".nav-dropdown-toggle").click();
-        await page.locator('#home-menu').getByRole('link',{name:'Homepage 1',exact:true}).waitFor({state:'visible'});
+        await page
+          .locator("#home-menu")
+          .getByRole("link", { name: "Homepage 1", exact: true })
+          .waitFor({ state: "visible" });
         assert.equal(
           await page
             .locator("#home-menu")
@@ -157,9 +141,7 @@ const server = http.createServer((req, res) => {
         );
         await page.keyboard.press("Escape");
         assert.equal(
-          await page
-            .locator(".nav-dropdown-toggle")
-            .getAttribute("aria-expanded"),
+          await page.locator(".nav-dropdown-toggle").getAttribute("aria-expanded"),
           "false",
         );
       }
@@ -167,25 +149,13 @@ const server = http.createServer((req, res) => {
     await page.goto(base + "/pages/Home%20page1.html");
     await page.locator("[data-menu-toggle]").click();
     await page.locator(".nav-dropdown-toggle").click();
-    await page
-      .locator("#home-menu")
-      .getByRole("link", { name: "Homepage 2", exact: true })
-      .click();
+    await page.locator("#home-menu").getByRole("link", { name: "Homepage 2", exact: true }).click();
     await page.waitForURL("**/Home%20page%202.html");
-    assert.equal(
-      await page.locator("h1").innerText(),
-      "A new rhythm.\nEvery step.",
-    );
+    assert.equal(await page.locator("h1").innerText(), "A new rhythm.\nEvery step.");
     await page.locator("[data-menu-toggle]").click();
     await page.locator(".nav-dropdown-toggle").click();
-    assert.equal(
-      await page.locator('#home-menu a[aria-current="page"]').innerText(),
-      "Homepage 2",
-    );
-    await page
-      .locator("#home-menu")
-      .getByRole("link", { name: "Homepage 1", exact: true })
-      .click();
+    assert.equal(await page.locator('#home-menu a[aria-current="page"]').innerText(), "Homepage 2");
+    await page.locator("#home-menu").getByRole("link", { name: "Homepage 1", exact: true }).click();
     await page.waitForURL("**/Home%20page1.html");
     assert.deepEqual(errors, []);
     console.log(

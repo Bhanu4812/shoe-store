@@ -19,12 +19,12 @@
     <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 64x64" />
     <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png" />
     <link rel="stylesheet" href="../assets/css/layout-polish.css" />
-  <link rel="stylesheet" href="../assets/css/section-designs.css">
-</head>
+    <link rel="stylesheet" href="../assets/css/section-designs.css" />
+  </head>
   <body>
     <!-- Premium site header -->
     <header class="site-header" data-site-header>
-      <div class="header-shell">
+      <div class="header-shell site-container">
         <a class="brand" href="Home page1.html" aria-label="VELORA home">
           <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
             <path
@@ -63,11 +63,7 @@
           </span>
         </a>
 
-        <nav
-          class="primary-nav"
-          aria-label="Primary navigation"
-          id="primary-navigation"
-        >
+        <nav class="primary-nav" aria-label="Primary navigation" id="primary-navigation">
           <ul class="nav-list">
             <li class="nav-item nav-item--has-menu">
               <button
@@ -88,14 +84,10 @@
               </button>
               <ul class="home-menu" id="home-menu" aria-label="Home pages">
                 <li>
-                  <a class="home-menu__link" href="Home page1.html"
-                    >Homepage 1</a
-                  >
+                  <a class="home-menu__link" href="Home page1.html">Homepage 1</a>
                 </li>
                 <li>
-                  <a class="home-menu__link" href="Home page 2.html"
-                    >Homepage 2</a
-                  >
+                  <a class="home-menu__link" href="Home page 2.html">Homepage 2</a>
                 </li>
               </ul>
             </li>
@@ -123,11 +115,7 @@
                 data-theme-toggle
                 aria-label="Switch to dark mode"
               >
-                <svg
-                  class="icon icon--moon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
+                <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z"
                     fill="none"
@@ -137,11 +125,7 @@
                     stroke-width="1.7"
                   />
                 </svg>
-                <svg
-                  class="icon icon--sun"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
+                <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true">
                   <circle
                     cx="12"
                     cy="12"
@@ -208,13 +192,6 @@
                 </span>
               </a>
             </div>
-            <a
-              class="login-button shop-header-cta"
-              href="Collections.html#products"
-            >
-              Shop Shoes
-              <span aria-hidden="true">→</span>
-            </a>
           </div>
         </nav>
 
@@ -279,11 +256,7 @@
             </svg>
             <span class="wishlist-count" aria-hidden="true">0</span>
           </a>
-          <a
-            class="header-icon-button bag-button"
-            href="#cart"
-            aria-label="Shopping cart, 0 items"
-          >
+          <a class="header-icon-button bag-button" href="#cart" aria-label="Shopping cart, 0 items">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M5 8.5h14l-1 12H6l-1-12ZM9 9V6.7a3 3 0 0 1 6 0V9"
@@ -296,10 +269,7 @@
             </svg>
             <span class="cart-count" aria-hidden="true">0</span>
           </a>
-          <a
-            class="login-button shop-header-cta"
-            href="Collections.html#products"
-          >
+          <a class="login-button shop-header-cta" href="Collections.html#products">
             Shop Shoes
             <span aria-hidden="true">→</span>
           </a>
@@ -318,22 +288,21 @@
       </div>
     </header>
 
-    <main>
+    <main class="site-main">
       <!-- Contact | Concierge hero -->
       <section class="shop-page-hero" aria-labelledby="contact-hero-title">
         <div>
           <p class="shop-eyebrow">VELORA / Contact Us</p>
           <h1 id="contact-hero-title">Let?s create something exceptional.</h1>
           <p>
-            For inquiries about our collections, orders, or custom requests, our
-            team is here to assist you with a personal touch.
+            For inquiries about our collections, orders, or custom requests, our team is here to
+            assist you with a personal touch.
           </p>
           <div class="shop-hero-actions">
-            <a class="shop-primary" href="mailto:concierge@velora.com"
-              >Start a Conversation &#8594;</a
-            ><a class="shop-secondary" href="#store-location"
-              >Visit the Store</a
-            >
+            <a class="shop-primary" href="mailto:concierge@velora.com">
+              Start a Conversation &#8594;
+            </a>
+            <a class="shop-secondary" href="#store-location">Visit the Store</a>
           </div>
         </div>
         <img
@@ -346,11 +315,7 @@
       </section>
 
       <!-- Contact | Concierge enquiry form -->
-      <section
-        class="contact-enquiry"
-        id="contact-form"
-        aria-labelledby="contact-enquiry-title"
-      >
+      <section class="contact-enquiry" id="contact-form" aria-labelledby="contact-enquiry-title">
         <div class="contact-enquiry__inner">
           <header class="contact-enquiry__intro">
             <p>Contact studio</p>
@@ -359,14 +324,8 @@
               <br />
               you need.
             </h2>
-            <span
-              >Share a few details and we'll guide your enquiry to the right
-              place.</span
-            >
-            <div
-              class="contact-enquiry__details"
-              aria-label="VELORA contact details"
-            >
+            <span>Share a few details and we'll guide your enquiry to the right place.</span>
+            <div class="contact-enquiry__details" aria-label="VELORA contact details">
               <div>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <rect x="3" y="5" width="18" height="14" rx="1.5" />
@@ -400,10 +359,7 @@
             </div>
             <div class="contact-enquiry__note">
               <strong>Personal support</strong>
-              <p>
-                Every enquiry is reviewed and directed to the most relevant
-                VELORA team.
-              </p>
+              <p>Every enquiry is reviewed and directed to the most relevant VELORA team.</p>
             </div>
           </header>
 
@@ -428,17 +384,14 @@
               </label>
               <input
                 id="contact-name"
+                placeholder="Your full name"
                 name="name"
                 type="text"
                 autocomplete="name"
                 required
                 aria-describedby="contact-name-error"
               />
-              <p
-                class="contact-field__error"
-                id="contact-name-error"
-                aria-live="polite"
-              ></p>
+              <p class="contact-field__error" id="contact-name-error" aria-live="polite"></p>
             </div>
 
             <div class="contact-field">
@@ -448,6 +401,7 @@
               </label>
               <input
                 id="contact-email"
+                placeholder="you@example.com"
                 name="email"
                 type="email"
                 inputmode="email"
@@ -455,11 +409,7 @@
                 required
                 aria-describedby="contact-email-error"
               />
-              <p
-                class="contact-field__error"
-                id="contact-email-error"
-                aria-live="polite"
-              ></p>
+              <p class="contact-field__error" id="contact-email-error" aria-live="polite"></p>
             </div>
 
             <div class="contact-field">
@@ -469,17 +419,14 @@
               </label>
               <input
                 id="contact-phone"
+                placeholder="Phone number with country code"
                 name="phone"
                 type="tel"
                 inputmode="tel"
                 autocomplete="tel"
                 aria-describedby="contact-phone-error"
               />
-              <p
-                class="contact-field__error"
-                id="contact-phone-error"
-                aria-live="polite"
-              ></p>
+              <p class="contact-field__error" id="contact-phone-error" aria-live="polite"></p>
             </div>
 
             <div class="contact-field contact-field--select">
@@ -504,35 +451,24 @@
               <svg viewBox="0 0 12 8" aria-hidden="true">
                 <path d="m1 1 5 5 5-5" />
               </svg>
-              <p
-                class="contact-field__error"
-                id="contact-type-error"
-                aria-live="polite"
-              ></p>
+              <p class="contact-field__error" id="contact-type-error" aria-live="polite"></p>
             </div>
 
-            <div
-              class="contact-field contact-field--order"
-              data-order-number
-              hidden
-            >
+            <div class="contact-field contact-field--order" data-order-number hidden>
               <label for="contact-order">
                 Order Number
                 <small>Optional</small>
               </label>
               <input
                 id="contact-order"
+                placeholder="e.g. VELORA-12345"
                 name="order_number"
                 type="text"
                 autocomplete="off"
                 disabled
                 aria-describedby="contact-order-error"
               />
-              <p
-                class="contact-field__error"
-                id="contact-order-error"
-                aria-live="polite"
-              ></p>
+              <p class="contact-field__error" id="contact-order-error" aria-live="polite"></p>
             </div>
 
             <div class="contact-field contact-field--message">
@@ -542,16 +478,13 @@
               </label>
               <textarea
                 id="contact-message"
+                placeholder="Tell us about the shoe, sizing, or order you need help with."
                 name="message"
                 rows="5"
                 required
                 aria-describedby="contact-message-error"
               ></textarea>
-              <p
-                class="contact-field__error"
-                id="contact-message-error"
-                aria-live="polite"
-              ></p>
+              <p class="contact-field__error" id="contact-message-error" aria-live="polite"></p>
             </div>
 
             <div class="contact-enquiry__submit">
@@ -566,8 +499,7 @@
                 <rect x="5" y="10" width="14" height="11" rx="1.5" />
                 <path d="M8.5 10V7.5a3.5 3.5 0 0 1 7 0V10M12 14v3" />
               </svg>
-              Your information is handled securely. We usually respond within 24
-              hours.
+              Your information is handled securely. We usually respond within 24 hours.
             </p>
             <p
               class="contact-enquiry__status"
@@ -602,9 +534,7 @@
               referrerpolicy="no-referrer-when-downgrade"
               allowfullscreen
             ></iframe>
-            <p class="contact-location__status" aria-hidden="true">
-              New Delhi / 110001
-            </p>
+            <p class="contact-location__status" aria-hidden="true">New Delhi / 110001</p>
           </div>
 
           <aside class="contact-location__panel">
@@ -630,11 +560,7 @@
       </section>
 
       <!-- Contact | Frequently asked questions -->
-      <section
-        class="contact-faq"
-        aria-labelledby="contact-faq-title"
-        data-contact-faq
-      >
+      <section class="contact-faq" aria-labelledby="contact-faq-title" data-contact-faq>
         <div class="contact-faq__inner">
           <header class="contact-faq__header">
             <p>Before You Ask</p>
@@ -675,10 +601,9 @@
               >
                 <div>
                   <p>
-                    Use our size consultation service or send us your
-                    measurements, usual size and preferred style. We’ll help you
-                    compare proportions, support and intended use before
-                    suggesting a fit.
+                    Use our size consultation service or send us your measurements, usual size and
+                    preferred style. We’ll help you compare proportions, support and intended use
+                    before suggesting a fit.
                   </p>
                 </div>
               </div>
@@ -692,9 +617,7 @@
                   aria-controls="contact-faq-answer-2"
                 >
                   <span class="contact-faq__number">02</span>
-                  <span class="contact-faq__question"
-                    >Can I ask about product availability?</span
-                  >
+                  <span class="contact-faq__question">Can I ask about product availability?</span>
                   <span class="contact-faq__icon" aria-hidden="true"></span>
                 </button>
               </h3>
@@ -706,9 +629,8 @@
               >
                 <div>
                   <p>
-                    Yes. Share the product name, size and preferred colour
-                    through the contact form, and our team can guide you on
-                    current availability.
+                    Yes. Share the product name, size and preferred colour through the contact form,
+                    and our team can guide you on current availability.
                   </p>
                 </div>
               </div>
@@ -736,9 +658,8 @@
               >
                 <div>
                   <p>
-                    Select Order Support in the enquiry form and include your
-                    order number. This helps us direct your request to the right
-                    team more quickly.
+                    Select Order Support in the enquiry form and include your order number. This
+                    helps us direct your request to the right team more quickly.
                   </p>
                 </div>
               </div>
@@ -752,9 +673,7 @@
                   aria-controls="contact-faq-answer-4"
                 >
                   <span class="contact-faq__number">04</span>
-                  <span class="contact-faq__question"
-                    >Can I make a bulk-order enquiry?</span
-                  >
+                  <span class="contact-faq__question">Can I make a bulk-order enquiry?</span>
                   <span class="contact-faq__icon" aria-hidden="true"></span>
                 </button>
               </h3>
@@ -766,9 +685,9 @@
               >
                 <div>
                   <p>
-                    Yes. Choose Bulk Orders and tell us about your quantity,
-                    sizing needs and preferred delivery timing. Dedicated
-                    assistance is available for qualifying requirements.
+                    Yes. Choose Bulk Orders and tell us about your quantity, sizing needs and
+                    preferred delivery timing. Dedicated assistance is available for qualifying
+                    requirements.
                   </p>
                 </div>
               </div>
@@ -782,9 +701,7 @@
                   aria-controls="contact-faq-answer-5"
                 >
                   <span class="contact-faq__number">05</span>
-                  <span class="contact-faq__question"
-                    >Where can I find store opening hours?</span
-                  >
+                  <span class="contact-faq__question">Where can I find store opening hours?</span>
                   <span class="contact-faq__icon" aria-hidden="true"></span>
                 </button>
               </h3>
@@ -796,9 +713,8 @@
               >
                 <div>
                   <p>
-                    Current demo opening hours appear in the store map section
-                    above. Please check them before travelling, as holiday and
-                    event hours may differ.
+                    Current demo opening hours appear in the store map section above. Please check
+                    them before travelling, as holiday and event hours may differ.
                   </p>
                 </div>
               </div>
@@ -812,9 +728,7 @@
                   aria-controls="contact-faq-answer-6"
                 >
                   <span class="contact-faq__number">06</span>
-                  <span class="contact-faq__question"
-                    >Can I request product-care guidance?</span
-                  >
+                  <span class="contact-faq__question">Can I request product-care guidance?</span>
                   <span class="contact-faq__icon" aria-hidden="true"></span>
                 </button>
               </h3>
@@ -826,9 +740,8 @@
               >
                 <div>
                   <p>
-                    Absolutely. Include the product and material in your message
-                    so we can recommend suitable cleaning, protection and
-                    long-term care.
+                    Absolutely. Include the product and material in your message so we can recommend
+                    suitable cleaning, protection and long-term care.
                   </p>
                 </div>
               </div>
@@ -836,14 +749,47 @@
           </div>
         </div>
       </section>
-      <section class="shop-added section-enquiry-timeline" aria-labelledby="contact-prepare"><header><p class="shop-eyebrow">VELORA / Help us help you.</p><h2 id="contact-prepare">Help us help you.</h2><p>Include these details when you send your enquiry.</p></header><ol><li><h3>The product</h3><p>Name the style that caught your eye.</p></li><li><h3>The question</h3><p>Tell us whether you need fit, material, care or ordering guidance.</p></li><li><h3>Your preferences</h3><p>Include your usual size and the occasion you have in mind.</p></li></ol></section>
-      <section class="shop-added section-explore-directory" aria-labelledby="contact-shopping"><div><header><p class="shop-eyebrow">VELORA / While you are here.</p><h2 id="contact-shopping">While you are here.</h2><p>Find inspiration in the collection and the VELORA story.</p></header></div><nav aria-label="Explore VELORA"><a href="Collections.html#products">01 / Shop the Collection &#8594;</a><a href="New Arrivals.html#products">02 / Discover New Arrivals &#8594;</a><a href="about.html">03 / Read Our Story &#8594;</a></nav></section>
+      <section class="shop-added section-enquiry-timeline" aria-labelledby="contact-prepare">
+        <header>
+          <p class="shop-eyebrow">VELORA / Help us help you.</p>
+          <h2 id="contact-prepare">Help us help you.</h2>
+          <p>Include these details when you send your enquiry.</p>
+        </header>
+        <ol>
+          <li>
+            <h3>The product</h3>
+            <p>Name the style that caught your eye.</p>
+          </li>
+          <li>
+            <h3>The question</h3>
+            <p>Tell us whether you need fit, material, care or ordering guidance.</p>
+          </li>
+          <li>
+            <h3>Your preferences</h3>
+            <p>Include your usual size and the occasion you have in mind.</p>
+          </li>
+        </ol>
+      </section>
+      <section class="shop-added section-explore-directory" aria-labelledby="contact-shopping">
+        <div>
+          <header>
+            <p class="shop-eyebrow">VELORA / While you are here.</p>
+            <h2 id="contact-shopping">While you are here.</h2>
+            <p>Find inspiration in the collection and the VELORA story.</p>
+          </header>
+        </div>
+        <nav aria-label="Explore VELORA">
+          <a href="Collections.html#products">01 / Shop the Collection &#8594;</a>
+          <a href="New Arrivals.html#products">02 / Discover New Arrivals &#8594;</a>
+          <a href="about.html">03 / Read Our Story &#8594;</a>
+        </nav>
+      </section>
     </main>
 
     <!-- Premium site footer -->
     <footer class="site-footer">
       <section class="footer-benefits" aria-label="VELORA customer benefits">
-        <div class="footer-container benefits-grid">
+        <div class="site-container footer-container benefits-grid">
           <article class="benefit">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path
@@ -918,13 +864,9 @@
         </div>
       </section>
       <div class="footer-main">
-        <div class="footer-container footer-grid">
+        <div class="site-container footer-container footer-grid">
           <section class="footer-brand" aria-label="VELORA">
-            <a
-              class="brand footer-brand__logo"
-              href="Home page1.html"
-              aria-label="VELORA home"
-            >
+            <a class="brand footer-brand__logo" href="Home page1.html" aria-label="VELORA home">
               <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
                 <path
                   d="M7 29.5c6.1-.1 10.4-2.3 13.5-6.8l3.3-4.9 5.1 4.7c3.1 2.8 6.9 4.5 11.5 4.9v5.8H7v-3.7Z"
@@ -962,8 +904,7 @@
               </span>
             </a>
             <p>
-              Elevated footwear crafted for everyday movement, modern style, and
-              lasting comfort.
+              Elevated footwear crafted for everyday movement, modern style, and lasting comfort.
             </p>
           </section>
           <nav class="footer-nav" aria-label="Shop">
@@ -972,19 +913,13 @@
               <li><a href="Collections.html#products">All Shoes</a></li>
               <li><a href="New Arrivals.html#products">New Arrivals</a></li>
               <li>
-                <a href="Collections.html?category=sneakers#products"
-                  >Sneakers</a
-                >
+                <a href="Collections.html?category=sneakers#products">Sneakers</a>
               </li>
               <li>
-                <a href="Collections.html?category=performance#products"
-                  >Performance</a
-                >
+                <a href="Collections.html?category=performance#products">Performance</a>
               </li>
               <li>
-                <a href="Collections.html?category=everyday#products"
-                  >Everyday</a
-                >
+                <a href="Collections.html?category=everyday#products">Everyday</a>
               </li>
               <li>
                 <a href="Collections.html?category=trail#products">Trail</a>
@@ -1014,14 +949,9 @@
           <section class="footer-newsletter" aria-labelledby="newsletter-title">
             <p class="footer-eyebrow">VELORA INSIDER</p>
             <h2 id="newsletter-title">Step Into What’s Next</h2>
-            <p>
-              Get early access to new collections, limited releases, and
-              members-only offers.
-            </p>
+            <p>Get early access to new collections, limited releases, and members-only offers.</p>
             <form class="newsletter-form" data-newsletter-form novalidate>
-              <label class="sr-only" for="newsletter-email"
-                >Email address</label
-              >
+              <label class="sr-only" for="newsletter-email">Email address</label>
               <div class="newsletter-field">
                 <input
                   id="newsletter-email"
@@ -1036,17 +966,13 @@
                   <span aria-hidden="true">→</span>
                 </button>
               </div>
-              <p
-                class="newsletter-message"
-                data-newsletter-message
-                aria-live="polite"
-              ></p>
+              <p class="newsletter-message" data-newsletter-message aria-live="polite"></p>
             </form>
           </section>
         </div>
       </div>
       <div class="footer-legal">
-        <div class="footer-container legal-content">
+        <div class="site-container footer-container legal-content">
           <p>© 2026 VELORA. All rights reserved.</p>
         </div>
       </div>
