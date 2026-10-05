@@ -1,0 +1,602 @@
+/* Shared spacing, full-image framing and aligned rows. */
+.error-shell > .shop-added,
+.coming-shell > .shop-added {
+  width: 100%;
+  padding-block: 28px;
+  border-top: 1px solid var(--header-border);
+}
+.shop-added {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.shop-added header {
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+.shop-added header > p:last-child {
+  margin: 14px 0 0;
+}
+.shop-added__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.shop-added__grid article {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: var(--hero-surface);
+  border: 1px solid var(--header-border);
+}
+main .shop-added__grid h3 {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+.shop-added__grid article p {
+  margin: 12px 0 20px;
+  font-size: 14px;
+  line-height: 1.65;
+  flex: 1;
+}
+.shop-added__grid article a {
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 36px;
+  text-underline-offset: 4px;
+}
+.shop-added--visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 36px;
+}
+.shop-added--visual > img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  background: var(--hero-surface);
+}
+.shop-added--visual > div p:not(.shop-eyebrow) {
+  margin: 18px 0 24px;
+  max-width: 50ch;
+}
+@media (max-width: 760px) {
+  .shop-added__grid,
+  .shop-added--visual {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .shop-added--visual > img {
+    height: 240px;
+  }
+  .shop-added__grid article {
+    padding: 20px;
+  }
+}
+:root {
+  --section-space: 48px;
+  --section-gutter: clamp(20px, 3vw, 40px);
+}
+body:not(.auth-page) main > section {
+  padding-block: 48px !important;
+}
+body:not(.auth-page) main > :is(.shop-home-hero, .shop-page-hero, .about-hero) {
+  padding: 0 !important;
+}
+body:not(.auth-page) main > .shop-brand-strip {
+  padding: 28px var(--section-gutter) !important;
+}
+body:not(.auth-page) main > .shop-intro {
+  padding: 28px var(--section-gutter) !important;
+}
+body:not(.auth-page) main > .shop-catalogue {
+  padding: 32px var(--section-gutter) 40px !important;
+}
+body:not(.auth-page) main > .shop-help {
+  padding: 32px !important;
+}
+main section:not(:first-child) h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+main section:not(:first-child) h3 {
+  line-height: 1.35;
+}
+main
+  :is(
+    .about-values__header,
+    .team-editorial__heading,
+    .service-offers__heading
+  ) {
+  text-align: start;
+  margin-inline: 0;
+  max-width: none;
+}
+main
+  :is(
+    .design-process__heading,
+    .craft-process__heading,
+    .team-editorial__heading
+  ) {
+  padding-bottom: 28px;
+  gap: 20px;
+}
+main :is(.about-values__grid, .team-editorial__grid, .service-offers__grid) {
+  margin-top: 28px;
+}
+/* Product and hero subjects remain completely visible. */
+.shop-home-hero,
+.shop-page-hero {
+  block-size: min(560px, calc(var(--hero-space) - 48px));
+  grid-template-rows: minmax(0, 1fr);
+}
+.shop-home-hero > img,
+.shop-page-hero > img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  background: var(--hero-surface);
+}
+.shop-home-hero > div,
+.shop-page-hero > div {
+  padding: 32px;
+}
+.shop-home-hero h1,
+.shop-page-hero h1 {
+  font-size: clamp(34px, 4.2vw, 60px);
+}
+.about-hero {
+  block-size: min(560px, var(--hero-space));
+}
+.about-hero__visual img {
+  object-fit: contain;
+  object-position: center;
+  background: var(--hero-surface);
+  filter: none;
+}
+.about-hero__visual figcaption {
+  display: none;
+}
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.shop-card__image {
+  flex: none;
+  aspect-ratio: 1/1;
+}
+.shop-card__image img {
+  object-fit: contain;
+  transform: none !important;
+}
+.shop-card__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.shop-card h3 {
+  min-height: 2.7em;
+  font-size: 18px;
+  text-wrap: initial;
+}
+main section.shop-featured .shop-card h3 {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+  min-height: 2.8em;
+}
+@media (max-width: 760px) {
+  main section.shop-featured .shop-card h3 {
+    font-size: 14px;
+  }
+}
+.shop-card strong {
+  margin-top: 8px;
+}
+.shop-card__actions {
+  margin-top: auto;
+  padding-top: 14px;
+}
+.shop-card__actions > a {
+  min-height: 28px;
+}
+.shop-detail img,
+.shop-cart-item img {
+  object-fit: contain;
+}
+/* The story collage uses a compact, regular frame. */
+.about-story__container {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 36px;
+}
+.about-story__copy h2 {
+  font-size: clamp(30px, 3.3vw, 44px);
+}
+.about-story__collage {
+  min-height: 0;
+  height: 420px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+}
+.about-story__image img {
+  object-fit: contain;
+  transform: none !important;
+  filter: none;
+  background: var(--hero-surface);
+}
+.about-story__accent {
+  margin-block: 20px;
+}
+.about-story__cta {
+  margin-top: 24px;
+}
+.field-story__container {
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 36px;
+}
+.field-story__visuals {
+  min-height: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+  padding: 0;
+  gap: 12px;
+}
+.field-story__image {
+  grid-column: auto !important;
+  grid-row: auto !important;
+  margin: 0 !important;
+  aspect-ratio: 3/4;
+}
+.field-story__image img {
+  object-fit: contain;
+  transform: none !important;
+  filter: none;
+}
+.field-story__image figcaption,
+.field-story__vertical {
+  display: none;
+}
+.field-story__copy {
+  align-self: center;
+  margin: 0;
+}
+.field-story__copy h2 {
+  margin-top: 20px;
+}
+.field-story__copy > p {
+  margin-top: 20px;
+}
+.design-process__sequence li {
+  min-height: 0;
+  padding: 24px;
+  text-align: start;
+}
+.design-process__sequence li:nth-child(n) div {
+  margin-top: 24px;
+}
+.design-process__sequence p {
+  margin-inline: 0;
+  max-width: none;
+}
+.design-process__number {
+  font-size: 56px;
+  line-height: 1;
+}
+/* Team and service cards share image baselines and equal card heights. */
+.team-editorial__grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+.team-profile {
+  grid-column: auto !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+}
+.team-profile > div {
+  aspect-ratio: 2/3;
+}
+.team-profile img {
+  object-fit: contain;
+  transform: none !important;
+  filter: none;
+}
+.team-profile figcaption {
+  flex: 1;
+  padding-top: 14px;
+}
+.team-profile h3 {
+  font-size: 20px;
+}
+.team-profile p {
+  margin-bottom: 0;
+  min-height: 2.8em;
+}
+.about-values__grid {
+  align-items: stretch;
+}
+.about-value {
+  text-align: start;
+  padding: 24px;
+}
+.about-value p {
+  margin-inline: 0;
+}
+.service-offers__grid {
+  align-items: stretch;
+  gap: 24px;
+}
+.service-offer {
+  display: flex;
+  flex-direction: column;
+}
+.service-offer__media {
+  aspect-ratio: 4/3;
+}
+.service-offer__media img {
+  object-fit: contain;
+  transform: none !important;
+}
+.service-offer__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+.service-offer__body h3 {
+  min-height: 2.7em;
+  font-size: 21px;
+}
+.service-offer__body p {
+  flex: 1;
+  margin-top: 12px;
+}
+.service-offer__body a {
+  margin-top: auto;
+  padding-top: 12px;
+}
+.personal-fitting__composition {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 24px;
+}
+.personal-fitting__image--main,
+.personal-fitting__image--detail {
+  grid-column: auto !important;
+  grid-row: 1;
+  margin: 0;
+}
+.personal-fitting__crop {
+  aspect-ratio: 4/3 !important;
+  border: 0 !important;
+}
+.personal-fitting__image img {
+  object-fit: contain;
+  transform: none !important;
+}
+.personal-fitting__process {
+  grid-column: 1/-1 !important;
+  grid-row: 2;
+}
+.bulk-concierge__layout {
+  min-height: 0;
+  grid-template-columns: 1fr 1fr;
+}
+.bulk-concierge__quantity {
+  padding: 36px 28px 36px 0;
+}
+.bulk-concierge__quantity strong {
+  font-size: clamp(70px, 10vw, 130px);
+  line-height: 1;
+}
+.bulk-concierge__content {
+  padding: 36px 0 36px 28px;
+}
+.bulk-concierge__description {
+  margin-block: 20px;
+}
+.bulk-concierge__services {
+  margin-bottom: 24px;
+}
+.bulk-concierge__backdrop,
+.bulk-concierge__quantity::after {
+  display: none;
+}
+.footer-main {
+  padding-block: 40px;
+}
+.footer-grid {
+  gap: 28px;
+}
+.size-consultation__header {
+  padding-bottom: 28px;
+  gap: 28px;
+}
+.size-consultation__header > div {
+  padding-top: 24px;
+  gap: 24px;
+}
+.size-consultation__composition {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 24px;
+}
+.size-consultation__image--product,
+.size-consultation__image--measure {
+  grid-column: auto !important;
+  grid-row: 1;
+  width: 100%;
+  margin: 0;
+  align-self: start;
+}
+.size-consultation__image > div {
+  aspect-ratio: 4/3;
+  border: 0;
+}
+.size-consultation__image img {
+  object-fit: contain;
+  filter: none;
+  transform: none !important;
+  background: var(--hero-surface);
+}
+.size-consultation__converter {
+  grid-column: 1/-1 !important;
+  grid-row: 2;
+  margin-top: 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.size-consultation__units {
+  margin-bottom: 0;
+}
+.size-consultation__primary {
+  min-height: 0;
+  align-items: center;
+  gap: 16px;
+}
+.size-consultation__primary span {
+  margin: 0;
+}
+.size-consultation__primary strong {
+  font-size: 72px;
+  line-height: 1;
+}
+.size-consultation__equivalents {
+  align-self: center;
+  margin: 0;
+}
+.size-consultation__equivalents dd {
+  font-size: 32px;
+}
+.size-consultation__note {
+  margin-top: 0;
+}
+.about-value {
+  min-height: 0;
+}
+.team-editorial__note {
+  margin-top: 28px;
+  padding-top: 16px;
+}
+.field-story__image {
+  background: var(--hero-surface);
+}
+@media (max-width: 1000px) {
+  .team-editorial__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .about-story__container,
+  .field-story__container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .about-story__collage {
+    height: 360px;
+  }
+  .field-story__visuals {
+    max-height: 420px;
+  }
+}
+@media (max-width: 760px) {
+  body:not(.auth-page) main > section {
+    padding-block: 28px !important;
+  }
+  body:not(.auth-page)
+    main
+    > :is(.shop-home-hero, .shop-page-hero, .about-hero) {
+    padding: 0 !important;
+  }
+  .shop-home-hero,
+  .shop-page-hero {
+    block-size: min(640px, calc(var(--hero-space) - 32px));
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+  .shop-home-hero > div,
+  .shop-page-hero > div {
+    padding: 24px;
+  }
+  .shop-home-hero h1,
+  .shop-page-hero h1 {
+    font-size: 32px;
+  }
+  .about-hero {
+    block-size: var(--hero-space);
+  }
+  .shop-card h3 {
+    font-size: 16px;
+  }
+  .team-editorial__grid,
+  .service-offers__grid {
+    gap: 20px;
+  }
+  .team-profile h3 {
+    font-size: 18px;
+  }
+  .field-story__visuals {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .personal-fitting__composition {
+    gap: 16px;
+  }
+  .bulk-concierge__layout {
+    grid-template-columns: 1fr;
+  }
+  .bulk-concierge__quantity {
+    padding: 24px 0;
+    border-inline-end: 0;
+    border-bottom: 1px solid var(--header-border);
+  }
+  .bulk-concierge__content {
+    padding: 24px 0;
+  }
+  .design-process__sequence li {
+    padding: 20px 14px;
+  }
+  .size-consultation__composition {
+    gap: 16px;
+  }
+  .size-consultation__image--measure {
+    width: 100%;
+    margin: 0;
+  }
+  .size-consultation__image > div {
+    aspect-ratio: 4/3;
+    border: 0;
+  }
+  .size-consultation__primary strong {
+    font-size: 56px;
+  }
+  .size-consultation__header > div {
+    padding-top: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .team-editorial__grid {
+    gap: 20px 12px;
+  }
+  .about-story__collage {
+    height: 280px;
+  }
+  .team-profile h3 {
+    font-size: 16px;
+  }
+  .service-offers__grid {
+    grid-template-columns: 1fr;
+  }
+  .service-offer__body h3 {
+    min-height: 0;
+  }
+}

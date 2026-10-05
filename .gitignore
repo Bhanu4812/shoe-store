@@ -1,2 +1,6 @@
 .DS_Store
 **/.DS_Store
+__MACOSX/
+._*
+node_modules/
+.qa/

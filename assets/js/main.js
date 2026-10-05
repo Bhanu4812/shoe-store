@@ -41,14 +41,14 @@
   document.addEventListener('click', (event) => { if (!header.contains(event.target)) { closeDropdown(); closeMenu(); } });
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeDropdown(); closeMenu(); menuToggle?.focus(); } });
 
-  const savedTheme = localStorage.getItem('velora-theme');
+  let savedTheme; try { savedTheme = localStorage.getItem('velora-theme'); } catch (_) {}
   const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
   const applyTheme = (theme) => {
     root.dataset.theme = theme;
     themeToggles.forEach((toggle) => toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'));
   };
   applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
-  themeToggles.forEach((toggle) => toggle.addEventListener('click', () => { const next = root.dataset.theme === 'dark' ? 'light' : 'dark'; applyTheme(next); localStorage.setItem('velora-theme', next); }));
+  themeToggles.forEach((toggle) => toggle.addEventListener('click', () => { const next = root.dataset.theme === 'dark' ? 'light' : 'dark'; applyTheme(next); try { localStorage.setItem('velora-theme', next); } catch (_) {} }));
 
   rtlToggles.forEach((toggle) => toggle.addEventListener('click', () => {
     const enabled = root.dir !== 'rtl';
@@ -116,45 +116,6 @@
     });
   });
   updateWishlistHeader();
-
-  document.querySelectorAll('[data-quick-add]').forEach((button) => {
-    button.addEventListener('click', () => {
-      const product = button.dataset.product;
-      const label = button.querySelector('span');
-      const cartCounts = document.querySelectorAll('.cart-count, .mobile-bag-button b');
-      const isArrivalQuickAdd = button.classList.contains('arrival-product__quick');
-      const isHomepageQuickAdd = button.classList.contains('product-card__quick-add');
-      const canToggleQuickAdd = isArrivalQuickAdd || isHomepageQuickAdd;
-      const originalLabel = button.dataset.quickAddLabel || label?.textContent || 'Quick Add';
-      button.dataset.quickAddLabel = originalLabel;
-      const isAdded = button.classList.contains('is-added');
-      if (isAdded && canToggleQuickAdd) {
-        button.classList.remove('is-added');
-        button.setAttribute('aria-label', `Add ${product} to cart`);
-        if (label) label.textContent = originalLabel;
-        cartCounts.forEach((count) => {
-          const nextCount = Math.max(0, Number(count.textContent) - 1);
-          if (count.classList.contains('cart-count')) updateHeaderBadge(count, nextCount);
-          else count.textContent = String(nextCount);
-        });
-        const remainingItems = Number(cartCounts[0]?.textContent || 0);
-        document.querySelectorAll('.bag-button, .mobile-bag-button').forEach((bag) => bag.setAttribute('aria-label', `Shopping cart, ${remainingItems} ${remainingItems === 1 ? 'item' : 'items'}`));
-        if (productAnnouncement) productAnnouncement.textContent = `${product} removed from cart.`;
-        return;
-      }
-      if (isAdded) return;
-      button.classList.add('is-added');
-      button.setAttribute('aria-label', `${product} added to cart`);
-      if (label) label.textContent = 'Added';
-      cartCounts.forEach((count) => {
-        const nextCount = Number(count.textContent) + 1;
-        if (count.classList.contains('cart-count')) updateHeaderBadge(count, nextCount);
-        else count.textContent = String(nextCount);
-      });
-      document.querySelectorAll('.bag-button, .mobile-bag-button').forEach((bag) => bag.setAttribute('aria-label', 'Shopping cart with added items'));
-      if (productAnnouncement) productAnnouncement.textContent = `${product} added to cart.`;
-    });
-  });
 
   const collectionTabs = [...document.querySelectorAll('[data-collection-tab]')];
   const collectionPreview = document.querySelector('#collection-preview');
@@ -244,7 +205,7 @@
 
   const categorySelector = document.querySelector('[data-category-selector]');
   if (categorySelector && !reduceMotion && 'IntersectionObserver' in window) {
-    categorySelector.setAttribute('data-reveal-ready', '');
+
     const categorySelectorObserver = new IntersectionObserver(([entry], observer) => {
       if (!entry.isIntersecting) return;
       categorySelector.classList.add('is-visible');
@@ -350,7 +311,7 @@
 
   const formaStyleStudy = document.querySelector('[data-forma-style-study]');
   if (formaStyleStudy && !reduceMotion && 'IntersectionObserver' in window) {
-    formaStyleStudy.setAttribute('data-reveal-ready', '');
+
     const formaStudyObserver = new IntersectionObserver(([entry], observer) => {
       if (!entry.isIntersecting) return;
       formaStyleStudy.classList.add('is-visible');
@@ -361,7 +322,7 @@
 
   const weeklyStyles = document.querySelector('[data-weekly-styles]');
   if (weeklyStyles && !reduceMotion && 'IntersectionObserver' in window) {
-    weeklyStyles.setAttribute('data-reveal-ready', '');
+
     const weeklyStylesObserver = new IntersectionObserver(([entry], observer) => {
       if (!entry.isIntersecting) return;
       weeklyStyles.classList.add('is-visible');
@@ -372,7 +333,7 @@
 
   const arrivalNewsletter = document.querySelector('[data-arrival-newsletter]');
   if (arrivalNewsletter && !reduceMotion && 'IntersectionObserver' in window) {
-    arrivalNewsletter.setAttribute('data-reveal-ready', '');
+
     const arrivalNewsletterObserver = new IntersectionObserver(([entry], observer) => {
       if (!entry.isIntersecting) return;
       arrivalNewsletter.classList.add('is-visible');
@@ -403,7 +364,7 @@
   const featuredDrop = document.querySelector('[data-featured-drop]');
   if (featuredDrop && !reduceMotion && 'IntersectionObserver' in window) {
     const featuredProduct = featuredDrop.querySelector('.featured-drop__product img');
-    featuredDrop.setAttribute('data-reveal-ready', '');
+
     const showFeaturedDrop = () => window.requestAnimationFrame(() => featuredDrop.classList.add('is-visible'));
     const featuredObserver = new IntersectionObserver(([entry], observer) => {
       if (!entry.isIntersecting) return;
@@ -419,7 +380,7 @@
 
   const serviceOffers = document.querySelector('[data-service-offers]');
   if (serviceOffers && !reduceMotion && 'IntersectionObserver' in window) {
-    serviceOffers.setAttribute('data-reveal-ready', '');
+
     const serviceOffersObserver = new IntersectionObserver(([entry], observer) => {
       if (!entry.isIntersecting) return;
       serviceOffers.classList.add('is-visible');
@@ -678,7 +639,7 @@
 
   const aboutStory = document.querySelector('[data-about-story]');
   if (aboutStory && !reduceMotion && 'IntersectionObserver' in window) {
-    aboutStory.setAttribute('data-reveal-ready', '');
+
     const aboutStoryObserver = new IntersectionObserver(([entry], observer) => {
       if (!entry.isIntersecting) return;
       aboutStory.classList.add('is-visible');
@@ -811,94 +772,6 @@
     const hasPreviousPage = window.history.length > 1 && Boolean(document.referrer);
     if (hasPreviousPage) window.history.back();
     else window.location.href = 'Home page1.html';
-  });
-})();
-
-/* Register page validation and password controls */
-(() => {
-  const form = document.querySelector('[data-register-form]');
-  if (!form) return;
-
-  const password = form.querySelector('#register-password');
-  const confirmPassword = form.querySelector('#register-confirm-password');
-  const strength = form.querySelector('[data-password-strength]');
-  const status = form.querySelector('[data-register-status]');
-  const submit = form.querySelector('.register-submit');
-  const submitLabel = form.querySelector('[data-register-submit-label]');
-
-  form.querySelectorAll('[data-register-password-toggle]').forEach((toggle) => {
-    const input = toggle.previousElementSibling;
-    toggle.addEventListener('click', () => {
-      const show = input.type === 'password';
-      input.type = show ? 'text' : 'password';
-      toggle.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
-      toggle.setAttribute('aria-pressed', String(show));
-    });
-  });
-
-  const passwordLevel = (value) => {
-    if (!value) return '';
-    const variety = [/[a-z]/i, /[0-9]/, /[^a-z0-9]/i].filter((pattern) => pattern.test(value)).length;
-    if (value.length >= 10 && variety >= 2) return 'strong';
-    if (value.length >= 8 && variety >= 2) return 'medium';
-    return 'weak';
-  };
-  password?.addEventListener('input', () => {
-    const level = passwordLevel(password.value);
-    strength.dataset.level = level;
-    const label = strength.querySelector('small');
-    label.textContent = level ? `${level[0].toUpperCase()}${level.slice(1)}` : 'Strength';
-  });
-
-  const messageFor = (field) => {
-    if (field.id === 'register-confirm-password' && field.value !== password.value) return 'Passwords must match.';
-    if (field.id === 'register-phone' && field.value && !/^[+()\d\s-]{7,20}$/.test(field.value)) return 'Enter a valid phone number.';
-    if (field.type === 'checkbox' && !field.checked) return 'Please accept the terms to continue.';
-    if (field.validity.valueMissing) return 'This field is required.';
-    if (field.validity.typeMismatch) return 'Enter a valid email address.';
-    if (field.validity.tooShort) return 'Use at least 8 characters.';
-    return '';
-  };
-  const validate = (field) => {
-    const message = messageFor(field);
-    const error = document.querySelector(`#${field.id}-error`);
-    field.toggleAttribute('aria-invalid', Boolean(message));
-    if (error) error.textContent = message;
-    return !message;
-  };
-
-  const fields = [...form.querySelectorAll('input')];
-  fields.forEach((field) => {
-    field.addEventListener('blur', () => validate(field));
-    field.addEventListener('input', () => {
-      if (field.getAttribute('aria-invalid') === 'true') validate(field);
-      if (field === password && confirmPassword.value) validate(confirmPassword);
-    });
-  });
-
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    submit.classList.remove('is-loading');
-    submit.disabled = false;
-    submitLabel.textContent = 'Create Account';
-    const results = fields.map((field) => ({ field, valid:validate(field) }));
-    const firstInvalid = results.find((result) => !result.valid)?.field;
-    status.classList.toggle('is-error', Boolean(firstInvalid));
-    if (firstInvalid) {
-      status.textContent = 'Please review the highlighted details.';
-      firstInvalid.focus();
-      return;
-    }
-
-    submit.classList.add('is-loading');
-    submit.disabled = true;
-    submitLabel.textContent = 'Creating account…';
-    window.requestAnimationFrame(() => {
-      status.textContent = 'Details validated. Connect your account endpoint to complete registration.';
-      submit.classList.remove('is-loading');
-      submit.disabled = false;
-      submitLabel.textContent = 'Create Account';
-    });
   });
 })();
 

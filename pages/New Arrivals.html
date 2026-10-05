@@ -1,379 +1,993 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
-  <title>VELORA — Crafted for Every Step</title>
-  <link rel="preload" as="image" href="../assets/images/new-arrivals-hero-brown-leather-2026.webp" type="image/webp">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/dark-mode.css">
-  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>VELORA — Crafted for Every Step</title>
+    <link
+      rel="preload"
+      as="image"
+      href="../assets/images/new-arrivals-hero-brown-leather-2026.webp"
+      type="image/webp"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../assets/css/rtl.css" />
+    <link rel="stylesheet" href="../assets/css/shop.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+    <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 64x64" />
+    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../assets/css/layout-polish.css" />
+  <link rel="stylesheet" href="../assets/css/section-designs.css">
 </head>
-<body class="new-arrivals-page">
-  <!-- Premium site header -->
-  <header class="site-header" data-site-header>
-    <div class="header-shell">
-      <a class="brand" href="Home page1.html" aria-label="VELORA home">
-        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 29.5c6.1-.1 10.4-2.3 13.5-6.8l3.3-4.9 5.1 4.7c3.1 2.8 6.9 4.5 11.5 4.9v5.8H7v-3.7Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/><path d="M10 36.4h29" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.7"/><path d="m17.2 22.8 5.4 4.7M21.4 18.5l5.6 4.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.1"/><path d="M8.5 24.2h4.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.1"/></svg>
-        <span class="brand-copy"><span class="brand-name">VELORA</span><span class="brand-tagline">Crafted for Every Step</span></span>
-      </a>
+  <body class="new-arrivals-page page-arrivals">
+    <!-- Premium site header -->
+    <header class="site-header" data-site-header>
+      <div class="header-shell">
+        <a class="brand" href="Home page1.html" aria-label="VELORA home">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <path
+              d="M7 29.5c6.1-.1 10.4-2.3 13.5-6.8l3.3-4.9 5.1 4.7c3.1 2.8 6.9 4.5 11.5 4.9v5.8H7v-3.7Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.7"
+            />
+            <path
+              d="M10 36.4h29"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2.7"
+            />
+            <path
+              d="m17.2 22.8 5.4 4.7M21.4 18.5l5.6 4.8"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2.1"
+            />
+            <path
+              d="M8.5 24.2h4.2"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2.1"
+            />
+          </svg>
+          <span class="brand-copy">
+            <span class="brand-name">VELORA</span>
+            <span class="brand-tagline">Crafted for Every Step</span>
+          </span>
+        </a>
 
-      <nav class="primary-nav" aria-label="Primary navigation" id="primary-navigation">
-        <ul class="nav-list">
-          <li class="nav-item nav-item--has-menu">
-            <button class="nav-link nav-link--active nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">
-              Home <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 6 4.5 4 4.5-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"/></svg>
-            </button>
-            <ul class="home-menu" id="home-menu" aria-label="Home pages">
-              <li><a class="home-menu__link home-menu__link--active" href="Home page1.html" aria-current="page"><span>Homepage 1</span><small>Current page</small></a></li>
-              <li><a class="home-menu__link" href="Home page 2.html"><span>Homepage 2</span><small>Alternate edit</small></a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="Collections.html">Collections</a></li>
-          <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="New Arrivals.html">New Arrivals</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-        <div class="mobile-menu-actions">
-          <div class="mobile-menu-utilities">
-            <button class="mobile-utility-button" type="button" data-theme-toggle aria-label="Switch to dark mode">
-              <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/></svg>
-              <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5v2M12 19.5v2M21.5 12h-2M4.5 12h-2M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4M18.7 18.7l-1.4-1.4M6.7 6.7 5.3 5.3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"/></svg>
-              <span>Theme</span>
-            </button>
-            <button class="mobile-utility-button mobile-rtl-button" type="button" data-rtl-toggle aria-pressed="false">Switch to RTL</button>
-            <a class="mobile-utility-button mobile-wishlist-button" href="New Arrivals.html#all-arrivals" aria-label="Wishlist, 0 items"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"/></svg><span>Wishlist <b>0</b></span></a>
-            <a class="mobile-utility-button mobile-bag-button" href="#cart" aria-label="Shopping cart, 0 items"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8.5h14l-1 12H6l-1-12ZM9 9V6.7a3 3 0 0 1 6 0V9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/></svg><span>Cart <b>0</b></span></a>
-          </div>
-          <a class="login-button" href="login.html">Login <span aria-hidden="true">→</span></a>
-        </div>
-      </nav>
-
-      <div class="header-actions">
-        <button class="header-icon-button theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Toggle color theme">
-          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/></svg>
-          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5v2M12 19.5v2M21.5 12h-2M4.5 12h-2M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4M18.7 18.7l-1.4-1.4M6.7 6.7 5.3 5.3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"/></svg>
-        </button>
-        <button class="rtl-toggle" type="button" data-rtl-toggle aria-pressed="false" aria-label="Switch to right-to-left layout">RTL</button>
-        <a class="header-icon-button wishlist-header-button" href="New Arrivals.html#all-arrivals" aria-label="Wishlist, 0 items"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"/></svg><span class="wishlist-count" aria-hidden="true">0</span></a>
-        <a class="header-icon-button bag-button" href="#cart" aria-label="Shopping cart, 0 items"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8.5h14l-1 12H6l-1-12ZM9 9V6.7a3 3 0 0 1 6 0V9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/></svg><span class="cart-count" aria-hidden="true">0</span></a>
-        <a class="login-button" href="login.html">Login <span aria-hidden="true">→</span></a>
-        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- New Arrivals | Split leather campaign hero -->
-    <section class="new-drop-hero" data-new-drop-hero aria-labelledby="new-drop-hero-title">
-      <div class="new-drop-hero__content">
-        <div class="new-drop-hero__content-inner">
-          <p class="new-drop-hero__eyebrow">New Arrivals</p>
-          <h1 id="new-drop-hero-title"><span>The latest.</span><span>Just for you.</span></h1>
-          <p class="new-drop-hero__copy">Fresh designs. Fine craftsmanship.<br>Step into what's new.</p>
-        </div>
-      </div>
-
-      <figure class="new-drop-hero__visual">
-        <img src="../assets/images/new-arrivals-hero-brown-leather-2026.webp" width="1536" height="1024" fetchpriority="high" decoding="async" alt="Pair of newly launched brown leather VELORA sneakers on warm travertine beside a matte-black shoe box">
-        <figcaption><span>New / 026</span><span>Leather study</span></figcaption>
-      </figure>
-    </section>
-
-    <!-- New Arrivals | Drop category navigation -->
-    <nav class="drop-navigation" data-arrivals-navigation aria-label="Browse new arrivals by category">
-      <div class="drop-navigation__inner">
-        <div class="drop-navigation__viewport" tabindex="0" aria-label="New arrival categories, horizontally scrollable on small screens">
-          <ul class="drop-navigation__list">
-            <li><a href="New Arrivals.html" aria-current="page"><span>All</span></a></li>
-            <li><a href="New Arrivals.html?category=running"><span>Running</span></a></li>
-            <li><a href="New Arrivals.html?category=lifestyle"><span>Lifestyle</span></a></li>
-            <li><a href="New Arrivals.html?category=sport"><span>Sport</span></a></li>
-            <li><a href="New Arrivals.html?category=training"><span>Training</span></a></li>
-            <li><a href="New Arrivals.html?category=formal"><span>Formal</span></a></li>
-            <li><a href="New Arrivals.html?category=kids"><span>Kids</span></a></li>
+        <nav
+          class="primary-nav"
+          aria-label="Primary navigation"
+          id="primary-navigation"
+        >
+          <ul class="nav-list">
+            <li class="nav-item nav-item--has-menu">
+              <button
+                class="nav-link nav-dropdown-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="home-menu"
+              >
+                Home
+                <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true">
+                  <path
+                    d="m3.5 6 4.5 4 4.5-4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                  />
+                </svg>
+              </button>
+              <ul class="home-menu" id="home-menu" aria-label="Home pages">
+                <li>
+                  <a class="home-menu__link" href="Home page1.html"
+                    >Homepage 1</a
+                  >
+                </li>
+                <li>
+                  <a class="home-menu__link" href="Home page 2.html"
+                    >Homepage 2</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Collections.html">Shop Shoes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="New Arrivals.html">New Arrivals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
           </ul>
-        </div>
-
-        <div class="drop-navigation__controls">
-          <div class="drop-navigation__sort" data-arrivals-sort>
-            <button class="drop-navigation__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="arrival-sort-menu">
-              <span data-arrivals-sort-label>Newest first</span>
-              <svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5"/></svg>
-            </button>
-            <div class="drop-navigation__sort-menu" id="arrival-sort-menu" role="listbox" aria-label="Sort new arrivals" hidden>
-              <button type="button" role="option" aria-selected="true" data-sort-value="newest">Newest first</button>
-              <button type="button" role="option" aria-selected="false" data-sort-value="price-low">Price: low to high</button>
-              <button type="button" role="option" aria-selected="false" data-sort-value="price-high">Price: high to low</button>
+          <div class="mobile-menu-actions">
+            <div class="mobile-menu-utilities">
+              <button
+                class="mobile-utility-button"
+                type="button"
+                data-theme-toggle
+                aria-label="Switch to dark mode"
+              >
+                <svg
+                  class="icon icon--moon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.7"
+                  />
+                </svg>
+                <svg
+                  class="icon icon--sun"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  />
+                  <path
+                    d="M12 2.5v2M12 19.5v2M21.5 12h-2M4.5 12h-2M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4M18.7 18.7l-1.4-1.4M6.7 6.7 5.3 5.3"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="1.7"
+                  />
+                </svg>
+                <span>Theme</span>
+              </button>
+              <button
+                class="mobile-utility-button mobile-rtl-button"
+                type="button"
+                data-rtl-toggle
+                aria-pressed="false"
+              >
+                Switch to RTL
+              </button>
+              <a
+                class="mobile-utility-button mobile-wishlist-button"
+                href="Collections.html?wishlist=1#products"
+                aria-label="Wishlist, 0 items"
+              >
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="1.7"
+                  />
+                </svg>
+                <span>
+                  Wishlist
+                  <b>0</b>
+                </span>
+              </a>
+              <a
+                class="mobile-utility-button mobile-bag-button"
+                href="#cart"
+                aria-label="Shopping cart, 0 items"
+              >
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M5 8.5h14l-1 12H6l-1-12ZM9 9V6.7a3 3 0 0 1 6 0V9"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.7"
+                  />
+                </svg>
+                <span>
+                  Cart
+                  <b>0</b>
+                </span>
+              </a>
             </div>
+            <a
+              class="login-button shop-header-cta"
+              href="Collections.html#products"
+            >
+              Shop Shoes
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
-          <button class="drop-navigation__filter" type="button" data-arrivals-filter aria-expanded="false" aria-controls="arrival-filter-panel">
-            <span>Filters</span>
-            <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4h14M5 9h8M7.5 14h3"/><circle cx="6" cy="4" r="1.5"/><circle cx="11" cy="9" r="1.5"/><circle cx="9" cy="14" r="1.5"/></svg>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="header-icon-button theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to dark mode"
+            title="Toggle color theme"
+          >
+            <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+              />
+            </svg>
+            <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle
+                cx="12"
+                cy="12"
+                r="3.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              />
+              <path
+                d="M12 2.5v2M12 19.5v2M21.5 12h-2M4.5 12h-2M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4M18.7 18.7l-1.4-1.4M6.7 6.7 5.3 5.3"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="1.7"
+              />
+            </svg>
+          </button>
+          <button
+            class="rtl-toggle"
+            type="button"
+            data-rtl-toggle
+            aria-pressed="false"
+            aria-label="Switch to right-to-left layout"
+          >
+            RTL
+          </button>
+          <a
+            class="header-icon-button wishlist-header-button"
+            href="Collections.html?wishlist=1#products"
+            aria-label="Wishlist, 0 items"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+              />
+            </svg>
+            <span class="wishlist-count" aria-hidden="true">0</span>
+          </a>
+          <a
+            class="header-icon-button bag-button"
+            href="#cart"
+            aria-label="Shopping cart, 0 items"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M5 8.5h14l-1 12H6l-1-12ZM9 9V6.7a3 3 0 0 1 6 0V9"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.7"
+              />
+            </svg>
+            <span class="cart-count" aria-hidden="true">0</span>
+          </a>
+          <a
+            class="login-button shop-header-cta"
+            href="Collections.html#products"
+          >
+            Shop Shoes
+            <span aria-hidden="true">→</span>
+          </a>
+          <button
+            class="menu-toggle"
+            type="button"
+            data-menu-toggle
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+          >
+            <span></span>
+            <span></span>
           </button>
         </div>
       </div>
+    </header>
 
-      <div class="drop-navigation__filter-panel" id="arrival-filter-panel" data-arrivals-filter-panel hidden>
-        <div class="drop-navigation__filter-grid">
-          <fieldset>
-            <legend>Size</legend>
-            <div class="drop-navigation__choices drop-navigation__choices--sizes">
-              <label><input type="checkbox" name="arrival-size" value="39"><span>39</span></label>
-              <label><input type="checkbox" name="arrival-size" value="40"><span>40</span></label>
-              <label><input type="checkbox" name="arrival-size" value="41"><span>41</span></label>
-              <label><input type="checkbox" name="arrival-size" value="42"><span>42</span></label>
-              <label><input type="checkbox" name="arrival-size" value="43"><span>43</span></label>
-              <label><input type="checkbox" name="arrival-size" value="44"><span>44</span></label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Colour</legend>
-            <div class="drop-navigation__choices drop-navigation__choices--colours">
-              <label><input type="checkbox" name="arrival-colour" value="brown"><span><i style="--swatch:#704b35"></i>Brown</span></label>
-              <label><input type="checkbox" name="arrival-colour" value="black"><span><i style="--swatch:#22221f"></i>Black</span></label>
-              <label><input type="checkbox" name="arrival-colour" value="ivory"><span><i style="--swatch:#e5ded0"></i>Ivory</span></label>
-              <label><input type="checkbox" name="arrival-colour" value="olive"><span><i style="--swatch:#77725a"></i>Olive</span></label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Price</legend>
-            <div class="drop-navigation__prices">
-              <label><input type="radio" name="arrival-price" value="all" checked><span>All prices</span></label>
-              <label><input type="radio" name="arrival-price" value="under-10000"><span>Under &#8377;10,000</span></label>
-              <label><input type="radio" name="arrival-price" value="10000-12000"><span>&#8377;10,000 — &#8377;12,000</span></label>
-              <label><input type="radio" name="arrival-price" value="over-12000"><span>Above &#8377;12,000</span></label>
-            </div>
-          </fieldset>
-          <div class="drop-navigation__filter-actions">
-            <button type="button" data-arrivals-filter-clear>Clear all</button>
-            <button type="button" data-arrivals-filter-apply>Apply filters</button>
-          </div>
+    <main class="shop-main">
+      <section class="shop-page-hero shop-catalogue-hero">
+        <div>
+          <p class="shop-eyebrow">VELORA / The latest edit</p>
+          <h1>A fresh step forward.</h1>
+          <p>
+            Considered silhouettes. Distinctive details. Explore footwear for
+            your kind of movement.
+          </p>
+
+          <a class="shop-primary" href="#products">Shop New Arrivals &#8594;</a>
         </div>
-        <p class="sr-only" data-arrivals-filter-status aria-live="polite"></p>
-      </div>
-    </nav>
-
-    <!-- New Arrivals | Editorial product gallery -->
-    <section class="arrival-gallery" id="all-arrivals" aria-labelledby="arrival-gallery-title">
-      <header class="arrival-gallery__header">
-        <div><p>Arrivals / 08</p><h2 id="arrival-gallery-title">The new line.</h2></div>
-        <p>Eight new expressions of movement, from technical pace to everyday form.</p>
-      </header>
-
-      <div class="arrival-gallery__grid">
-        <article class="arrival-product arrival-product--feature">
-          <div class="arrival-product__media">
-            <a href="Collections.html?product=aeron-x" aria-label="View Aeron X"><img src="../assets/images/new-arrival-gallery-aeron-x-2026.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="Graphite Aeron X performance sneaker on a warm stone studio background"></a>
-            <div class="arrival-product__badges"><span class="arrival-product__badge">Featured drop</span><span class="arrival-product__badge arrival-product__badge--new">New</span></div>
-            <button class="arrival-product__wishlist" type="button" data-wishlist aria-pressed="false" aria-label="Add Aeron X to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
-            <button class="arrival-product__quick" type="button" data-quick-add data-product="Aeron X" aria-label="Add Aeron X to cart"><span aria-hidden="true">+</span></button>
-          </div>
-          <div class="arrival-product__info"><div><p>Performance Runner</p><h3><a href="Collections.html?product=aeron-x">Aeron X</a></h3></div><div class="arrival-product__meta"><strong>&#8377;12,999</strong><span>4 colours</span></div></div>
-        </article>
-
-        <article class="arrival-product arrival-product--standard">
-          <div class="arrival-product__media"><a href="Collections.html?product=vector-02" aria-label="View Vector 02"><img src="../assets/images/new-arrival-gallery-vector-02-2026.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="Silver and navy Vector 02 running shoe on a cool grey background"></a><span class="arrival-product__badge">New</span><button class="arrival-product__wishlist" type="button" data-wishlist aria-pressed="false" aria-label="Add Vector 02 to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"/></svg></button><button class="arrival-product__quick" type="button" data-quick-add data-product="Vector 02" aria-label="Add Vector 02 to cart"><span aria-hidden="true">+</span></button></div>
-          <div class="arrival-product__info"><div><p>Lifestyle Sneaker</p><h3><a href="Collections.html?product=vector-02">Vector 02</a></h3></div><div class="arrival-product__meta"><strong>&#8377;10,999</strong><span>3 colours</span></div></div>
-        </article>
-
-        <article class="arrival-product arrival-product--standard">
-          <div class="arrival-product__media"><a href="Collections.html?product=forma-low" aria-label="View Forma Low"><img src="../assets/images/new-arrival-gallery-forma-low-2026.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="Minimal black leather Forma Low sneaker on limestone"></a><button class="arrival-product__wishlist" type="button" data-wishlist aria-pressed="false" aria-label="Add Forma Low to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"/></svg></button><button class="arrival-product__quick" type="button" data-quick-add data-product="Forma Low" aria-label="Add Forma Low to cart"><span>Quick Add</span></button></div>
-          <div class="arrival-product__info"><div><p>Minimal Essential</p><h3><a href="Collections.html?product=forma-low">Forma Low</a></h3></div><div class="arrival-product__meta"><strong>&#8377;11,999</strong><span>2 colours</span></div></div>
-        </article>
-
-        <article class="arrival-product arrival-product--wide">
-          <div class="arrival-product__media"><a href="Collections.html?product=flux-runner" aria-label="View Flux Runner"><img src="../assets/images/new-arrival-gallery-flux-runner-2026.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Burnt sienna Flux Runner on a warm grey studio background"></a><span class="arrival-product__badge">New</span><button class="arrival-product__wishlist" type="button" data-wishlist aria-pressed="false" aria-label="Add Flux Runner to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"/></svg></button><button class="arrival-product__quick" type="button" data-quick-add data-product="Flux Runner" aria-label="Add Flux Runner to cart"><span>Quick Add</span></button></div>
-          <div class="arrival-product__info"><div><p>Training Shoe</p><h3><a href="Collections.html?product=flux-runner">Flux Runner</a></h3></div><div class="arrival-product__meta"><strong>&#8377;11,499</strong><span>5 colours</span></div></div>
-        </article>
-
-        <article class="arrival-product arrival-product--standard">
-          <div class="arrival-product__media"><a href="Collections.html?product=studio-court" aria-label="View Studio Court"><img src="../assets/images/new-arrival-gallery-studio-court-2026.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="White and pale sage Studio Court sneaker"></a><button class="arrival-product__wishlist" type="button" data-wishlist aria-pressed="false" aria-label="Add Studio Court to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"/></svg></button><button class="arrival-product__quick" type="button" data-quick-add data-product="Studio Court" aria-label="Add Studio Court to cart"><span>Quick Add</span></button></div>
-          <div class="arrival-product__info"><div><p>Court Sneaker</p><h3><a href="Collections.html?product=studio-court">Studio Court</a></h3></div><div class="arrival-product__meta"><strong>&#8377;9,999</strong><span>4 colours</span></div></div>
-        </article>
-
-        <article class="arrival-product arrival-product--tall">
-          <div class="arrival-product__media"><a href="Collections.html?product=terrain-shift" aria-label="View Terrain Shift"><img src="../assets/images/new-arrival-gallery-terrain-shift-2026.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="Olive and taupe Terrain Shift trail shoe on a mineral plinth"></a><span class="arrival-product__badge">New</span><button class="arrival-product__wishlist" type="button" data-wishlist aria-pressed="false" aria-label="Add Terrain Shift to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"/></svg></button><button class="arrival-product__quick" type="button" data-quick-add data-product="Terrain Shift" aria-label="Add Terrain Shift to cart"><span>Quick Add</span></button></div>
-          <div class="arrival-product__info"><div><p>Trail Shoe</p><h3><a href="Collections.html?product=terrain-shift">Terrain Shift</a></h3></div><div class="arrival-product__meta"><strong>&#8377;13,999</strong><span>3 colours</span></div></div>
-        </article>
-
-        <article class="arrival-product arrival-product--standard">
-          <div class="arrival-product__media"><a href="Collections.html?product=core-knit" aria-label="View Core Knit"><img src="../assets/images/new-arrival-gallery-core-knit-2026.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="Oatmeal Core Knit sneaker on a blush-beige background"></a><button class="arrival-product__wishlist" type="button" data-wishlist aria-pressed="false" aria-label="Add Core Knit to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"/></svg></button><button class="arrival-product__quick" type="button" data-quick-add data-product="Core Knit" aria-label="Add Core Knit to cart"><span>Quick Add</span></button></div>
-          <div class="arrival-product__info"><div><p>Everyday Slip-On</p><h3><a href="Collections.html?product=core-knit">Core Knit</a></h3></div><div class="arrival-product__meta"><strong>&#8377;8,999</strong><span>6 colours</span></div></div>
-        </article>
-
-        <article class="arrival-product arrival-product--standard">
-          <div class="arrival-product__media"><a href="Collections.html?product=axis-one" aria-label="View Axis One"><img src="../assets/images/new-arrival-gallery-axis-one-2026.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="Chalk-white Axis One lifestyle sneaker with an architectural sole"></a><span class="arrival-product__badge">New</span><button class="arrival-product__wishlist" type="button" data-wishlist aria-pressed="false" aria-label="Add Axis One to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"/></svg></button><button class="arrival-product__quick" type="button" data-quick-add data-product="Axis One" aria-label="Add Axis One to cart"><span>Quick Add</span></button></div>
-          <div class="arrival-product__info"><div><p>Active Sneaker</p><h3><a href="Collections.html?product=axis-one">Axis One</a></h3></div><div class="arrival-product__meta"><strong>&#8377;10,999</strong><span>3 colours</span></div></div>
-        </article>
-      </div>
-
-      <div class="arrival-gallery__cta">
-        <a href="Collections.html?filter=new" aria-label="View all new arrivals">
-          <span>View All New Arrivals</span>
-          <svg viewBox="0 0 18 12" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5"/></svg>
-        </a>
-      </div>
-      <p class="sr-only" data-product-announcement aria-live="polite"></p>
-    </section>
-
-    <!-- New Arrivals | One shoe, three ways -->
-    <section class="forma-style-study" data-forma-style-study aria-labelledby="forma-style-study-title">
-      <div class="forma-style-study__inner">
-        <header class="forma-style-study__header">
-          <p>Style study / 026</p>
+        <img
+          src="../assets/images/new-arrivals-hero-brown-leather-2026.webp"
+          alt="Pair of brown leather VELORA sneakers with a branded box in a studio"
+          width="1536"
+          height="1024"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </section>
+      <section class="shop-intro shop-intro--compact">
+        <h2>Shop by category</h2>
+        <nav class="shop-categories" aria-label="Shop categories">
+          <a href="Collections.html#products">All Shoes</a>
+          <a href="Collections.html?category=sneakers#products">Sneakers</a>
+          <a href="Collections.html?category=performance#products"
+            >Performance</a
+          >
+          <a href="Collections.html?category=everyday#products">Everyday</a>
+          <a href="Collections.html?category=trail#products">Trail</a>
+        </nav>
+      </section>
+      <section
+        class="shop-catalogue"
+        id="products"
+        aria-labelledby="shop-title"
+      >
+        <div class="shop-toolbar">
           <div>
-            <h2 id="forma-style-study-title">One shoe.<br>Three ways.</h2>
-            <p>A single silhouette, styled around three different rhythms of the day.</p>
+            <h2 id="shop-title">New Arrivals</h2>
+            <p data-result-count aria-live="polite"></p>
           </div>
-          <span aria-hidden="true">01 — 03</span>
-        </header>
+          <label>
+            Search shoes
+            <input
+              type="search"
+              data-shop-search
+              placeholder="Search product names"
+            />
+          </label>
+          <label>
+            Sort by
+            <select data-shop-sort>
+              <option value="featured">Featured</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </label>
+        </div>
+        <div class="shop-grid">
+          <article
+            class="shop-card"
+            data-shop-card
+            data-category="performance"
+            data-name="aeron x"
+          >
+            <a
+              class="shop-card__image"
+              href="Collections.html?product=aeron-x"
+              aria-label="View Aeron X"
+            >
+              <img
+                src="../assets/images/new-arrival-gallery-aeron-x-2026.webp"
+                alt="Aeron X"
+                width="900"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="shop-badge">New</span>
+            </a>
+            <div class="shop-card__info">
+              <p>Performance</p>
+              <h3><a href="Collections.html?product=aeron-x">Aeron X</a></h3>
+              <strong>₹12,999</strong>
+              <div class="shop-card__actions">
+                <a href="Collections.html?product=aeron-x">View Product</a>
+                <button type="button" data-shop-add="aeron-x">
+                  Add to Cart
+                </button>
+                <button
+                  type="button"
+                  data-wishlist
+                  data-product="Aeron X"
+                  aria-label="Add Aeron X to wishlist"
+                  aria-pressed="false"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="shop-card"
+            data-shop-card
+            data-category="performance"
+            data-name="vector 02"
+          >
+            <a
+              class="shop-card__image"
+              href="Collections.html?product=vector-02"
+              aria-label="View Vector 02"
+            >
+              <img
+                src="../assets/images/new-arrival-gallery-vector-02-2026.webp"
+                alt="Vector 02"
+                width="900"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="shop-badge">New</span>
+            </a>
+            <div class="shop-card__info">
+              <p>Performance</p>
+              <h3>
+                <a href="Collections.html?product=vector-02">Vector 02</a>
+              </h3>
+              <strong>₹10,999</strong>
+              <div class="shop-card__actions">
+                <a href="Collections.html?product=vector-02">View Product</a>
+                <button type="button" data-shop-add="vector-02">
+                  Add to Cart
+                </button>
+                <button
+                  type="button"
+                  data-wishlist
+                  data-product="Vector 02"
+                  aria-label="Add Vector 02 to wishlist"
+                  aria-pressed="false"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="shop-card"
+            data-shop-card
+            data-category="sneakers"
+            data-name="forma low"
+          >
+            <a
+              class="shop-card__image"
+              href="Collections.html?product=forma-low"
+              aria-label="View Forma Low"
+            >
+              <img
+                src="../assets/images/new-arrival-gallery-forma-low-2026.webp"
+                alt="Forma Low"
+                width="900"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="shop-badge">New</span>
+            </a>
+            <div class="shop-card__info">
+              <p>Sneakers</p>
+              <h3>
+                <a href="Collections.html?product=forma-low">Forma Low</a>
+              </h3>
+              <strong>₹11,999</strong>
+              <div class="shop-card__actions">
+                <a href="Collections.html?product=forma-low">View Product</a>
+                <button type="button" data-shop-add="forma-low">
+                  Add to Cart
+                </button>
+                <button
+                  type="button"
+                  data-wishlist
+                  data-product="Forma Low"
+                  aria-label="Add Forma Low to wishlist"
+                  aria-pressed="false"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="shop-card"
+            data-shop-card
+            data-category="performance"
+            data-name="flux runner"
+          >
+            <a
+              class="shop-card__image"
+              href="Collections.html?product=flux-runner"
+              aria-label="View Flux Runner"
+            >
+              <img
+                src="../assets/images/new-arrival-gallery-flux-runner-2026.webp"
+                alt="Flux Runner"
+                width="900"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="shop-badge">New</span>
+            </a>
+            <div class="shop-card__info">
+              <p>Performance</p>
+              <h3>
+                <a href="Collections.html?product=flux-runner">Flux Runner</a>
+              </h3>
+              <strong>₹11,499</strong>
+              <div class="shop-card__actions">
+                <a href="Collections.html?product=flux-runner">View Product</a>
+                <button type="button" data-shop-add="flux-runner">
+                  Add to Cart
+                </button>
+                <button
+                  type="button"
+                  data-wishlist
+                  data-product="Flux Runner"
+                  aria-label="Add Flux Runner to wishlist"
+                  aria-pressed="false"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="shop-card"
+            data-shop-card
+            data-category="sneakers"
+            data-name="studio court"
+          >
+            <a
+              class="shop-card__image"
+              href="Collections.html?product=studio-court"
+              aria-label="View Studio Court"
+            >
+              <img
+                src="../assets/images/new-arrival-gallery-studio-court-2026.webp"
+                alt="Studio Court"
+                width="900"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="shop-badge">New</span>
+            </a>
+            <div class="shop-card__info">
+              <p>Sneakers</p>
+              <h3>
+                <a href="Collections.html?product=studio-court">Studio Court</a>
+              </h3>
+              <strong>₹9,999</strong>
+              <div class="shop-card__actions">
+                <a href="Collections.html?product=studio-court">View Product</a>
+                <button type="button" data-shop-add="studio-court">
+                  Add to Cart
+                </button>
+                <button
+                  type="button"
+                  data-wishlist
+                  data-product="Studio Court"
+                  aria-label="Add Studio Court to wishlist"
+                  aria-pressed="false"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="shop-card"
+            data-shop-card
+            data-category="trail"
+            data-name="terrain shift"
+          >
+            <a
+              class="shop-card__image"
+              href="Collections.html?product=terrain-shift"
+              aria-label="View Terrain Shift"
+            >
+              <img
+                src="../assets/images/new-arrival-gallery-terrain-shift-2026.webp"
+                alt="Terrain Shift"
+                width="900"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="shop-badge">New</span>
+            </a>
+            <div class="shop-card__info">
+              <p>Trail</p>
+              <h3>
+                <a href="Collections.html?product=terrain-shift"
+                  >Terrain Shift</a
+                >
+              </h3>
+              <strong>₹13,999</strong>
+              <div class="shop-card__actions">
+                <a href="Collections.html?product=terrain-shift"
+                  >View Product</a
+                >
+                <button type="button" data-shop-add="terrain-shift">
+                  Add to Cart
+                </button>
+                <button
+                  type="button"
+                  data-wishlist
+                  data-product="Terrain Shift"
+                  aria-label="Add Terrain Shift to wishlist"
+                  aria-pressed="false"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="shop-card"
+            data-shop-card
+            data-category="everyday"
+            data-name="core knit"
+          >
+            <a
+              class="shop-card__image"
+              href="Collections.html?product=core-knit"
+              aria-label="View Core Knit"
+            >
+              <img
+                src="../assets/images/new-arrival-gallery-core-knit-2026.webp"
+                alt="Core Knit"
+                width="900"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="shop-badge">New</span>
+            </a>
+            <div class="shop-card__info">
+              <p>Everyday</p>
+              <h3>
+                <a href="Collections.html?product=core-knit">Core Knit</a>
+              </h3>
+              <strong>₹8,999</strong>
+              <div class="shop-card__actions">
+                <a href="Collections.html?product=core-knit">View Product</a>
+                <button type="button" data-shop-add="core-knit">
+                  Add to Cart
+                </button>
+                <button
+                  type="button"
+                  data-wishlist
+                  data-product="Core Knit"
+                  aria-label="Add Core Knit to wishlist"
+                  aria-pressed="false"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="shop-card"
+            data-shop-card
+            data-category="sneakers"
+            data-name="axis one"
+          >
+            <a
+              class="shop-card__image"
+              href="Collections.html?product=axis-one"
+              aria-label="View Axis One"
+            >
+              <img
+                src="../assets/images/new-arrival-gallery-axis-one-2026.webp"
+                alt="Axis One"
+                width="900"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="shop-badge">New</span>
+            </a>
+            <div class="shop-card__info">
+              <p>Sneakers</p>
+              <h3><a href="Collections.html?product=axis-one">Axis One</a></h3>
+              <strong>₹10,999</strong>
+              <div class="shop-card__actions">
+                <a href="Collections.html?product=axis-one">View Product</a>
+                <button type="button" data-shop-add="axis-one">
+                  Add to Cart
+                </button>
+                <button
+                  type="button"
+                  data-wishlist
+                  data-product="Axis One"
+                  aria-label="Add Axis One to wishlist"
+                  aria-pressed="false"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p data-shop-empty hidden>
+          No shoes match this search. Try another name or
+          <a href="Collections.html#products">browse all shoes</a>
+          .
+        </p>
+      </section>
+      <section class="shop-help shop-help--balanced" aria-label="Shopping assistance">
+        <div class="shop-help__copy">
+          <p class="shop-eyebrow">HERE TO HELP YOU CHOOSE</p>
+          <h2>A little help with your next pair?</h2>
+          <p>Explore our fitting and care services, or talk to the VELORA team.</p>
+        </div>
+        <nav class="shop-help__actions" aria-label="Shopping assistance links">
+          <a class="shop-primary" href="Services.html">Explore Services &#8594;</a>
+          <a class="shop-help__contact" href="contact.html">Contact Us &#8594;</a>
+        </nav>
+      </section>
+      <section
+        class="shop-added shop-added--visual section-arrival-spotlight"
+        aria-labelledby="arrivals-style"
+      >
+        <img
+          src="../assets/images/new-arrivals-forma-study-evening-2026.webp"
+          alt="Black Forma Low sneakers styled for an evening in the city"
+          width="1536"
+          height="1024"
+          loading="lazy"
+          decoding="async"
+        />
+        <div>
+          <p class="shop-eyebrow">VELORA / The edit</p>
+          <h2 id="arrivals-style">A fresh perspective on everyday style.</h2>
+          <p>
+            Take a closer look at Forma Low, then explore the rest of the latest
+            edit.
+          </p>
+          <a class="shop-primary" href="Collections.html?product=forma-low"
+            >View Product &#8594;</a
+          >
+        </div>
+      </section>
+      <section class="shop-added section-release-questions" aria-labelledby="arrivals-fit"><header><p class="shop-eyebrow">VELORA / Before adding your next pair.</p><h2 id="arrivals-fit">Before adding your next pair.</h2><p>The latest edit, with the details that matter to you.</p></header><div><details open><summary>How do I learn more about a style?</summary><p>Choose View Product to see its image, listed price and category.</p><a href="#products">Explore the Latest Styles &#8594;</a></details><details><summary>Can I check sizing and availability?</summary><p>Contact VELORA with the product name and your usual size before ordering.</p><a href="contact.html#contact-form">Ask the Team &#8594;</a></details><details><summary>How does the shopping bag work?</summary><p>Add your favourites and adjust quantities in the bag. Ordering enquiries go through the contact page.</p><a href="#cart">Open Your Bag &#8594;</a></details></div></section>
+    </main>
 
-        <div class="forma-style-study__composition">
-          <figure class="forma-style-moment forma-style-moment--morning">
-            <div class="forma-style-moment__image"><img src="../assets/images/new-arrivals-forma-study-morning-2026.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Forma Low black leather sneakers styled with charcoal trousers for a morning city walk"></div>
-            <figcaption><strong>01 / Morning</strong><span>08:10 / City</span><p>Clean layers. Easy movement.</p></figcaption>
-          </figure>
-
-          <figure class="forma-style-moment forma-style-moment--afternoon">
-            <div class="forma-style-moment__image"><img src="../assets/images/new-arrivals-forma-study-afternoon-2026.webp" width="1537" height="1023" loading="lazy" decoding="async" alt="Forma Low black leather sneakers styled with relaxed taupe trousers outside a design studio"></div>
-            <figcaption><strong>02 / Afternoon</strong><span>14:35 / Off duty</span><p>Relaxed proportions. Everyday comfort.</p></figcaption>
-          </figure>
-
-          <figure class="forma-style-moment forma-style-moment--evening">
-            <div class="forma-style-moment__image"><img src="../assets/images/new-arrivals-forma-study-evening-2026.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Forma Low black leather sneakers styled with tailored black trousers for an evening city setting"></div>
-            <figcaption><strong>03 / Evening</strong><span>20:42 / After hours</span><p>Same silhouette. Different energy.</p></figcaption>
-          </figure>
-
-          <div class="forma-style-study__product">
-            <p>Forma / 026</p>
-            <div><span>Featured shoe</span><h3>Velora Forma Low</h3></div>
-            <strong>&#8377;11,999</strong>
-            <a href="Collections.html?product=forma-low">Discover Forma Low <svg viewBox="0 0 18 12" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5"/></svg></a>
-          </div>
-
-          <div class="forma-style-study__timeline" aria-hidden="true">
-            <span>08:10</span><i></i><span>14:35</span><i></i><span>20:42</span>
-          </div>
-          <p class="forma-style-study__meta" aria-hidden="true">Style study / Forma Low / 2026</p>
+    <!-- Premium site footer -->
+    <footer class="site-footer">
+      <section class="footer-benefits" aria-label="VELORA customer benefits">
+        <div class="footer-container benefits-grid">
+          <article class="benefit">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M3 6h11v10H3zM14 10h3.5l3.5 3.5V16H14zM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+            <div>
+              <strong>Free Shipping</strong>
+              <span>On qualifying orders</span>
+            </div>
+          </article>
+          <article class="benefit">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20 11a8 8 0 0 0-14.7-4.4M4 13a8 8 0 0 0 14.7 4.4M5.3 3.8v3.7H1.6M18.7 20.2v-3.7h3.7"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+            <div>
+              <strong>Easy Returns</strong>
+              <span>Simple 30-day returns</span>
+            </div>
+          </article>
+          <article class="benefit">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 3 5 6v5c0 4.6 3 8 7 10 4-2 7-5.4 7-10V6l-7-3Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="m9 12 2 2 4-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+            <div>
+              <strong>Guest Shopping</strong>
+              <span>No account needed</span>
+            </div>
+          </article>
+          <article class="benefit">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M4 13v-1a8 8 0 0 1 16 0v1M4 13h3v6H5a1 1 0 0 1-1-1v-5ZM20 13h-3v6h2a1 1 0 0 0 1-1v-5Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+            <div>
+              <strong>Customer Support</strong>
+              <span>Help when you need it</span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <div class="footer-main">
+        <div class="footer-container footer-grid">
+          <section class="footer-brand" aria-label="VELORA">
+            <a
+              class="brand footer-brand__logo"
+              href="Home page1.html"
+              aria-label="VELORA home"
+            >
+              <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+                <path
+                  d="M7 29.5c6.1-.1 10.4-2.3 13.5-6.8l3.3-4.9 5.1 4.7c3.1 2.8 6.9 4.5 11.5 4.9v5.8H7v-3.7Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.7"
+                />
+                <path
+                  d="M10 36.4h29"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2.7"
+                />
+                <path
+                  d="m17.2 22.8 5.4 4.7M21.4 18.5l5.6 4.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2.1"
+                />
+                <path
+                  d="M8.5 24.2h4.2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2.1"
+                />
+              </svg>
+              <span class="brand-copy">
+                <span class="brand-name">VELORA</span>
+                <span class="brand-tagline">Crafted for Every Step</span>
+              </span>
+            </a>
+            <p>
+              Elevated footwear crafted for everyday movement, modern style, and
+              lasting comfort.
+            </p>
+          </section>
+          <nav class="footer-nav" aria-label="Shop">
+            <h2>Shop</h2>
+            <ul>
+              <li><a href="Collections.html#products">All Shoes</a></li>
+              <li><a href="New Arrivals.html#products">New Arrivals</a></li>
+              <li>
+                <a href="Collections.html?category=sneakers#products"
+                  >Sneakers</a
+                >
+              </li>
+              <li>
+                <a href="Collections.html?category=performance#products"
+                  >Performance</a
+                >
+              </li>
+              <li>
+                <a href="Collections.html?category=everyday#products"
+                  >Everyday</a
+                >
+              </li>
+              <li>
+                <a href="Collections.html?category=trail#products">Trail</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="footer-nav" aria-label="Company">
+            <h2>Company</h2>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="Services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">Our Story</a></li>
+              <li><a href="contact.html">Careers</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-nav" aria-label="Customer help">
+            <h2>Help</h2>
+            <ul>
+              <li><a href="contact.html">Size Guide</a></li>
+              <li><a href="contact.html">Shipping Information</a></li>
+              <li><a href="contact.html">Returns &amp; Exchanges</a></li>
+              <li><a href="contact.html">FAQ</a></li>
+              <li><a href="contact.html">Order Support</a></li>
+            </ul>
+          </nav>
+          <section class="footer-newsletter" aria-labelledby="newsletter-title">
+            <p class="footer-eyebrow">VELORA INSIDER</p>
+            <h2 id="newsletter-title">Step Into What’s Next</h2>
+            <p>
+              Get early access to new collections, limited releases, and
+              members-only offers.
+            </p>
+            <form class="newsletter-form" data-newsletter-form novalidate>
+              <label class="sr-only" for="newsletter-email"
+                >Email address</label
+              >
+              <div class="newsletter-field">
+                <input
+                  id="newsletter-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="Email address"
+                  required
+                />
+                <button type="submit">
+                  Subscribe
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+              <p
+                class="newsletter-message"
+                data-newsletter-message
+                aria-live="polite"
+              ></p>
+            </form>
+          </section>
         </div>
       </div>
-    </section>
-
-    <!-- New Arrivals | Weekly editorial promotion -->
-    <section class="weekly-styles" data-weekly-styles aria-label="New styles every week">
-      <div class="weekly-styles__inner">
-        <article class="weekly-styles__card weekly-styles__card--image weekly-styles__card--craft">
-          <img src="../assets/images/services-offer-expert-craftsmanship-2026.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="Artisan carefully crafting a premium brown leather shoe by hand">
-          <div class="weekly-styles__content">
-            <h2>Crafted<br>with purpose.</h2>
-            <a href="about.html">Learn more <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-
-        <article class="weekly-styles__card weekly-styles__card--center">
-          <svg class="weekly-styles__shoe" viewBox="0 0 64 38" aria-hidden="true"><path d="M5 25.5c7.2-.8 12.4-4.5 16.4-11.8 1.4-2.6 3.3-3.6 5.4-1.4 5.1 5.3 10.7 8.4 19 9.7l9.3 1.5c2.5.4 4.1 2.2 3.9 4.3-.2 2.8-2.5 4.2-6.1 4.2H11.2C7.1 32 4.7 30 5 25.5Z"/><path d="M20 17.2c4.5 2.3 9.6 3.8 15.1 4.4M25.7 13.3l-3 6.2M31.2 17.4l-2 3.9"/></svg>
-          <div>
-            <h2>New styles<br>every week.</h2>
-            <p>Stay ahead with our latest arrivals.</p>
-          </div>
-          <a href="#all-arrivals">Explore now <span aria-hidden="true">→</span></a>
-        </article>
-
-        <article class="weekly-styles__card weekly-styles__card--image weekly-styles__card--comfort">
-          <img src="../assets/images/new-arrivals-hero-brown-leather-2026.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Contemporary brown leather VELORA sneakers photographed in a warm studio setting">
-          <div class="weekly-styles__content">
-            <h2>Designed for<br>comfort. Made<br>to last.</h2>
-            <a href="Collections.html">Discover your pair <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- New Arrivals | Stay ahead newsletter campaign -->
-    <section class="arrival-newsletter" data-arrival-newsletter aria-labelledby="arrival-newsletter-title">
-      <div class="arrival-newsletter__banner">
-        <img class="arrival-newsletter__image" src="../assets/images/new-arrivals-newsletter-workshop-2026.webp" width="1600" height="800" loading="lazy" decoding="async" alt="Handcrafted brown leather shoes and shoe-care tools on a dark walnut workshop table">
-        <div class="arrival-newsletter__shade" aria-hidden="true"></div>
-
-        <div class="arrival-newsletter__intro">
-          <div class="arrival-newsletter__eyebrow">
-            <svg viewBox="0 0 28 22" aria-hidden="true"><rect x="1" y="1" width="26" height="20" rx="1"/><path d="m2 3 12 9L26 3"/></svg>
-            <span>Stay ahead</span>
-          </div>
-          <h2 id="arrival-newsletter-title">Be the first to know</h2>
-          <p>Subscribe for early access to new arrivals, exclusive offers, and style inspiration.</p>
+      <div class="footer-legal">
+        <div class="footer-container legal-content">
+          <p>© 2026 VELORA. All rights reserved.</p>
         </div>
-
-        <span class="arrival-newsletter__divider" aria-hidden="true"></span>
-
-        <form class="arrival-newsletter__form" data-arrival-newsletter-form novalidate>
-          <label for="arrival-newsletter-email">Email address</label>
-          <div class="arrival-newsletter__field">
-            <input id="arrival-newsletter-email" name="email" type="email" autocomplete="email" placeholder="Enter your email address" aria-describedby="arrival-newsletter-note arrival-newsletter-message" required>
-            <button type="submit">Subscribe <span aria-hidden="true">→</span></button>
-          </div>
-          <p id="arrival-newsletter-note" class="arrival-newsletter__note">No spam. Unsubscribe anytime.</p>
-          <p id="arrival-newsletter-message" class="arrival-newsletter__message" data-arrival-newsletter-message aria-live="polite"></p>
-        </form>
       </div>
-    </section>
-
-    <!-- New Arrivals | Customer benefits strip -->
-    <section class="new-arrivals-benefits" aria-label="New Arrivals shopping benefits">
-      <div class="new-arrivals-benefits__inner">
-        <article class="new-arrivals-benefit">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5h11v10H3zM14 10h3.5l3.5 3.5v3h-7zM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
-          <div><strong>Free Shipping</strong><span>On qualifying orders</span></div>
-        </article>
-        <article class="new-arrivals-benefit">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.7-4.4M4 13a8 8 0 0 0 14.7 4.4M5.3 3.8v3.7H1.6M18.7 20.2v-3.7h3.7"/></svg>
-          <div><strong>Easy Returns</strong><span>Simple 30-day returns</span></div>
-        </article>
-        <article class="new-arrivals-benefit">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="15" rx="1.5"/><path d="M7.5 3.5v4M16.5 3.5v4M3.5 10h17M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></svg>
-          <div><strong>New Drops</strong><span>Fresh arrivals every month</span></div>
-        </article>
-        <article class="new-arrivals-benefit">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.6 3 8 7 10 4-2 7-5.4 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <div><strong>Premium Quality</strong><span>Crafted with care</span></div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-   <!-- Premium site footer -->
-  <footer class="site-footer">
-    <section class="footer-benefits" aria-label="VELORA customer benefits">
-      <div class="footer-container benefits-grid">
-        <article class="benefit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h11v10H3zM14 10h3.5l3.5 3.5V16H14zM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg><div><strong>Free Shipping</strong><span>On qualifying orders</span></div></article>
-        <article class="benefit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.7-4.4M4 13a8 8 0 0 0 14.7 4.4M5.3 3.8v3.7H1.6M18.7 20.2v-3.7h3.7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg><div><strong>Easy Returns</strong><span>Simple 30-day returns</span></div></article>
-        <article class="benefit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.6 3 8 7 10 4-2 7-5.4 7-10V6l-7-3Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg><div><strong>Secure Payments</strong><span>Protected checkout</span></div></article>
-        <article class="benefit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1M4 13h3v6H5a1 1 0 0 1-1-1v-5ZM20 13h-3v6h2a1 1 0 0 0 1-1v-5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg><div><strong>Customer Support</strong><span>Help when you need it</span></div></article>
-      </div>
-    </section>
-    <div class="footer-main">
-      <div class="footer-container footer-grid">
-        <section class="footer-brand" aria-label="VELORA">
-          <a class="brand footer-brand__logo" href="Home page1.html" aria-label="VELORA home"><svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 29.5c6.1-.1 10.4-2.3 13.5-6.8l3.3-4.9 5.1 4.7c3.1 2.8 6.9 4.5 11.5 4.9v5.8H7v-3.7Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/><path d="M10 36.4h29" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.7"/><path d="m17.2 22.8 5.4 4.7M21.4 18.5l5.6 4.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.1"/><path d="M8.5 24.2h4.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.1"/></svg><span class="brand-copy"><span class="brand-name">VELORA</span><span class="brand-tagline">Crafted for Every Step</span></span></a>
-          <p>Elevated footwear crafted for everyday movement, modern style, and lasting comfort.</p>
-          <div class="social-links" aria-label="Follow VELORA">
-            <a href="#instagram" aria-label="Follow VELORA on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.8" r=".9" fill="currentColor"/></svg></a>
-            <a href="#facebook" aria-label="Follow VELORA on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 20v-7h2.7l.4-3h-3.1V8.1c0-.9.2-1.5 1.5-1.5h1.6V3.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V10H9v3h2.7v7h2.8Z" fill="currentColor"/></svg></a>
-            <a href="#pinterest" aria-label="Follow VELORA on Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-3.1 16.4c-.1-1.4 0-3 .3-4.3l1-4.2s-.3-.7-.3-1.7c0-1.6.9-2.8 2.1-2.8 1 0 1.5.8 1.5 1.7 0 1-.7 2.6-1 4-.3 1.1.5 2 1.6 2 2 0 3.5-2 3.5-4.9 0-2.6-1.9-4.3-4.5-4.3-3.1 0-4.9 2.3-4.9 4.7 0 .9.3 1.9.8 2.4.1.1.1.2.1.4l-.3 1.1c-.1.4-.4.5-.7.3-1.3-.6-2.1-2.5-2.1-4 0-3.2 2.3-6.2 6.7-6.2 3.5 0 6.2 2.5 6.2 5.8 0 3.5-2.2 6.3-5.2 6.3-1 0-2-.5-2.3-1.1l-.6 2.3c-.2.9-.8 2-1.2 2.7.9.3 1.8.5 2.8.5a8.5 8.5 0 0 0 0-17Z" fill="currentColor"/></svg></a>
-            <a href="#youtube" aria-label="Follow VELORA on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8.2a2.9 2.9 0 0 0-2-2C17.2 5.7 12 5.7 12 5.7s-5.2 0-7 .5a2.9 2.9 0 0 0-2 2A30 30 0 0 0 2.5 12 30 30 0 0 0 3 15.8a2.9 2.9 0 0 0 2 2c1.8.5 7 .5 7 .5s5.2 0 7-.5a2.9 2.9 0 0 0 2-2 30 30 0 0 0 .5-3.8 30 30 0 0 0-.5-3.8ZM10 15.3V8.7l5.2 3.3-5.2 3.3Z" fill="currentColor"/></svg></a>
-          </div>
-        </section>
-        <nav class="footer-nav" aria-label="Shop"><h2>Shop</h2><ul><li><a href="Collections.html">Collections</a></li><li><a href="New Arrivals.html">New Arrivals</a></li><li><a href="Collections.html">Men</a></li><li><a href="Collections.html">Women</a></li><li><a href="Services.html">Sports</a></li><li><a href="#sale">Sale</a></li></ul></nav>
-        <nav class="footer-nav" aria-label="Company"><h2>Company</h2><ul><li><a href="about.html">About Us</a></li><li><a href="Services.html">Services</a></li><li><a href="contact.html">Contact</a></li><li><a href="about.html">Our Story</a></li><li><a href="#careers">Careers</a></li></ul></nav>
-        <nav class="footer-nav" aria-label="Customer help"><h2>Help</h2><ul><li><a href="#size-guide">Size Guide</a></li><li><a href="#shipping">Shipping Information</a></li><li><a href="#returns">Returns &amp; Exchanges</a></li><li><a href="#faq">FAQ</a></li><li><a href="contact.html">Order Support</a></li></ul></nav>
-        <section class="footer-newsletter" aria-labelledby="newsletter-title"><p class="footer-eyebrow">VELORA INSIDER</p><h2 id="newsletter-title">Step Into What’s Next</h2><p>Get early access to new collections, limited releases, and members-only offers.</p><form class="newsletter-form" data-newsletter-form novalidate><label class="sr-only" for="newsletter-email">Email address</label><div class="newsletter-field"><input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="Email address" required><button type="submit">Subscribe <span aria-hidden="true">→</span></button></div><p class="newsletter-message" data-newsletter-message aria-live="polite"></p></form></section>
-      </div>
-    </div>
-    <div class="footer-legal"><div class="footer-container legal-content"><p>© 2026 VELORA. All rights reserved.</p><nav aria-label="Legal"><a href="#privacy">Privacy Policy</a><a href="#terms">Terms &amp; Conditions</a><a href="#cookies">Cookie Policy</a></nav></div></div>
-  </footer>
-  <script src="../assets/js/main.js" defer></script>
-</body>
+    </footer>
+    <script src="../assets/js/products.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/shop.js" defer></script>
+  </body>
 </html>
