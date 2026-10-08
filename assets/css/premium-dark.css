@@ -1,0 +1,86 @@
+﻿/* Premium additions inherit the same neutral surfaces as the rest of the site. */
+main .section-buying-guide .buying-guide-icon {
+  padding: 10px;
+  stroke-width: 1.5;
+  box-shadow: inset 0 0 0 4px #fffdf980;
+}
+html[data-theme='dark'] body:not(.auth-page) main > :is(.section-fit-path, .section-rotation-list, .section-buying-guide, .section-release-questions, .section-explore-directory) {
+  --editorial-paper: var(--page-background);
+  --editorial-card: var(--hero-surface);
+  --editorial-rule: var(--header-border);
+  --editorial-ink: var(--heading-text);
+  --editorial-muted: var(--body-muted);
+  background: var(--page-background) !important;
+}
+html[data-theme='dark'] body:not(.auth-page) main :is(.section-fit-path, .section-rotation-list) li {
+  background: var(--hero-surface);
+  border-color: var(--header-border);
+  box-shadow: 0 8px 24px #00000012;
+}
+html[data-theme='dark'] body:not(.auth-page) main :is(.section-fit-path, .section-rotation-list, .section-buying-guide, .section-release-questions, .section-explore-directory) :is(h2, h3, strong) {
+  color: var(--heading-text);
+}
+html[data-theme='dark'] body:not(.auth-page) main :is(.section-fit-path, .section-rotation-list) :is(li p, header > p:last-child) {
+  color: var(--body-muted);
+}
+html[data-theme='dark'] body:not(.auth-page) main :is(.section-fit-path, .section-rotation-list, .section-buying-guide, .section-release-questions, .section-explore-directory) .shop-eyebrow,
+html[data-theme='dark'] body:not(.auth-page) main .section-fit-path li > span,
+html[data-theme='dark'] body:not(.auth-page) main .section-rotation-list li::before,
+html[data-theme='dark'] body:not(.auth-page) main .section-buying-guide article::before,
+html[data-theme='dark'] body:not(.auth-page) main .section-release-questions summary::after {
+  color: var(--hero-accent);
+}
+html[data-theme='dark'] body:not(.auth-page) main .section-buying-guide .buying-guide-icon {
+  background: var(--header-hover);
+  border-color: var(--hero-border);
+  stroke: var(--hero-accent);
+  box-shadow: inset 0 0 0 4px #ffffff03;
+}
+html[data-theme='dark'] body:not(.auth-page) main .section-buying-guide article {
+  box-shadow: 0 8px 24px #00000012;
+}
+html[data-theme='dark'] body:not(.auth-page) main > :is(.section-aftercare-strip, .section-concierge-banner),
+html[data-theme='dark'] body:not(.auth-page) main .section-buying-guide aside {
+  background: var(--hero-surface) !important;
+  border-color: var(--hero-border);
+  box-shadow: 0 12px 30px #00000018;
+}
+html[data-theme='dark'] body:not(.auth-page) main :is(.section-aftercare-strip, .section-concierge-banner)::before {
+  border-color: var(--header-border);
+}
+html[data-theme='dark'] body:not(.auth-page) main :is(.section-aftercare-strip, .section-concierge-banner) h2,
+html[data-theme='dark'] body:not(.auth-page) main .section-buying-guide aside h3 {
+  color: var(--heading-text);
+}
+html[data-theme='dark'] body:not(.auth-page) main .section-aftercare-strip p,
+html[data-theme='dark'] body:not(.auth-page) main .section-concierge-banner header > p:last-child {
+  color: var(--body-muted);
+}
+html[data-theme='dark'] body:not(.auth-page) main .aftercare-heading > span,
+html[data-theme='dark'] body:not(.auth-page) main .buying-guide-label,
+html[data-theme='dark'] body:not(.auth-page) main .section-concierge-banner .shop-eyebrow {
+  color: var(--hero-accent);
+}
+html[data-theme='dark'] body:not(.auth-page) main :is(.section-aftercare-strip, .section-concierge-banner) nav a,
+html[data-theme='dark'] body:not(.auth-page) main .section-buying-guide aside a,
+html[data-theme='dark'] body:not(.auth-page) main .section-rotation-list li a {
+  background: var(--header-hover);
+  border-color: var(--hero-border);
+  color: var(--heading-text);
+}
+html[data-theme='dark'] body:not(.auth-page) main .section-concierge-banner nav a:first-child {
+  background: var(--button-surface);
+  color: var(--button-text);
+}
+html[data-theme='dark'] body:not(.auth-page) main .section-fit-path li > a,
+html[data-theme='dark'] body:not(.auth-page) main .section-release-questions details a {
+  color: var(--hero-accent);
+}
+html[data-theme='dark'] body:not(.auth-page) main :is(.section-aftercare-strip, .section-concierge-banner) nav a:hover,
+html[data-theme='dark'] body:not(.auth-page) main .section-buying-guide aside a:hover,
+html[data-theme='dark'] body:not(.auth-page) main .section-rotation-list li a:hover {
+  background: var(--hero-shape);
+  border-color: var(--hero-accent);
+  color: var(--heading-text);
+}
+

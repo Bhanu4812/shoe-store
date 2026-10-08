@@ -1,0 +1,293 @@
+/* Shopping advice and discovery share a quiet, warm editorial palette. */
+main .section-buying-guide article {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 30px #49321e08;
+}
+main .section-buying-guide .buying-guide-icon {
+  position: absolute;
+  inset-inline-end: 26px;
+  top: 26px;
+  width: 60px;
+  height: 60px;
+  padding: 8px;
+  border: 1px solid #dfcdb8;
+  border-radius: 50%;
+  background: #f7efe4;
+  fill: none;
+  stroke: #a66c44;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+main .section-buying-guide .buying-guide-label {
+  color: #d9b68a;
+  font-size: 10px;
+  letter-spacing: .18em;
+}
+main .section-buying-guide aside h3 {
+  color: #fff4e3;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 4px 0 12px;
+}
+main .section-aftercare-strip .aftercare-heading > span {
+  display: block;
+  margin-bottom: 16px;
+  color: #d5ae7a;
+  font-size: 10px;
+  letter-spacing: .18em;
+}
+body:not(.auth-page) main > .section-aftercare-strip {
+  position: relative;
+  box-shadow: 0 16px 36px #30271916;
+}
+main .section-aftercare-strip::before {
+  content: '';
+  position: absolute;
+  inset: 9px;
+  border: 1px solid #d6b88b26;
+  border-radius: 3px;
+  pointer-events: none;
+}
+body:not(.auth-page) main > :is(.section-buying-guide, .section-release-questions, .section-explore-directory) {
+  --editorial-paper: #f6f3ed;
+  --editorial-card: #fffdf9;
+  --editorial-rule: #ded3c5;
+  --editorial-ink: #302b25;
+  --editorial-muted: #776d60;
+  padding: clamp(48px, 6vw, 88px) max(24px, calc((100vw - 1280px) / 2));
+  background: var(--editorial-paper) !important;
+}
+main :is(.section-buying-guide, .section-release-questions, .section-explore-directory) .shop-eyebrow {
+  color: #a56641;
+  font-size: 11px;
+  letter-spacing: .18em;
+  line-height: 1.7;
+}
+main :is(.section-buying-guide, .section-release-questions, .section-explore-directory) h2 {
+  color: var(--editorial-ink);
+  font-size: clamp(32px, 3.4vw, 48px);
+  line-height: 1.12;
+}
+main :is(.section-buying-guide, .section-release-questions, .section-explore-directory) header > p:last-child {
+  color: var(--editorial-muted);
+  font-size: 16px;
+  line-height: 1.75;
+  margin-top: 22px;
+}
+main .section-buying-guide > header {
+  max-width: 760px;
+  margin-bottom: 36px;
+}
+main .section-buying-guide > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr .9fr;
+  gap: 20px;
+  counter-reset: guide;
+}
+main .section-buying-guide article {
+  counter-increment: guide;
+  padding: 30px;
+  background: var(--editorial-card);
+  border: 1px solid var(--editorial-rule);
+  border-radius: 5px;
+}
+main .section-buying-guide article::before {
+  content: counter(guide, decimal-leading-zero);
+  display: block;
+  margin-bottom: 24px;
+  font: 400 40px/1 Georgia, serif;
+  color: #ad714b;
+}
+main .section-buying-guide article h3 {
+  color: var(--editorial-ink);
+  font-size: 20px;
+}
+main .section-buying-guide article p {
+  color: var(--editorial-muted);
+  font-size: 15px;
+  line-height: 1.75;
+  margin-top: 16px;
+}
+main .section-buying-guide aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding: 28px;
+  border: 1px solid #635240;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #34332b, #514431);
+}
+main .section-buying-guide aside a,
+main .section-aftercare-strip nav a {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid #c8ae8866;
+  border-radius: 3px;
+  color: #fff3df;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+body:not(.auth-page) main > .section-aftercare-strip {
+  width: calc(100% - 48px);
+  max-width: 1280px;
+  margin: 32px auto 64px;
+  padding: clamp(28px, 4vw, 48px);
+  border: 1px solid #62533e;
+  border-radius: 6px;
+  background: linear-gradient(120deg, #292b25, #4e4230) !important;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 32px;
+}
+main .section-aftercare-strip h2 {
+  color: #fff6e9;
+  font-size: clamp(28px, 2.7vw, 38px);
+  line-height: 1.15;
+}
+main .section-aftercare-strip p {
+  color: #d5c8b6;
+  font-size: 15px;
+  line-height: 1.75;
+}
+main .section-aftercare-strip nav {
+  gap: 12px;
+}
+main .section-release-questions {
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: 64px;
+  align-items: start;
+}
+main .section-release-questions > div {
+  display: grid;
+  gap: 12px;
+  border: 0;
+}
+main .section-release-questions details {
+  border: 1px solid var(--editorial-rule);
+  background: var(--editorial-card);
+  border-radius: 5px;
+  padding: 0;
+  overflow: hidden;
+}
+main .section-release-questions details[open] {
+  border-color: #b88b65;
+  box-shadow: 0 8px 22px #40301f06;
+}
+main .section-release-questions summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 24px;
+  color: var(--editorial-ink);
+  font-size: 17px;
+  line-height: 1.5;
+  list-style: none;
+}
+main .section-release-questions summary::-webkit-details-marker {
+  display: none;
+}
+main .section-release-questions summary::after {
+  content: '+';
+  color: #a66a43;
+  font-size: 24px;
+  font-weight: 400;
+}
+main .section-release-questions details[open] summary::after {
+  content: '\2212';
+}
+main .section-release-questions details p {
+  margin: 0;
+  padding: 0 24px 20px;
+  color: var(--editorial-muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+main .section-release-questions details a {
+  display: inline-block;
+  margin: 0 24px 24px;
+  color: #a16540;
+  font-size: 14px;
+  font-weight: 600;
+}
+main .section-explore-directory {
+  align-items: center;
+  gap: 64px;
+}
+main .section-explore-directory header {
+  margin: 0;
+}
+main .section-explore-directory nav {
+  gap: 14px;
+}
+main .section-explore-directory nav a {
+  padding: 26px 28px;
+  border: 1px solid var(--editorial-rule);
+  border-inline-start: 3px solid #af7853;
+  border-radius: 4px;
+  background: var(--editorial-card);
+  color: var(--editorial-ink);
+  font-size: 18px;
+  line-height: 1.5;
+  transition: transform .2s ease, border-color .2s ease;
+}
+main .section-explore-directory nav a:hover {
+  transform: translateY(-2px);
+  border-color: #b88b65;
+}
+main :is(.section-buying-guide, .section-aftercare-strip) nav a:hover,
+main .section-buying-guide aside a:hover {
+  background: #ffffff12;
+}
+main :is(.section-buying-guide, .section-aftercare-strip, .section-release-questions, .section-explore-directory) :is(a, summary):focus-visible {
+  outline: 2px solid #b88b65;
+  outline-offset: 4px;
+}
+html[data-theme='dark'] body main > :is(.section-buying-guide, .section-release-questions, .section-explore-directory) {
+  --editorial-paper: #24231f;
+  --editorial-card: #302e28;
+  --editorial-rule: #51483d;
+  --editorial-ink: #f3eadc;
+  --editorial-muted: #c4b7a6;
+}
+@media (max-width: 1000px) {
+  main .section-buying-guide > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  main .section-buying-guide aside {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 800px) {
+  main .section-release-questions,
+  main .section-explore-directory,
+  body:not(.auth-page) main > .section-aftercare-strip {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+@media (max-width: 520px) {
+  main .section-buying-guide > div {
+    grid-template-columns: 1fr;
+  }
+  main .section-buying-guide article {
+    padding: 24px;
+  }
+  main .section-explore-directory nav a {
+    padding: 22px;
+    font-size: 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  main .section-explore-directory nav a {
+    transition: none;
+  }
+  main .section-explore-directory nav a:hover {
+    transform: none;
+  }
+}

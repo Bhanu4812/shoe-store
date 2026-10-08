@@ -8,23 +8,22 @@
     <link
       rel="preload"
       as="image"
-      href="../assets/images/new-arrivals-newsletter-workshop-2026.webp"
+      href="../assets/images/service-personal-fitting-detail-2026.webp"
       type="image/webp"
     />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/dark-mode.css" />
     <link rel="stylesheet" href="../assets/css/rtl.css" />
     <link rel="stylesheet" href="../assets/css/shop.css" />
+    <link rel="stylesheet" href="../assets/css/about.css" />
     <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
     <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 64x64" />
     <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png" />
-    <link rel="stylesheet" href="../assets/css/layout-polish.css" />
-    <link rel="stylesheet" href="../assets/css/section-designs.css" />
   </head>
   <body>
     <!-- Premium site header -->
     <header class="site-header" data-site-header>
-      <div class="header-shell site-container">
+      <div class="header-shell">
         <a class="brand" href="Home page1.html" aria-label="VELORA home">
           <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
             <path
@@ -63,34 +62,13 @@
           </span>
         </a>
 
-        <nav class="primary-nav" aria-label="Primary navigation" id="primary-navigation">
+        <nav
+          class="primary-nav"
+          aria-label="Primary navigation"
+          id="primary-navigation"
+        >
           <ul class="nav-list">
-            <li class="nav-item nav-item--has-menu">
-              <button
-                class="nav-link nav-dropdown-toggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="home-menu"
-              >
-                Home
-                <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true">
-                  <path
-                    d="m3.5 6 4.5 4 4.5-4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.75"
-                  />
-                </svg>
-              </button>
-              <ul class="home-menu" id="home-menu" aria-label="Home pages">
-                <li>
-                  <a class="home-menu__link" href="Home page1.html">Homepage 1</a>
-                </li>
-                <li>
-                  <a class="home-menu__link" href="Home page 2.html">Homepage 2</a>
-                </li>
-              </ul>
-            </li>
+            <li class="nav-item nav-item--has-menu"><button class="nav-link nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="home-menu">Home <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 6 4.5 4 4.5-4" fill="none" stroke="currentColor" stroke-width="1.75"/></svg></button><ul class="home-menu" id="home-menu" aria-label="Home pages"><li><a class="home-menu__link" href="Home page1.html">Homepage 1</a></li><li><a class="home-menu__link" href="Home page 2.html">Homepage 2</a></li></ul></li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
@@ -115,7 +93,11 @@
                 data-theme-toggle
                 aria-label="Switch to dark mode"
               >
-                <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+                <svg
+                  class="icon icon--moon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
                   <path
                     d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z"
                     fill="none"
@@ -125,7 +107,11 @@
                     stroke-width="1.7"
                   />
                 </svg>
-                <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+                <svg
+                  class="icon icon--sun"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
                   <circle
                     cx="12"
                     cy="12"
@@ -192,6 +178,13 @@
                 </span>
               </a>
             </div>
+            <a
+              class="login-button shop-header-cta"
+              href="Collections.html#products"
+            >
+              Shop Shoes
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
         </nav>
 
@@ -256,7 +249,11 @@
             </svg>
             <span class="wishlist-count" aria-hidden="true">0</span>
           </a>
-          <a class="header-icon-button bag-button" href="#cart" aria-label="Shopping cart, 0 items">
+          <a
+            class="header-icon-button bag-button"
+            href="#cart"
+            aria-label="Shopping cart, 0 items"
+          >
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M5 8.5h14l-1 12H6l-1-12ZM9 9V6.7a3 3 0 0 1 6 0V9"
@@ -269,7 +266,10 @@
             </svg>
             <span class="cart-count" aria-hidden="true">0</span>
           </a>
-          <a class="login-button shop-header-cta" href="Collections.html#products">
+          <a
+            class="login-button shop-header-cta"
+            href="Collections.html#products"
+          >
             Shop Shoes
             <span aria-hidden="true">→</span>
           </a>
@@ -287,17 +287,17 @@
         </div>
       </div>
     </header>
-    <main class="site-main">
+    <main>
       <!-- About Us | Craftsmanship hero -->
       <section class="about-hero" aria-labelledby="about-hero-title">
         <figure class="about-hero__visual">
           <img
-            src="../assets/images/new-arrivals-newsletter-workshop-2026.webp"
-            width="1600"
-            height="800"
+            src="../assets/images/service-personal-fitting-detail-2026.webp"
+            width="1122"
+            height="1402"
             fetchpriority="high"
             decoding="async"
-            alt="Leather shoes and care tools in the VELORA workshop"
+            alt="Footwear specialist checking the fit and construction of a leather shoe beside a measuring tape and insole"
           />
           <figcaption>
             <span>ATELIER / 01</span>
@@ -316,12 +316,14 @@
             <span class="about-hero__accent" aria-hidden="true"></span>
             <div class="about-hero__copy">
               <p>
-                Velora was born from a simple belief — that true luxury lies in the perfect balance
-                of comfort, craftsmanship, and timeless design.
+                Velora was born from a simple belief — that true luxury lies in
+                the perfect balance of comfort, craftsmanship, and timeless
+                design.
               </p>
               <p>
-                Every pair we create is a reflection of our dedication to detail, passion for
-                perfection, and respect for the heritage of shoemaking.
+                Every pair we create is a reflection of our dedication to
+                detail, passion for perfection, and respect for the heritage of
+                shoemaking.
               </p>
             </div>
             <p class="about-hero__signature">The Velora Team</p>
@@ -329,7 +331,11 @@
         </div>
       </section>
       <!-- About Us | Our story -->
-      <section class="about-story" aria-labelledby="about-story-title" data-about-story>
+      <section
+        class="about-story"
+        aria-labelledby="about-story-title"
+        data-about-story
+      >
         <div class="about-story__container">
           <div class="about-story__copy">
             <p class="about-story__eyebrow">Our Story</p>
@@ -341,14 +347,16 @@
             <span class="about-story__accent" aria-hidden="true"></span>
             <div class="about-story__body">
               <p>
-                VELORA began in a small footwear workshop, where every last, stitch and material was
-                considered by hand. That close relationship with the craft shaped our belief that
-                quality should be felt in every step.
+                VELORA began in a small footwear workshop, where every last,
+                stitch and material was considered by hand. That close
+                relationship with the craft shaped our belief that quality
+                should be felt in every step.
               </p>
               <p>
-                As our perspective grew beyond the workshop, we evolved into a modern premium
-                footwear brand without leaving those principles behind—combining enduring technique
-                with contemporary design for life around the world.
+                As our perspective grew beyond the workshop, we evolved into a
+                modern premium footwear brand without leaving those principles
+                behind—combining enduring technique with contemporary design for
+                life around the world.
               </p>
             </div>
             <a class="about-story__cta" href="#design-process">
@@ -357,7 +365,10 @@
             </a>
           </div>
 
-          <div class="about-story__collage" aria-label="VELORA workshop process">
+          <div
+            class="about-story__collage"
+            aria-label="VELORA workshop process"
+          >
             <figure class="about-story__image about-story__image--main">
               <img
                 src="../assets/images/services-practice-care-2026.webp"
@@ -414,7 +425,9 @@
             </article>
             <article class="about-value">
               <svg viewBox="0 0 48 48" aria-hidden="true">
-                <path d="M24 39S8 30 8 18.5C8 12 16 9 24 17c8-8 16-5 16 1.5C40 30 24 39 24 39Z" />
+                <path
+                  d="M24 39S8 30 8 18.5C8 12 16 9 24 17c8-8 16-5 16 1.5C40 30 24 39 24 39Z"
+                />
                 <path d="m14 24 5-4 5 4 5-4 5 4" />
               </svg>
               <h3>Craftsmanship</h3>
@@ -432,7 +445,9 @@
               <svg viewBox="0 0 48 48" aria-hidden="true">
                 <circle cx="19" cy="17" r="6" />
                 <circle cx="33" cy="20" r="4" />
-                <path d="M7 39c0-8 5-13 12-13s12 5 12 13M29 28c7 0 11 4 11 11" />
+                <path
+                  d="M7 39c0-8 5-13 12-13s12 5 12 13M29 28c7 0 11 4 11 11"
+                />
               </svg>
               <h3>Customer Commitment</h3>
               <p>Your satisfaction inspires everything we do.</p>
@@ -480,7 +495,9 @@
               />
               <figcaption>FORM / ENVIRONMENT</figcaption>
             </figure>
-            <p class="field-story__vertical" aria-hidden="true">DESIGNED OUTSIDE THE STUDIO</p>
+            <p class="field-story__vertical" aria-hidden="true">
+              DESIGNED OUTSIDE THE STUDIO
+            </p>
           </div>
 
           <div class="field-story__copy">
@@ -494,15 +511,20 @@
               beyond the studio.
             </h2>
             <p>
-              Every VELORA silhouette is shaped by the places footwear actually lives — city
-              streets, long commutes, spontaneous detours and everyday movement.
+              Every VELORA silhouette is shaped by the places footwear actually
+              lives — city streets, long commutes, spontaneous detours and
+              everyday movement.
             </p>
             <strong>Observed outside. Refined inside.</strong>
           </div>
         </div>
       </section>
       <!-- About Us | Design process -->
-      <section class="design-process" id="design-process" aria-labelledby="design-process-title">
+      <section
+        class="design-process"
+        id="design-process"
+        aria-labelledby="design-process-title"
+      >
         <div class="design-process__container">
           <header class="design-process__heading">
             <p>PROCESS / VELORA METHOD</p>
@@ -643,7 +665,7 @@
     <!-- Premium site footer -->
     <footer class="site-footer">
       <section class="footer-benefits" aria-label="VELORA customer benefits">
-        <div class="site-container footer-container benefits-grid">
+        <div class="footer-container benefits-grid">
           <article class="benefit">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path
@@ -718,9 +740,13 @@
         </div>
       </section>
       <div class="footer-main">
-        <div class="site-container footer-container footer-grid">
+        <div class="footer-container footer-grid">
           <section class="footer-brand" aria-label="VELORA">
-            <a class="brand footer-brand__logo" href="Home page1.html" aria-label="VELORA home">
+            <a
+              class="brand footer-brand__logo"
+              href="Home page1.html"
+              aria-label="VELORA home"
+            >
               <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
                 <path
                   d="M7 29.5c6.1-.1 10.4-2.3 13.5-6.8l3.3-4.9 5.1 4.7c3.1 2.8 6.9 4.5 11.5 4.9v5.8H7v-3.7Z"
@@ -758,7 +784,8 @@
               </span>
             </a>
             <p>
-              Elevated footwear crafted for everyday movement, modern style, and lasting comfort.
+              Elevated footwear crafted for everyday movement, modern style, and
+              lasting comfort.
             </p>
           </section>
           <nav class="footer-nav" aria-label="Shop">
@@ -767,13 +794,19 @@
               <li><a href="Collections.html#products">All Shoes</a></li>
               <li><a href="New Arrivals.html#products">New Arrivals</a></li>
               <li>
-                <a href="Collections.html?category=sneakers#products">Sneakers</a>
+                <a href="Collections.html?category=sneakers#products"
+                  >Sneakers</a
+                >
               </li>
               <li>
-                <a href="Collections.html?category=performance#products">Performance</a>
+                <a href="Collections.html?category=performance#products"
+                  >Performance</a
+                >
               </li>
               <li>
-                <a href="Collections.html?category=everyday#products">Everyday</a>
+                <a href="Collections.html?category=everyday#products"
+                  >Everyday</a
+                >
               </li>
               <li>
                 <a href="Collections.html?category=trail#products">Trail</a>
@@ -803,9 +836,14 @@
           <section class="footer-newsletter" aria-labelledby="newsletter-title">
             <p class="footer-eyebrow">VELORA INSIDER</p>
             <h2 id="newsletter-title">Step Into What’s Next</h2>
-            <p>Get early access to new collections, limited releases, and members-only offers.</p>
+            <p>
+              Get early access to new collections, limited releases, and
+              members-only offers.
+            </p>
             <form class="newsletter-form" data-newsletter-form novalidate>
-              <label class="sr-only" for="newsletter-email">Email address</label>
+              <label class="sr-only" for="newsletter-email"
+                >Email address</label
+              >
               <div class="newsletter-field">
                 <input
                   id="newsletter-email"
@@ -820,13 +858,17 @@
                   <span aria-hidden="true">→</span>
                 </button>
               </div>
-              <p class="newsletter-message" data-newsletter-message aria-live="polite"></p>
+              <p
+                class="newsletter-message"
+                data-newsletter-message
+                aria-live="polite"
+              ></p>
             </form>
           </section>
         </div>
       </div>
       <div class="footer-legal">
-        <div class="site-container footer-container legal-content">
+        <div class="footer-container legal-content">
           <p>© 2026 VELORA. All rights reserved.</p>
         </div>
       </div>

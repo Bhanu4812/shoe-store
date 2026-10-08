@@ -1,0 +1,147 @@
+/* A wardrobe index with warm paper surfaces and copper details. */
+body.page-home2 main > .section-rotation-list {
+  background: #f5f2eb !important;
+  padding: clamp(48px, 6vw, 88px) max(24px, calc((100vw - 1280px) / 2));
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(32px, 6vw, 88px);
+  align-items: center;
+}
+.page-home2 .section-rotation-list header {
+  position: relative;
+  margin: 0;
+  padding-block: 28px;
+}
+.page-home2 .section-rotation-list header::before {
+  content: '';
+  display: block;
+  width: 52px;
+  height: 2px;
+  margin-bottom: 28px;
+  background: #a76a44;
+}
+.page-home2 .section-rotation-list .shop-eyebrow {
+  color: #a15f3c;
+  font-size: 11px;
+  line-height: 1.7;
+  letter-spacing: .18em;
+}
+.page-home2 .section-rotation-list h2 {
+  max-width: 470px;
+  font-size: clamp(34px, 3.8vw, 54px);
+  line-height: 1.08;
+}
+.page-home2 .section-rotation-list header > p:last-child {
+  max-width: 390px;
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #776c60;
+}
+.page-home2 .section-rotation-list ul {
+  display: grid;
+  gap: 14px;
+  counter-reset: rotation;
+}
+.page-home2 .section-rotation-list li {
+  counter-increment: rotation;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  gap: 8px 20px;
+  padding: 26px;
+  border: 1px solid #ded4c6;
+  border-radius: 5px;
+  background: #fffdf8;
+  box-shadow: 0 6px 18px #40311f04;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.page-home2 .section-rotation-list li::before {
+  content: counter(rotation, decimal-leading-zero);
+  grid-row: 1 / 3;
+  font: 400 32px/1 Georgia, serif;
+  color: #ae7552;
+  align-self: center;
+}
+.page-home2 .section-rotation-list li strong {
+  grid-column: 2;
+  color: #302b25;
+  font-size: 20px;
+  font-weight: 600;
+}
+.page-home2 .section-rotation-list li p {
+  grid-column: 2;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #7b7063;
+}
+.page-home2 .section-rotation-list li a {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  align-self: center;
+  padding: 10px 14px;
+  border: 1px solid #dbcab6;
+  border-radius: 3px;
+  color: #6a4931;
+  background: #f5efe5;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.page-home2 .section-rotation-list li:hover {
+  transform: translateY(-2px);
+  border-color: #ba906f;
+}
+.page-home2 .section-rotation-list li a:hover {
+  background: #e9dccb;
+}
+.page-home2 .section-rotation-list li a:focus-visible {
+  outline: 2px solid #a76a44;
+  outline-offset: 4px;
+}
+html[data-theme='dark'] .page-home2 main > .section-rotation-list {
+  background: #24231f !important;
+}
+html[data-theme='dark'] .page-home2 .section-rotation-list li {
+  background: #302e28;
+  border-color: #51483c;
+}
+html[data-theme='dark'] .page-home2 .section-rotation-list li strong {
+  color: #f5eddf;
+}
+html[data-theme='dark'] .page-home2 .section-rotation-list :is(li p, header > p:last-child) {
+  color: #bfb2a1;
+}
+@media (max-width: 900px) {
+  body.page-home2 main > .section-rotation-list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .page-home2 .section-rotation-list header {
+    padding: 0;
+  }
+}
+@media (max-width: 480px) {
+  .page-home2 .section-rotation-list li {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 8px 16px;
+    padding: 22px 18px;
+  }
+  .page-home2 .section-rotation-list li::before {
+    font-size: 26px;
+    align-self: start;
+  }
+  .page-home2 .section-rotation-list li a {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: start;
+    margin-top: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-home2 .section-rotation-list li {
+    transition: none;
+  }
+  .page-home2 .section-rotation-list li:hover {
+    transform: none;
+  }
+}

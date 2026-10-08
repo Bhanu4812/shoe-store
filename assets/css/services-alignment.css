@@ -1,0 +1,35 @@
+/* Keep the size consultation title and description on a shared top edge. */
+main .size-consultation__header {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  padding-block: 24px 32px;
+}
+main .size-consultation__header > p {
+  margin: 0;
+}
+main .size-consultation__header > div {
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: start;
+  padding-block-start: 0;
+  gap: clamp(28px, 5vw, 72px);
+}
+main .size-consultation__header h2 {
+  margin: 0;
+  line-height: 1.08;
+}
+main .size-consultation__header div > p {
+  margin: 0 !important;
+  padding: 0;
+  border: 0;
+  max-inline-size: 415px;
+  justify-self: end;
+}
+@media (max-width: 700px) {
+  main .size-consultation__header > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  main .size-consultation__header div > p {
+    justify-self: start;
+  }
+}
